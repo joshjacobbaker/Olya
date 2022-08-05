@@ -22,3 +22,9 @@ VScode Shortcuts for Developer Productivity
 [VsCode Shortcuts]("https://code.visualstudio.com/docs/editor/codebasics#:~:text=VS%20Code%20supports%20multiple%20cursors,insert%20cursors%20below%20or%20above.")
 [VsCode Shortcuts]("https://owenconti.com/posts/5-keyboard-shortcuts-to-navigate-your-code-faster")
 [VsCode Shortcuts]("https://blog.logrocket.com/learn-these-keyboard-shortcuts-to-become-a-vs-code-ninja/#:~:text=You%20can%20switch%20between%20views,page%20up%20%2F%20page%20down%20).")
+
+##########################################################
+Emoji's HTML Dev Code
+##########################################################
+
+https://www.alt-codes.net/smiley_alt_codes.php
