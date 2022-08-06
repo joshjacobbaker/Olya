@@ -6,6 +6,7 @@ importers:
     specifiers:
       autoprefixer: ^10.4.8
       eslint-config-custom: workspace:*
+      pnpm: ^7.8.0
       postcss: ^8.4.14
       prettier: latest
       prettier-plugin-tailwindcss: ^0.1.13
@@ -14,6 +15,7 @@ importers:
     devDependencies:
       autoprefixer: 10.4.8_postcss@8.4.14
       eslint-config-custom: link:packages/eslint-config-custom
+      pnpm: 7.8.0
       postcss: 8.4.14
       prettier: 2.7.1
       prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
@@ -1827,6 +1829,12 @@ packages:
   /pify/2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /pnpm/7.8.0:
+    resolution: {integrity: sha512-jzb9/gto4nwuVA2itTRk0PJhuaZcA1NBRB298UzXhqKZQMjtHCS+KLzh7RWk5n3g+KnMg5FHr6Mwg1L62dBz1A==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: true
 
   /postcss-import/14.1.0_postcss@8.4.14:
