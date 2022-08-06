@@ -63,6 +63,8 @@ TurboRepo
 
 ## [TurboRepo Repository Example]("https://github.com/mnismt/turborepo-pnpm-example/blob/main/package.json")
 
+[TurboRepo Leo Roese tutorial youtube]("https://www.youtube.com/watch?v=YQLw5kJ1yrQ")
+
 ---
 
 ##########################################################
