@@ -1,7 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
-import { Button } from "ui"
+// import { Button } from "ui"
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +18,10 @@ const Home: NextPage = () => {
             Next.js!
           </a>
         </h1>
-        <Button />
+
+        {/* <Button />
+         */}
+
         <p className="mt-3 text-2xl">
           Get started by editing <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">pages/index.tsx</code>
         </p>
