@@ -5,7 +5,6 @@
 # WIP
 
 - [deploy to Vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
-  ....
 
 # Finished
 
