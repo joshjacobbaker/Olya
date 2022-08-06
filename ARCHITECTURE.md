@@ -21,6 +21,8 @@ NextJS
 
 - [pnpm create next-app --example with-tailwindcss .]("https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss")
 
+- [Problem: sharing monorepo workspace components; Solution: next-transpile-modules package]("https://dailydevsblog.com/troubleshoot/resolved-turborepo-library-consuming-another-library-you-may-need-an-appropriate-loader-to-handle-this-file-type-189221/")
+
 ---
 
 ---
@@ -28,13 +30,18 @@ NextJS
 ##########################################################
 Vercel
 ##########################################################
+
+**_Deployed Websites_**
+[Olya Blog]("https://olya-blog.vercel.app/")
+[Olya Portfolio]("https://olya-portfolio.vercel.app/")
+
 [Vercel]("https://vercel.com/docs/concepts/monorepos/turborepo")
 [MonoRepo deployment with Vercel]("https://vercel.com/blog/monorepos")
 [Deploy to vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
 
-[apps>docs Build Command within Vercel's Build Command]("cd ../.. && npx turbo run build --scope=web --include-dependencies --no-deps")
+[apps>docs Build Command within Vercel's Build Command]("cd ../.. && npx turbo run build --scope=blog --include-dependencies --no-deps")
 
-[apps>web Build Command within Vercel's Build Command]("cd ../.. && npx turbo run build --scope=web --include-dependencies --no-deps")
+[apps>web Build Command within Vercel's Build Command]("cd ../.. && npx turbo run build --scope=portfolio --include-dependencies --no-deps")
 
 ---
 
@@ -52,9 +59,9 @@ PNpm
 ##########################################################
 TurboRepo
 ##########################################################
-[TurboRepo]("https://turborepo.org/docs/reference/command-line-reference")
+[TurboRepo CLI Resource]("https://turborepo.org/docs/reference/command-line-reference")
 
----
+## [TurboRepo Repository Example]("https://github.com/mnismt/turborepo-pnpm-example/blob/main/package.json")
 
 ---
 
@@ -85,5 +92,15 @@ Design
 [Figma.com]("https://www.figma.com/")
 [Type-scale.com for fonts]("https://type-scale.com/")
 [Atomic Design: atom, molecule, organism]("")
+
+---
+
+---
+
+##########################################################
+SWC-loader for NextJS in Rust to transpile components?
+##########################################################
+[stackoverflow problem with SWC via next-transpile-modules]("https://stackoverflow.com/questions/70635365/how-to-transpile-node-modules-with-turborepo-and-swc")
+[Problem: Can't share monorepo modules with NextJS; Solution: adding next-transpile-modules tells SWC/NextJS to transpile this library]("https://dailydevsblog.com/troubleshoot/resolved-turborepo-library-consuming-another-library-you-may-need-an-appropriate-loader-to-handle-this-file-type-189221/")
 
 ---

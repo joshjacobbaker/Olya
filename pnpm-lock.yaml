@@ -29,20 +29,24 @@ importers:
       '@types/react-dom': 18.0.5
       autoprefixer: ^10.4.7
       next: latest
+      next-transpile-modules: ^9.0.0
       postcss: ^8.4.14
       react: 18.1.0
       react-dom: 18.1.0
       tailwindcss: ^3.1.2
       typescript: 4.7.2
+      ui: workspace:*
     dependencies:
       next: 12.2.4_ef5jwxihqo6n7gxfmzogljlgcm
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
+      ui: link:../../packages/ui
     devDependencies:
       '@types/node': 17.0.35
       '@types/react': 18.0.9
       '@types/react-dom': 18.0.5
       autoprefixer: 10.4.8_postcss@8.4.14
+      next-transpile-modules: 9.0.0
       postcss: 8.4.14
       tailwindcss: 3.1.8
       typescript: 4.7.2
@@ -54,20 +58,24 @@ importers:
       '@types/react-dom': 18.0.5
       autoprefixer: ^10.4.7
       next: latest
+      next-transpile-modules: ^9.0.0
       postcss: ^8.4.14
       react: 18.1.0
       react-dom: 18.1.0
       tailwindcss: ^3.1.2
       typescript: 4.7.2
+      ui: workspace:*
     dependencies:
       next: 12.2.4_ef5jwxihqo6n7gxfmzogljlgcm
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
+      ui: link:../../packages/ui
     devDependencies:
       '@types/node': 17.0.35
       '@types/react': 18.0.9
       '@types/react-dom': 18.0.5
       autoprefixer: 10.4.8_postcss@8.4.14
+      next-transpile-modules: 9.0.0
       postcss: 8.4.14
       tailwindcss: 3.1.8
       typescript: 4.7.2
@@ -94,17 +102,23 @@ importers:
     specifiers:
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
+      autoprefixer: ^10.4.8
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
+      postcss: ^8.4.14
       react: ^17.0.2
+      tailwindcss: ^3.1.8
       tsconfig: workspace:*
       typescript: ^4.5.2
     devDependencies:
       '@types/react': 17.0.48
       '@types/react-dom': 17.0.17
+      autoprefixer: 10.4.8_postcss@8.4.14
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
+      postcss: 8.4.14
       react: 17.0.2
+      tailwindcss: 3.1.8
       tsconfig: link:../tsconfig
       typescript: 4.7.4
 
@@ -811,6 +825,14 @@ packages:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: false
 
+  /enhanced-resolve/5.10.0:
+    resolution: {integrity: sha512-T0yTFjdpldGY8PmuXXR0PyQ1ufZpEGiHVrp7zHKB7jdR4qlmZHhONVM5AQOAWXuF/w3dnHbEQVrNptJgt7F+cQ==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      graceful-fs: 4.2.10
+      tapable: 2.2.1
+    dev: true
+
   /enquirer/2.3.6:
     resolution: {integrity: sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==}
     engines: {node: '>=8.6'}
@@ -1337,6 +1359,10 @@ packages:
       slash: 3.0.0
     dev: false
 
+  /graceful-fs/4.2.10:
+    resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
+    dev: true
+
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: false
@@ -1635,6 +1661,13 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  /next-transpile-modules/9.0.0:
+    resolution: {integrity: sha512-VCNFOazIAnXn1hvgYYSTYMnoWgKgwlYh4lm1pKbSfiB3kj5ZYLcKVhfh3jkPOg1cnd9DP+pte9yCUocdPEUBTQ==}
+    dependencies:
+      enhanced-resolve: 5.10.0
+      escalade: 3.1.1
+    dev: true
 
   /next/12.2.4_ef5jwxihqo6n7gxfmzogljlgcm:
     resolution: {integrity: sha512-b1xlxEozmAWokAXzXsi5vlmU/IfJcFNIJA8dpU5UdkFbyDPio8wwb8mAQ/Y7rGtfTgG/t/u49BiyEA+xAgFvow==}
@@ -2227,6 +2260,11 @@ packages:
       resolve: 1.22.1
     transitivePeerDependencies:
       - ts-node
+    dev: true
+
+  /tapable/2.2.1:
+    resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
+    engines: {node: '>=6'}
     dev: true
 
   /text-table/0.2.0:
