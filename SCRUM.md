@@ -1,10 +1,12 @@
 # Backlog
 
 - [Dark Mode]("https://www.youtube.com/watch?v=hGHk5eS5MkA&list=PLCvPStjGyw0dkfGTHZwg9vzXJ6Rv8TwWh&index=15")
+- [Layout and sub-layouts]("https://www.youtube.com/watch?v=DGn25s42NvQ")
 
 # WIP
 
 - [Clean NextJS starter code out, & add UI components]("")
+- [Layout and sub-layouts]("https://www.youtube.com/watch?v=DGn25s42NvQ")
 
 # Finished
 
