@@ -8,6 +8,7 @@ TailwindCSS
 [TailwindCSS & TurboRepo]("https://shubhamverma.me/blog/setup-tailwind-css-with-turborepo")
 
 [Setup tailwindcss in TurboRepo]("https://medium.com/wesionary-team/next-js-in-turborepo-with-chakra-ui-tailwindcss-6671e6cf730d")
+[VScode TailwindCSS intellisense update settings for javascript files9ol.]("https://dev.to/papaponmx/how-to-enable-tailwind-intellisense-on-tsx-files-230b")
 
 ---
 
@@ -18,10 +19,15 @@ NextJS
 ##########################################################
 
 [NextJS]("https://nextjs.org/docs/getting-started")
+[NextJS \_document.tsx]("https://nextjs.org/docs/advanced-features/custom-document")
+
+[NextJS TypeScript Documentation]("https://nextjs.org/docs/basic-features/typescript#custom-app")
 
 - [pnpm create next-app --example with-tailwindcss .]("https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss")
 
 - [Problem: sharing monorepo workspace components; Solution: next-transpile-modules package]("https://dailydevsblog.com/troubleshoot/resolved-turborepo-library-consuming-another-library-you-may-need-an-appropriate-loader-to-handle-this-file-type-189221/")
+
+[NextJS Layouts and nested layouts]("https://www.youtube.com/watch?v=69-mnojSa0M")
 
 ---
 
