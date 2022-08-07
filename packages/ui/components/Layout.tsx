@@ -1,4 +1,4 @@
 import * as React from "react"
-export const Layout = ({ children }: React.Element) => {
+export const Layout = ({ children }: JSX.Element) => {
   return <>{children}</>
 }
