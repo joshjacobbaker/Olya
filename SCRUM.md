@@ -8,6 +8,7 @@
 
 # Finished
 
+- [\_app.tsx <Component/> error during build, fix was to add a overides/resolution within the package.json for @types/react and @types/react-dom]("https://github.com/vercel/next.js/issues/36019")
 - [deploy blog to Vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
 - [deploy portfolio to Vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
 - [with-tailwindcss NextJS start for portfolio]("pnpm create next-app --example with-tailwindcss .")
