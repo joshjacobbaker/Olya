@@ -122,3 +122,13 @@ Storybook & NextJS
 ## pnpm create next-app --example with-storybook
 
 [Storybook start kit]("https://github.com/vercel/next.js/tree/canary/examples/with-storybook-styled-jsx-scss")
+
+---
+
+##########################################################
+Storybook & NextJS
+##########################################################
+
+https://dev.to/ynwd/how-to-create-react-monorepo-with-npm-workspace-webpack-and-create-react-app-2dhn
+
+---
