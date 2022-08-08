@@ -5,6 +5,7 @@
 - [\_Document setup google analytics 404.tsx page \_Error.tsx page]("https://www.youtube.com/watch?v=kyZohU8RHgw")
 - [Multi-Zones _combine two apps into one website_]("https://nextjs.org/docs/advanced-features/multi-zones")
 - [Web Vitals via NEXTJS]("https://nextjs.org/docs/advanced-features/measuring-performance")
+- [Nextjs + Storybook + MSW]("https://www.youtube.com/watch?v=J-HuWEPm8vA")
 
 # WIP
 

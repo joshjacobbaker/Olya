@@ -112,3 +112,11 @@ SWC-loader for NextJS in Rust to transpile components?
 [Problem: Can't share monorepo modules with NextJS; Solution: adding next-transpile-modules tells SWC/NextJS to transpile this library]("https://dailydevsblog.com/troubleshoot/resolved-turborepo-library-consuming-another-library-you-may-need-an-appropriate-loader-to-handle-this-file-type-189221/")
 
 ---
+
+---
+
+##########################################################
+Storybook & NextJS
+##########################################################
+
+## pnpm create next-app --example with-storybook
