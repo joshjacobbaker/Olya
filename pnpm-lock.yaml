@@ -151,7 +151,6 @@ importers:
       '@types/react': <18.0.0
       '@types/react-dom': <18.0.0
       autoprefixer: ^10.4.8
-      babel-loader: ^8.2.5
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       next: ^12.2.4
@@ -162,7 +161,6 @@ importers:
       tailwindcss: ^3.1.8
       tsconfig: workspace:*
       typescript: ^4.5.2
-      webpack: ^5.74.0
     dependencies:
       next: 12.2.4_r76nqiwixermwriqot5jgcb5im
       react: 17.0.2
@@ -175,14 +173,12 @@ importers:
       '@types/react': 17.0.48
       '@types/react-dom': 17.0.17
       autoprefixer: 10.4.8_postcss@8.4.16
-      babel-loader: 8.2.5_xc6oct4hcywdrbo4ned6ytbybm
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
       postcss: 8.4.16
       tailwindcss: 3.1.8
       tsconfig: link:../tsconfig
       typescript: 4.7.4
-      webpack: 5.74.0
 
 packages:
 
@@ -4234,21 +4230,6 @@ packages:
       loader-utils: 2.0.2
       make-dir: 3.1.0
       schema-utils: 2.7.1
-    dev: true
-
-  /babel-loader/8.2.5_xc6oct4hcywdrbo4ned6ytbybm:
-    resolution: {integrity: sha512-OSiFfH89LrEMiWd4pLNqGz4CwJDtbs2ZVc+iGu2HrkRfPxId9F2anQj38IxWpmRfsUY0aBZYi1EFcd3mhtRMLQ==}
-    engines: {node: '>= 8.9'}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      webpack: '>=2'
-    dependencies:
-      '@babel/core': 7.18.10
-      find-cache-dir: 3.3.2
-      loader-utils: 2.0.2
-      make-dir: 3.1.0
-      schema-utils: 2.7.1
-      webpack: 5.74.0
     dev: true
 
   /babel-plugin-add-react-displayname/0.0.5:
