@@ -17,7 +17,7 @@ TailwindCSS
 ##########################################################
 NextJS
 ##########################################################
-
+[NextJS Examples]("https://nextjs.org/examples")
 [NextJS]("https://nextjs.org/docs/getting-started")
 [NextJS \_document.tsx]("https://nextjs.org/docs/advanced-features/custom-document")
 
@@ -120,3 +120,5 @@ Storybook & NextJS
 ##########################################################
 
 ## pnpm create next-app --example with-storybook
+
+[Storybook start kit]("https://github.com/vercel/next.js/tree/canary/examples/with-storybook-styled-jsx-scss")
