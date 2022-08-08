@@ -9,28 +9,25 @@ function Footer() {
         Footer
       </h6>
 
-      <ul className="flex justify-between items-center w-1/4 m-4 bg-slate-300 mr-6">
+      <ul className="flex justify-between items-center w-1/4 m-4 mr-6">
         <li>
           <a
-            className="cursor-pointer focus:bottom-full transition 
-          ease-in-out hover:delay-150 hover:-translate-y-1 hover:scale-110 
-          hover:duration-300 active:duration-75 select-none active:translate-y-0">
+            className="inline-block cursor-pointer focus:bottom-full transition ease-in-out 
+        hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0">
             1 Item
           </a>
         </li>
         <li>
-          <a
-            className="cursor-pointer focus:bottom-full transition 
-          ease-in-out hover:delay-150 hover:-translate-y-1 hover:scale-110 
-          hover:duration-300 active:duration-75 select-none active:translate-y-0">
+          <p
+            className="inline-block cursor-pointer focus:bottom-full transition ease-in-out 
+            hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0">
             1 Item
-          </a>
+          </p>
         </li>
         <li>
           <a
-            className="cursor-pointer focus:bottom-full transition 
-          ease-in-out hover:delay-150 hover:-translate-y-1 hover:scale-110 
-          hover:duration-300 active:duration-75 select-none active:translate-y-0">
+            className="inline-block cursor-pointer focus:bottom-full transition ease-in-out 
+            hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0">
             1 Item
           </a>
         </li>

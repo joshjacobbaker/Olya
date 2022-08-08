@@ -1,8 +1,9 @@
 import * as React from "react"
+import Link from "next/link"
 export const Button = () => {
   return (
-    <button type="button" className="bg-blue-500 p-6 h-16 w-16">
-      Boop
-    </button>
+    <Link href="/practicepage" className="bg-black h-8 w-16">
+      <a className="bg-blue-900 h-10 w-20 flex justify-center items-center rounded-lg">Home </a>
+    </Link>
   )
 }
