@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "ui"
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
           </a>
         </h1>
 
+        <Link href="/practicepage">Click here to go to the practice page</Link>
         <Button />
 
         <p className="mt-3 text-2xl">
