@@ -14,12 +14,12 @@
 - [Web Vitals via NEXTJS]("https://nextjs.org/docs/advanced-features/measuring-performance")
 - [Nextjs + Storybook + MSW]("https://www.youtube.com/watch?v=J-HuWEPm8vA")
 - [Add Tailwind to Storybook App]("")
+- [clsx classNames Tailwind]("https://www.npmjs.com/package/clsx")
 
 # WIP
 
 - [Mason Grid]("")
-- [Layout and sub-layouts]("https://www.youtube.com/watch?v=DGn25s42NvQ")
-- [Nested Layouts]("https://www.youtube.com/watch?v=69-mnojSa0M")
+- [Nested Layouts]("https://www.youtube.com/watch?v=WOeLxL2DF3E")
 
 # Finished
 
