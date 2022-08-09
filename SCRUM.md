@@ -15,11 +15,17 @@
 - [Nextjs + Storybook + MSW]("https://www.youtube.com/watch?v=J-HuWEPm8vA")
 - [Add Tailwind to Storybook App]("")
 - [clsx classNames Tailwind]("https://www.npmjs.com/package/clsx")
+- [TailwindCSS @layer component @apply text-size for typographies... header1, buttons, etc. on different screen sizes]("")
 
 # WIP
 
 - [Mason Grid]("https://www.youtube.com/watch?v=kuY9MehvHh4")
 - [Responsive Design, Mobile First]("")
+- [Semantic HTML -- How many "main" elements can I have? How should I structure the HTML tree, A11y accessibility?]("https://www.youtube.com/watch?v=ZThq93Yuwd0")
+  - [Can be more than 1 header... header>nav]("")
+  - [Only 1 main element per page.... main>section>article>aside>details>summary]("https://www.youtube.com/watch?v=kGW8Al_cga4")
+  - [Can be more than 1 footer... footer>nav]("")
+  - [div & spans do not have any semantic meaning]("")
 
 # Finished
 

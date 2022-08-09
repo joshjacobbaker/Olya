@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <>
       <Head>
-        <meta></meta>
+        <meta />
       </Head>
       <Layout>
         {Component.PageLayout ? (

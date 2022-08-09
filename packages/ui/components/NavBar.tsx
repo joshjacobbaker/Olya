@@ -5,15 +5,15 @@ function NavBar() {
     <nav className="flex top-0 h-20 w-full text-2xl text-slate-800 bg-blue-400 justify-between">
       <div className="flex flex-1 justify-between items-center ml-10 mr-10">
         <h1
-          className="text-4xl cursor-pointer focus:bottom-full transition ease-in-out 
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl cursor-pointer focus:bottom-full transition ease-in-out 
         hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0">
           NavBar
         </h1>
         <label htmlFor="randomText">
-          <input className="focus:outline-none focus:bg-gray-400 rounded mr-4" type="text" name="randomText" id="randomText" placeholder="Search" />
+          <input className="hidden sm:inline-block sm:w-48 md:w-60 lg:w-96 focus:outline-none focus:bg-gray-400 rounded mr-4" type="text" name="randomText" id="randomText" placeholder="Search" />
           <button
             type="submit"
-            className="cursor-pointer focus:bottom-full transition 
+            className="hidden sm:inline-block text-2xl cursor-pointer focus:bottom-full transition 
           ease-in-out hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0">
             Submit
           </button>

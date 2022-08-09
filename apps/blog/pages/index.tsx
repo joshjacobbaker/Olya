@@ -6,17 +6,17 @@ import { Button } from "ui"
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Olya's Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="">
+      <div className="min-w-full flex grow flex-col justify-around items-center bg-zinc-100 ">
         <Button />
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
       </div>
-    </div>
+    </>
   )
 }
 
