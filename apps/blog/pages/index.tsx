@@ -12,10 +12,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+      <div className="">
         <Button />
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-      </main>
+      </div>
     </div>
   )
 }

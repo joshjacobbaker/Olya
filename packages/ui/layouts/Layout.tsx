@@ -10,7 +10,7 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       <NavBar />
-      <main className="flex min-h-screen flex-col items-center justify-center py-2 ">{children}</main>
+      <main className="flex min-w-full flex-col items-center py-4 px-4">{children}</main>
       <Footer />
     </>
   )
