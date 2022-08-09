@@ -3,18 +3,26 @@ import type { AppProps, NextWebVitalsMetric } from "next/app"
 import Head from "next/head"
 import { Layout } from "ui"
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  // const EmptyLayout: React.FC = ({ children }) => <>{children}</>
+type ComponentWithPageLayout = AppProps & {
+  Component: AppProps["Component"] & {
+    PageLayout?: React.ComponentType
+  }
+}
 
-  // const NestedLayout: React.ReactElement = Component.Layout || EmptyLayout
-
+function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <>
       <Head>
         <meta></meta>
       </Head>
       <Layout>
-        <Component {...pageProps} />
+        {Component.PageLayout ? (
+          <Component.PageLayout>
+            <Component {...pageProps} />
+          </Component.PageLayout>
+        ) : (
+          <Component {...pageProps} />
+        )}
       </Layout>
     </>
   )

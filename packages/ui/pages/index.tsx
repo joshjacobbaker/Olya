@@ -4,7 +4,7 @@ import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import PageWithLayoutType from "../types/pageWithLayout"
 
-import MainLayout from "../layouts/MainLayout"
+import MainLayout from "../layouts/PracticeLayout"
 
 const Home: React.FC = () => {
   return (

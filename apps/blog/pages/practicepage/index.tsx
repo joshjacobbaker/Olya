@@ -2,8 +2,9 @@ import type { ReactElement } from "react"
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Head from "next/head"
 import Link from "next/link"
+import { PracticeLayout } from "ui"
 
-export default function Page() {
+function Page() {
   return (
     <main>
       <Head>
@@ -16,10 +17,6 @@ export default function Page() {
   )
 }
 
-Page.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <>
-      <>{page}</>
-    </>
-  )
-}
+Page.PageLayout = PracticeLayout
+
+export default Page

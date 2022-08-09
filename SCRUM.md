@@ -19,10 +19,10 @@
 # WIP
 
 - [Mason Grid]("")
-- [Nested Layouts]("https://www.youtube.com/watch?v=WOeLxL2DF3E")
 
 # Finished
 
+- [Nested Layouts]("https://www.youtube.com/watch?v=WOeLxL2DF3E")
 - [\_Document setup google analytics 404.tsx page \_Error.tsx page]("https://www.youtube.com/watch?v=kyZohU8RHgw")
 - [Clean NextJS starter code out, & add UI components]("")
 - [Adding prop types to children within ui/components/layout]("https://www.carlrippon.com/react-children-with-typescript/")
