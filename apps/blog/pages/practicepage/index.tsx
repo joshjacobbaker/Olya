@@ -1,8 +1,9 @@
+import type { ReactElement } from "react"
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Head from "next/head"
 import Link from "next/link"
 
-export default function indexPage() {
+export default function Page() {
   return (
     <main>
       <Head>
@@ -12,5 +13,13 @@ export default function indexPage() {
       <p>practicepage</p>
       <Link href="/">Click this and go back home</Link>
     </main>
+  )
+}
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <>
+      <>{page}</>
+    </>
   )
 }

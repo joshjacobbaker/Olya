@@ -4,6 +4,10 @@ import Head from "next/head"
 import { Layout } from "ui"
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  // const EmptyLayout: React.FC = ({ children }) => <>{children}</>
+
+  // const NestedLayout: React.ReactElement = Component.Layout || EmptyLayout
+
   return (
     <>
       <Head>

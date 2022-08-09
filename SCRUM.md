@@ -1,14 +1,23 @@
 # Backlog
 
+- [GraphQL Client & Server?]("")
+- [Express Server?]("")
+- [API]("")
+- [ICR]("")
+- [SSG]("")
+- [SSR]("")
 - [Dark Mode]("https://www.youtube.com/watch?v=hGHk5eS5MkA&list=PLCvPStjGyw0dkfGTHZwg9vzXJ6Rv8TwWh&index=15")
+- [Responsive Design, Mobile First]("")
 - [Next.js Layout]("https://www.youtube.com/watch?v=9g_3Zsoj17I")
 
 - [Multi-Zones _combine two apps into one website_]("https://nextjs.org/docs/advanced-features/multi-zones")
 - [Web Vitals via NEXTJS]("https://nextjs.org/docs/advanced-features/measuring-performance")
 - [Nextjs + Storybook + MSW]("https://www.youtube.com/watch?v=J-HuWEPm8vA")
+- [Add Tailwind to Storybook App]("")
 
 # WIP
 
+- [Mason Grid]("")
 - [Layout and sub-layouts]("https://www.youtube.com/watch?v=DGn25s42NvQ")
 - [Nested Layouts]("https://www.youtube.com/watch?v=69-mnojSa0M")
 
