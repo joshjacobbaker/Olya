@@ -7,7 +7,7 @@
 - [SSG]("")
 - [SSR]("")
 - [Dark Mode]("https://www.youtube.com/watch?v=hGHk5eS5MkA&list=PLCvPStjGyw0dkfGTHZwg9vzXJ6Rv8TwWh&index=15")
-- [Responsive Design, Mobile First]("")
+
 - [Next.js Layout]("https://www.youtube.com/watch?v=9g_3Zsoj17I")
 
 - [Multi-Zones _combine two apps into one website_]("https://nextjs.org/docs/advanced-features/multi-zones")
@@ -18,7 +18,8 @@
 
 # WIP
 
-- [Mason Grid]("")
+- [Mason Grid]("https://www.youtube.com/watch?v=kuY9MehvHh4")
+- [Responsive Design, Mobile First]("")
 
 # Finished
 

@@ -6,3 +6,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@layer components {
+  .video {
+    @apply px-12 py-14 bg-gray-200 text-center shadow-md;
+  }
+}
