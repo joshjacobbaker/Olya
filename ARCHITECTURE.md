@@ -12,6 +12,10 @@ TailwindCSS
 
 - [clsx classNames Tailwind]("https://www.npmjs.com/package/clsx")
 
+- [Tailwindcss Variants]("https://www.youtube.com/watch?v=jevYcOlcUsc")
+- [Dark Theme]("https://www.youtube.com/watch?v=9U1UG-bY8Cw&list=PLYHXTr4kGJjG0_h7lZa3jM4l9syvPbf_4&index=9")
+- [Theming Tailwind with CSS Variables]("https://www.youtube.com/watch?v=MAtaT8BZEAo")
+
 ---
 
 ---
@@ -130,10 +134,17 @@ Storybook & NextJS
 
 ---
 
-##########################################################
-Storybook & NextJS
-##########################################################
-
-https://dev.to/ynwd/how-to-create-react-monorepo-with-npm-workspace-webpack-and-create-react-app-2dhn
-
 ---
+
+##########################################################
+Semantic HTML
+##########################################################
+
+- [Semantic HTML -- How many "main" elements can I have? How should I structure the HTML tree, A11y accessibility?]("https://www.youtube.com/watch?v=ZThq93Yuwd0")
+
+  - [Can be more than 1 header... header>nav]("")
+  - [Only 1 main element per page.... main>section>article>aside>details>summary]("https://www.youtube.com/watch?v=kGW8Al_cga4")
+  - [Can be more than 1 footer... footer>nav]("")
+  - [div & spans do not have any semantic meaning]("")
+
+  ***
