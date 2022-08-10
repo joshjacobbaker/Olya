@@ -12,3 +12,12 @@
     @apply px-12 py-14 bg-gray-200 text-center shadow-md;
   }
 }
+
+/* @layer base {
+  body {
+    @apply dark:bg-red-500 dark:text-blue-500;
+  }
+  main {
+    @apply dark:bg-red-500 dark:text-blue-500;
+  }
+} */

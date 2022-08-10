@@ -34,6 +34,7 @@ importers:
       '@types/react-dom': <18.0.0
       autoprefixer: ^10.4.7
       next: latest
+      next-themes: ^0.2.0
       next-transpile-modules: ^9.0.0
       postcss: ^8.4.14
       react: 18.1.0
@@ -43,6 +44,7 @@ importers:
       ui: workspace:*
     dependencies:
       next: 12.2.4_ef5jwxihqo6n7gxfmzogljlgcm
+      next-themes: 0.2.0_yvocaa5laqq4lii6e25wp4dnnu
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
       ui: link:../../packages/ui
@@ -154,6 +156,7 @@ importers:
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       next: ^12.2.4
+      next-themes: ^0.2.0
       postcss: ^8.4.14
       react: ^17.0.2
       react-dom: 18.1.0
@@ -163,6 +166,7 @@ importers:
       typescript: ^4.5.2
     dependencies:
       next: 12.2.4_r76nqiwixermwriqot5jgcb5im
+      next-themes: 0.2.0_cpwd3whk5lzxczx2ecomeywyna
       react: 17.0.2
       react-dom: 18.1.0_react@17.0.2
       require-from-string: 2.0.2
@@ -8232,6 +8236,30 @@ packages:
   /nested-error-stacks/2.1.1:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
+
+  /next-themes/0.2.0_cpwd3whk5lzxczx2ecomeywyna:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.2.4_r76nqiwixermwriqot5jgcb5im
+      react: 17.0.2
+      react-dom: 18.1.0_react@17.0.2
+    dev: false
+
+  /next-themes/0.2.0_yvocaa5laqq4lii6e25wp4dnnu:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.2.4_ef5jwxihqo6n7gxfmzogljlgcm
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
 
   /next-transpile-modules/9.0.0:
     resolution: {integrity: sha512-VCNFOazIAnXn1hvgYYSTYMnoWgKgwlYh4lm1pKbSfiB3kj5ZYLcKVhfh3jkPOg1cnd9DP+pte9yCUocdPEUBTQ==}

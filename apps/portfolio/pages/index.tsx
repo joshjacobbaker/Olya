@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Olya`&apos;`s Portfolio</title>
+        <title>Olya&apos;s Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
