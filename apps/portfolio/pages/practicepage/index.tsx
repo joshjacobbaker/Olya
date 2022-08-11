@@ -1,27 +1,37 @@
-import type { ReactElement } from "react"
+import { ReactElement, useState, useEffect } from "react"
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Head from "next/head"
 import Link from "next/link"
+import { useTheme } from "next-themes"
 
-export default function Page() {
+function Page() {
+  const [mounted, setMounted] = useState(false)
+  const { systemTheme, theme, setTheme } = useTheme()
+
+  const currentTheme = theme === "system" ? systemTheme : theme
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  console.log(theme)
+
   return (
-    <main>
+    <div>
       <Head>
         <title>practicepage</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <p>
-        I wanna know more about your <span className="text-blue-800">blue balls</span>, my darling...
-      </p>
-      <Link href="/">Go Back to the home page</Link>
-    </main>
+      <p>practicepage</p>
+      <Link href="/">Click this and go back home</Link>
+      <br />
+      {currentTheme === "dark" ? <button onClick={() => setTheme("light")}>Light Theme? {theme}</button> : <button onClick={() => setTheme("dark")}>Dark Theme? {theme}</button>}
+    </div>
   )
 }
 
-Page.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <>
-      <>{page}</>
-    </>
-  )
-}
+export default Page

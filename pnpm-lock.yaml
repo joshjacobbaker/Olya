@@ -105,6 +105,7 @@ importers:
       '@types/react-dom': <18.0.0
       babel-loader: ^8.1.0
       next: latest
+      next-themes: ^0.2.0
       react: ^17.0.2
       react-dom: ^17.0.2
       react-is: ^17.0.1
@@ -112,6 +113,7 @@ importers:
       typescript: ^4.0.3
     dependencies:
       next: 12.2.4_mwwt6phwdo6uemitywbdojjpd4
+      next-themes: 0.2.0_4u6zbjx6dbt7fttn6k4hvqzi7a
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
@@ -135,17 +137,22 @@ importers:
       eslint-config-next: ^12.0.8
       eslint-config-prettier: ^8.3.0
       eslint-plugin-react: 7.28.0
+      next-themes: ^0.2.0
       typescript: ^4.7.4
     dependencies:
       eslint: 7.32.0
       eslint-config-next: 12.2.4_hxadhbs2xogijvk7vq4t2azzbu
       eslint-config-prettier: 8.5.0_eslint@7.32.0
       eslint-plugin-react: 7.28.0_eslint@7.32.0
+      next-themes: 0.2.0
     devDependencies:
       typescript: 4.7.4
 
   packages/tsconfig:
-    specifiers: {}
+    specifiers:
+      next-themes: ^0.2.0
+    dependencies:
+      next-themes: 0.2.0
 
   packages/ui:
     specifiers:
@@ -8238,6 +8245,26 @@ packages:
   /nested-error-stacks/2.1.1:
     resolution: {integrity: sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==}
     dev: true
+
+  /next-themes/0.2.0:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dev: false
+
+  /next-themes/0.2.0_4u6zbjx6dbt7fttn6k4hvqzi7a:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.2.4_mwwt6phwdo6uemitywbdojjpd4
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /next-themes/0.2.0_cpwd3whk5lzxczx2ecomeywyna:
     resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
