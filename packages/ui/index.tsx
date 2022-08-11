@@ -11,4 +11,4 @@ export * from "./components/Menu"
 // export * from "./components/Button"
 // Layouts
 // export * from "./layouts/Layout"
-// export * from "./layouts/PracticeLayout"
+export * from "./layouts/PracticeLayout"
