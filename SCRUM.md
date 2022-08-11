@@ -24,11 +24,20 @@
 **_Semantic HTML_**
 
 - [Semantic HTML -- How many "main" elements can I have? How should I structure the HTML tree, A11y accessibility?]("https://www.youtube.com/watch?v=ZThq93Yuwd0")
+
   - [Can be more than 1 header... header>nav]("")
   - [Only 1 main element per page.... main>section>article>aside>details>summary]("https://www.youtube.com/watch?v=kGW8Al_cga4")
   - [Can be more than 1 footer... footer>nav]("")
   - [div & spans do not have any semantic meaning]("")
   - [Test Network calls from Vercel for NextJS Apps--caching, SSR, SSG, Ttfb, etc.]("") -[header tag around NavBar? Or within main?]("")
+
+  **_React Context & UseContext to pass down next-themes properties down to shared UI components_**
+
+  -[UseContext]("https://www.youtube.com/watch?v=5LrDIWkK_Bc")
+
+  - [From Scratch... Theme TypeScript NextJS TailwindCSS React.Context]("https://javascript.plainenglish.io/how-to-implement-dark-light-themes-in-a-next-js-app-using-context-hook-tailwindcss-336558dd4579")
+    - [Github Repo of solution]("https://github.com/joshjacobbaker/nextjs-tailwind-dark-theme?organization=joshjacobbaker&organization=joshjacobbaker")
+  - [Changing Themes through useContext]("https://www.youtube.com/watch?v=QBfh7D8URnc")
 
 # WIP
 
