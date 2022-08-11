@@ -1,5 +1,4 @@
 import React from "react"
-import ThemeChanger from "./ThemeChanger"
 
 function NavBar() {
   return (
@@ -11,7 +10,6 @@ function NavBar() {
         hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0 dark:text-orange-400 text-blue-900">
             NavBar
           </h1>
-          <ThemeChanger />
           <label htmlFor="randomText">
             <input className="hidden sm:inline-block sm:w-48 md:w-60 lg:w-96 focus:outline-none focus:bg-gray-400 rounded mr-4" type="text" name="randomText" id="randomText" placeholder="Search" />
             <button

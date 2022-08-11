@@ -1,7 +1,6 @@
 import "../styles/globals.css"
 import type { AppProps, NextWebVitalsMetric } from "next/app"
 import Head from "next/head"
-
 import { Layout } from "ui"
 
 type ComponentWithPageLayout = AppProps & {
@@ -16,6 +15,7 @@ function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
       <Head>
         <meta />
       </Head>
+
       <Layout>
         {Component.PageLayout ? (
           <Component.PageLayout>

@@ -9,9 +9,10 @@ export default function ThemeChanger({}: Props) {
 
   const currentTheme = theme === "system" ? systemTheme : theme
 
-  const updateTheme = () => {
-    setTheme((p) => (p === "dark" ? "light" : "dark"))
-  }
+  // const updateTheme = () => {
+  //   console.log(theme)
+  //   setTheme("light")
+  // }
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
@@ -20,13 +21,13 @@ export default function ThemeChanger({}: Props) {
 
   if (currentTheme === "dark") {
     return (
-      <button className="bg-black dark:text-white" onClick={updateTheme}>
+      <button className="bg-black dark:text-white" onClick={() => setTheme("light")}>
         Light
       </button>
     )
   } else {
     return (
-      <button className="bg-white dark:text-black" onClick={updateTheme}>
+      <button className="bg-white dark:text-black" onClick={() => setTheme("dark")}>
         Dark Mode
       </button>
     )
