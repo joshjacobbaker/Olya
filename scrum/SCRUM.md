@@ -30,14 +30,7 @@
   - [Can be more than 1 footer... footer>nav]("")
   - [div & spans do not have any semantic meaning]("")
   - [Test Network calls from Vercel for NextJS Apps--caching, SSR, SSG, Ttfb, etc.]("") -[header tag around NavBar? Or within main?]("")
-
-  **_React Context & UseContext to pass down next-themes properties down to shared UI components_**
-
-  -[UseContext]("https://www.youtube.com/watch?v=5LrDIWkK_Bc")
-
-  - [From Scratch... Theme TypeScript NextJS TailwindCSS React.Context]("https://javascript.plainenglish.io/how-to-implement-dark-light-themes-in-a-next-js-app-using-context-hook-tailwindcss-336558dd4579")
-    - [Github Repo of solution]("https://github.com/joshjacobbaker/nextjs-tailwind-dark-theme?organization=joshjacobbaker&organization=joshjacobbaker")
-  - [Changing Themes through useContext]("https://www.youtube.com/watch?v=QBfh7D8URnc")
+  - [Remote Vercel Cache of TurboRepo]("")
 
 # WIP
 
@@ -55,6 +48,16 @@
 - [TailwindCSS Animations]("https://www.youtube.com/watch?v=y6Nw8pURu8Y&list=PLYHXTr4kGJjG0_h7lZa3jM4l9syvPbf_4&index=1")
 - [npx tailwindcss init --full ......want entire configuration with all classes]("")
 
+# Finished
+
+**_React Context & UseContext to pass down next-themes properties down to shared UI components_**
+
+-[UseContext]("https://www.youtube.com/watch?v=5LrDIWkK_Bc")
+
+- [From Scratch... Theme TypeScript NextJS TailwindCSS React.Context]("https://javascript.plainenglish.io/how-to-implement-dark-light-themes-in-a-next-js-app-using-context-hook-tailwindcss-336558dd4579")
+  - [Github Repo of solution]("https://github.com/joshjacobbaker/nextjs-tailwind-dark-theme?organization=joshjacobbaker&organization=joshjacobbaker")
+- [Changing Themes through useContext]("https://www.youtube.com/watch?v=QBfh7D8URnc")
+
 **_Dark Mode_**
 
 - [NextJS & Tailwind CSS via next-theme package Dark MODE]("https://www.youtube.com/watch?v=z2B3gRt2nj0")
@@ -68,7 +71,7 @@
   - [className="dark" on body html tag]("")
   - [toggle button for sun/moon light/dark modes]("")
 
-# Finished
+---
 
 - [Nested Layouts]("https://www.youtube.com/watch?v=WOeLxL2DF3E")
 - [\_Document setup google analytics 404.tsx page \_Error.tsx page]("https://www.youtube.com/watch?v=kyZohU8RHgw")

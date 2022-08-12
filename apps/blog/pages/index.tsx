@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 // import Link from "next/link"
 import { Button } from "ui"
 
@@ -13,8 +14,15 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="min-w-full flex grow flex-col justify-around items-center bg-zinc-100 ">
-        <Button />
-        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <div className="flex w-1/2 justify-between">
+          <Link href="/practicepage" className="bg-red-200 py-4 px-8">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Practice Page?</a>
+          </Link>
+          <Link href="/masongrid" className="bg-red-200 py-4 px-8">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
+          </Link>
+        </div>
+        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />{" "}
       </div>
     </>
   )

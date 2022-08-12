@@ -28,9 +28,24 @@ function Page() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p>practicepage</p>
-      <Link href="/">Click this and go back home</Link>
+      <div className="grid grid-flow-col gap-4">
+        <Link href="/" className="bg-red-200 py-4 px-8">
+          <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Home Page?</a>
+        </Link>
+        <Link href="/masongrid" className="bg-red-200 py-4 px-8">
+          <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
+        </Link>
+      </div>
       <br />
-      {currentTheme === "dark" ? <button onClick={() => setTheme("light")}>Light Theme? {theme}</button> : <button onClick={() => setTheme("dark")}>Dark Theme? {theme}</button>}
+      {currentTheme === "dark" ? (
+        <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("light")}>
+          Light Theme? {theme}
+        </button>
+      ) : (
+        <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("dark")}>
+          Dark Theme? Currently Doesn't work, cuz its setup for next-themes try header toggle {theme}
+        </button>
+      )}
     </div>
   )
 }

@@ -9,7 +9,7 @@
 
 @layer components {
   .video {
-    @apply px-12 py-14 bg-gray-200 text-center shadow-md;
+    @apply flex justify-center items-center bg-gray-200 text-center shadow-md;
   }
 }
 
