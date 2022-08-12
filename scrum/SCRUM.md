@@ -6,6 +6,7 @@
 - [ICR]("")
 - [SSG]("")
 - [SSR]("")
+- [CMS]("")
 
 - [Add Jest Testing to MonoRepo...?]("")
 - [Tailwind & MaterialUI]("https://www.youtube.com/watch?v=QQIfuMlA6TI")

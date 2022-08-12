@@ -43,7 +43,7 @@ function Page() {
         </button>
       ) : (
         <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("dark")}>
-          Dark Theme? Currently Doesn't work, cuz its setup for next-themes try header toggle {theme}
+          Dark Theme? Currently Doesnt work, cuz its setup for next-themes try header toggle {theme}
         </button>
       )}
     </div>
