@@ -1,15 +1,38 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
+import Modal from "react-modal"
 import { Search, Menu, Logo } from "ui"
 import MyThemeContext from "../store/myThemeContext"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 type Props = {}
 
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+}
+
+Modal.setAppElement("#__next")
+
 function Header({}: Props) {
   const themeCtx: { isDarkTheme?: boolean; toggleThemeHandler: () => void } = useContext(MyThemeContext)
+  const [modalIsOpen, setIsOpen] = useState(false)
 
   function toggleThemeHandler(): void {
     themeCtx.toggleThemeHandler()
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
+  function closeModal() {
+    setIsOpen(false)
   }
 
   return (
@@ -29,10 +52,12 @@ function Header({}: Props) {
             onClick={toggleThemeHandler}>
             {themeCtx.isDarkTheme ? <FaSun /> : <FaMoon />}
           </button>
-
-          <Menu />
+          <button onClick={openModal}>
+            <Menu />
+          </button>
         </div>
       </nav>
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal"></Modal>
     </header>
   )
 }

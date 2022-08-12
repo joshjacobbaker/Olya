@@ -42,10 +42,13 @@
   - [Remote Vercel Cache of TurboRepo]("")
     **MonoRepo Management**
   - [remove unwanted root level packages from node_modules and package.json]("")
-    **UI/UX**
-  - [Overlay when clicking on Menu Icon]("")
 
 # WIP
+
+    **UI/UX**
+
+- [Overlay when clicking on Menu Icon]("https://www.youtube.com/watch?v=EyjuRCxpf6Y")
+- [NPM react-modal]("https://www.npmjs.com/package/react-modal")
 
 **Dark Themes**
 
