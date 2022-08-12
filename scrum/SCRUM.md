@@ -1,5 +1,6 @@
 # Backlog
 
+- [HOC styling next/link by passing props down packages/ui]("")
 - [Nested Layout Grid, Responsive]("")
 - [Framer-Motion]("")
 - [GraphQL Client & Server?]("")
@@ -56,7 +57,7 @@
 - [Mason Grid]("https://www.youtube.com/watch?v=kuY9MehvHh4")
 - [Responsive Design, Mobile First]("")
 
-** TailwindCSS Animations**
+**TailwindCSS Animations**
 
 - [TailwindCSS Animations]("https://www.youtube.com/watch?v=y6Nw8pURu8Y&list=PLYHXTr4kGJjG0_h7lZa3jM4l9syvPbf_4&index=1")
 
@@ -67,6 +68,11 @@
 - [TailwindCSS @layer component @apply text-size for typographies... header1, buttons, etc. on different screen sizes]("")
 - [Create Shared tailwind.config.js configuration for apps/\*]("")
 - [npx tailwindcss init --full ......want entire configuration with all classes]("")
+
+**NextJS Modal**
+[react-modal]("https://www.npmjs.com/package/react-modal")
+[Instagram Style Modal w/Leigh Halliday]("https://www.youtube.com/watch?v=EyjuRCxpf6Y")
+[Next.js Modal Routing w/Ryan Toronto]("https://www.youtube.com/watch?v=P4W_LaotmNI")
 
 # Finished
 
