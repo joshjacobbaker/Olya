@@ -3,6 +3,7 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Head from "next/head"
 import Link from "next/link"
 import { PracticeLayout } from "ui"
+// import PageLayout from "../../components/layouts/PageLayout"
 import { useTheme } from "next-themes"
 
 function Page() {

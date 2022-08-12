@@ -3,11 +3,23 @@ import type { AppProps } from "next/app"
 import { ThemeProvider } from "next-themes"
 import MainLayout from "../components/layout/MainLayout"
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+type ComponentWithPageLayout = AppProps & {
+  Component: AppProps["Component"] & {
+    PageLayout?: React.ComponentType
+  }
+}
+
+function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
       <MainLayout>
-        <Component {...pageProps} />
+        {Component.PageLayout ? (
+          <Component.PageLayout>
+            <Component {...pageProps} />
+          </Component.PageLayout>
+        ) : (
+          <Component {...pageProps} />
+        )}
       </MainLayout>
     </ThemeProvider>
   )
