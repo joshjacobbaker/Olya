@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Search, Menu, Logo } from "ui"
 import { useTheme } from "next-themes"
+import { FaSun, FaMoon } from "react-icons/fa"
 
 type Props = {}
 
@@ -35,7 +36,7 @@ function Header({}: Props) {
           <Logo />
           <Search />
           <button type="button" className="py-1 sm:py-2.5 px-2 sm:px-5 mr-2 bg-zinc-800 text-white dark:bg-zinc-200 dark:text-black rounded" onClick={toggleThemeHandler}>
-            Toggle Theme
+            {currentTheme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
           <Menu />
         </div>

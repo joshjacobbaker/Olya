@@ -160,3 +160,13 @@ Dark Mode
 [Github nextjs-tailwind-dark-theme from scratch]("https://github.com/joshjacobbaker/nextjs-tailwind-dark-theme")
 
 ---
+
+---
+
+##########################################################
+Icons
+##########################################################
+
+[React-Icons/FA Library]("https://react-icons.github.io/react-icons/search?q=sun")
+
+---

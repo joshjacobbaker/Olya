@@ -9,6 +9,7 @@
     "react-library.json"
   ],
   "dependencies": {
-    "next-themes": "^0.2.0"
+    "next-themes": "^0.2.0",
+    "react-icons": "^4.4.0"
   }
 }
