@@ -8,6 +8,7 @@
 - [SSR]("")
 - [CMS]("")
 
+- [Husky Linting]("https://github.com/typicode/husky")
 - [Add Jest Testing to MonoRepo...?]("")
 - [Tailwind & MaterialUI]("https://www.youtube.com/watch?v=QQIfuMlA6TI")
 - [Neon in Tailwind & NextJs with next-theme package]("https://www.youtube.com/watch?v=04w0qmT7wKQ")

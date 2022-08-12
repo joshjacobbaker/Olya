@@ -14,11 +14,11 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="min-w-full flex grow flex-col justify-around items-center bg-zinc-100 ">
-        <div className="flex w-1/2 justify-between">
-          <Link href="/practicepage" className="bg-red-200 py-4 px-8">
-            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Practice Page?</a>
+        <div className="flex flex-col w-1/2 justify-between">
+          <Link href="/practicepage">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">Practice Page?</a>
           </Link>
-          <Link href="/masongrid" className="bg-red-200 py-4 px-8">
+          <Link href="/masongrid">
             <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
           </Link>
         </div>
