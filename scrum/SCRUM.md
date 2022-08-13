@@ -1,5 +1,10 @@
 # Backlog
 
+- [React-Testing-Library]("")
+- [Sentry Web Vitals]("https://www.youtube.com/watch?v=ydbajDeDCsQ")
+- [React-Query]("")
+- [Video Background w/Overlay!!!]("https://www.youtube.com/watch?v=LSRNmhLS76o")
+- [routing as a modal like instagram in nextjs source code, nextjs example, router, link]("https://morioh.com/p/059573f49760")
 - [HOC styling next/link by passing props down packages/ui]("")
 - [Nested Layout Grid, Responsive]("")
 - [Framer-Motion]("")

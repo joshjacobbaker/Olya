@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react"
+import Link from "next/link"
 import Modal from "react-modal"
 import { Search, Menu, Logo } from "ui"
 import MyThemeContext from "../store/myThemeContext"
@@ -57,7 +58,22 @@ function Header({}: Props) {
           </button>
         </div>
       </nav>
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal"></Modal>
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
+        <ul>
+          <li>
+            <Link href="/">Home Page</Link>
+          </li>
+          <li>
+            <Link href="/practicepage">Practice Page</Link>
+          </li>
+          <li>
+            <Link href="/masongrid">MasonGrid Page</Link>
+          </li>
+          <li>
+            <Link href="/video">Video Page</Link>
+          </li>
+        </ul>
+      </Modal>
     </header>
   )
 }
