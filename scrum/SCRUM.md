@@ -1,5 +1,7 @@
 # Backlog
 
+- [Easy Husky, EsLint, Prettier Setup]("https://www.youtube.com/watch?v=JVKFQRHw7lw")
+- [Reusable TailwindCSS Components & Dynamic TailwindCSS Styling by JavaScript Mastery]("https://www.youtube.com/watch?v=_oO4Qi5aVZs")
 - [React-Testing-Library]("")
 - [Sentry Web Vitals]("https://www.youtube.com/watch?v=ydbajDeDCsQ")
 - [React-Query]("")
