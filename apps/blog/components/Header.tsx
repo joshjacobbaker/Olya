@@ -1,22 +1,12 @@
 import React, { useContext, useState } from "react"
 
-import ModalComponent from "./Modal"
+// import ModalComponent from "./Modal"
+import ModalFromScratch from "./ModalFromScratch"
 import { Search, Menu, Logo } from "ui"
 import MyThemeContext from "../store/myThemeContext"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 type Props = {}
-
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-}
 
 function Header({}: Props) {
   const themeCtx: { isDarkTheme?: boolean; toggleThemeHandler: () => void } = useContext(MyThemeContext)
@@ -56,7 +46,8 @@ function Header({}: Props) {
           </button>
         </div>
       </nav>
-      <ModalComponent modalIsOpen={modalIsOpen} closeModal={closeModal} customStyles={customStyles} contentLabel={"Example Modal"} />
+      <ModalFromScratch modalIsOpen={modalIsOpen} closeModal={closeModal} contentLabel={"Example Modal"}></ModalFromScratch>
+      {/* <ModalComponent modalIsOpen={modalIsOpen} closeModal={closeModal} contentLabel={"Example Modal"} /> */}
     </header>
   )
 }

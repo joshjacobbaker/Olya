@@ -1,5 +1,6 @@
 # Backlog
 
+- [React Modal from Scratch]("https://www.youtube.com/watch?v=UXKt-IFgBGM")
 - [Easy Husky, EsLint, Prettier Setup]("https://www.youtube.com/watch?v=JVKFQRHw7lw")
 - [Reusable TailwindCSS Components & Dynamic TailwindCSS Styling by JavaScript Mastery]("https://www.youtube.com/watch?v=_oO4Qi5aVZs")
 - [React-Testing-Library]("")
@@ -80,9 +81,7 @@
 - [npx tailwindcss init --full ......want entire configuration with all classes]("")
 
 **NextJS Modal**
-[react-modal]("https://www.npmjs.com/package/react-modal")
-[Instagram Style Modal w/Leigh Halliday]("https://www.youtube.com/watch?v=EyjuRCxpf6Y")
-[Next.js Modal Routing w/Ryan Toronto]("https://www.youtube.com/watch?v=P4W_LaotmNI")
+[Modal from Scratch]("https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular")
 
 # Finished
 
@@ -136,3 +135,10 @@
 - [deploy to Vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
 - [deploy blog to Vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
 - [deploy portfolio to Vercel]("https://www.youtube.com/watch?v=_sB2E1XnzOY")
+
+# Abandoned Ideas, Obsolete, Found Better Solutions..
+
+**NextJS Modal**
+[react-modal]("https://www.npmjs.com/package/react-modal")
+[Instagram Style Modal w/Leigh Halliday]("https://www.youtube.com/watch?v=EyjuRCxpf6Y")
+[Next.js Modal Routing w/Ryan Toronto]("https://www.youtube.com/watch?v=P4W_LaotmNI")
