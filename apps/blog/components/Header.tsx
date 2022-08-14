@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
-import Link from "next/link"
-import Modal from "react-modal"
+
+import ModalComponent from "./Modal"
 import { Search, Menu, Logo } from "ui"
 import MyThemeContext from "../store/myThemeContext"
 import { FaSun, FaMoon } from "react-icons/fa"
@@ -17,8 +17,6 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
   },
 }
-
-Modal.setAppElement("#__next")
 
 function Header({}: Props) {
   const themeCtx: { isDarkTheme?: boolean; toggleThemeHandler: () => void } = useContext(MyThemeContext)
@@ -58,22 +56,7 @@ function Header({}: Props) {
           </button>
         </div>
       </nav>
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
-        <ul>
-          <li>
-            <Link href="/">Home Page</Link>
-          </li>
-          <li>
-            <Link href="/practicepage">Practice Page</Link>
-          </li>
-          <li>
-            <Link href="/masongrid">MasonGrid Page</Link>
-          </li>
-          <li>
-            <Link href="/video">Video Page</Link>
-          </li>
-        </ul>
-      </Modal>
+      <ModalComponent modalIsOpen={modalIsOpen} closeModal={closeModal} customStyles={customStyles} contentLabel={"Example Modal"} />
     </header>
   )
 }
