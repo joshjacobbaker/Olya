@@ -4,23 +4,23 @@ import Head from "next/head"
 import Link from "next/link"
 import { PracticeLayout } from "ui"
 // import PageLayout from "../../components/layouts/PageLayout"
-import { useTheme } from "next-themes"
+// import { useTheme } from "next-themes"
 
 function Page() {
-  const [mounted, setMounted] = useState(false)
-  const { systemTheme, theme, setTheme } = useTheme()
+  // const [mounted, setMounted] = useState(false)
+  // const { systemTheme, theme, setTheme } = useTheme()
 
-  const currentTheme = theme === "system" ? systemTheme : theme
+  // const currentTheme = theme === "system" ? systemTheme : theme
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // useEffect(() => {
+  //   setMounted(true)
+  // }, [])
 
-  if (!mounted) {
-    return null
-  }
+  // if (!mounted) {
+  //   return null
+  // }
 
-  console.log(theme)
+  // console.log(theme)
 
   return (
     <div>
@@ -38,7 +38,7 @@ function Page() {
         </Link>
       </div>
       <br />
-      {currentTheme === "dark" ? (
+      {/* {currentTheme === "dark" ? (
         <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("light")}>
           Light Theme? {theme}
         </button>
@@ -46,7 +46,7 @@ function Page() {
         <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("dark")}>
           Dark Theme? Currently Doesnt work, cuz its setup for next-themes try header toggle {theme}
         </button>
-      )}
+      )} */}
     </div>
   )
 }

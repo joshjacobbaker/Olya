@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-w-full flex grow flex-col justify-around items-center bg-zinc-100 ">
+      <div className="min-w-full flex grow flex-col justify-around items-center bg-zinc-100 dark:bg-zinc-800">
         <div className="flex flex-col w-1/2 justify-between">
           <Link href="/practicepage">
             <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">Practice Page?</a>
