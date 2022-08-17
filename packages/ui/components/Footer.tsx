@@ -2,7 +2,7 @@ import React from "react"
 
 function Footer() {
   return (
-    <footer className="flex w-full justify-between items-center h-20 font-bold text-blue-700 bg-blue-400">
+    <footer className="flex w-full justify-between items-center h-20 font-bold text-blue-700 dark:text-blue-100 bg-blue-400 dark:bg-blue-800">
       <h6
         className="text-3xl ml-32 text-4xl cursor-pointer focus:bottom-full transition ease-in-out 
         hover:delay-150 hover:-translate-y-1 hover:scale-110 hover:duration-300 active:duration-75 select-none active:translate-y-0">
