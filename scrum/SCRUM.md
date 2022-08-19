@@ -1,5 +1,6 @@
 # Backlog
 
+- [Setup End-to-End Testing w/Cypress]("")
 - [Add Hilton workflow to project]("")
 - [React Modal from Scratch]("https://www.youtube.com/watch?v=UXKt-IFgBGM")
 - [Easy Husky, EsLint, Prettier Setup]("https://www.youtube.com/watch?v=JVKFQRHw7lw")
