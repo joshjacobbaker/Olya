@@ -1,5 +1,7 @@
 # Backlog
 
+- Cypress
+- [GitLab CICD]("")
 - [Setup End-to-End Testing w/Cypress]("")
 - [Add Hilton workflow to project]("")
 - [React Modal from Scratch]("https://www.youtube.com/watch?v=UXKt-IFgBGM")
