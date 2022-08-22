@@ -1,5 +1,6 @@
 # Backlog
 
+- [React-Query Client, QueryProvider]("")
 - [Import Export Module Path Alias for Shortcuts?](""https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27406740#overview)
 - Cypress
 - [GitLab CICD]("")
@@ -59,6 +60,8 @@
 # WIP
 
     **UI/UX**
+
+- [UI Provider for Overlay, Sidedrawer, etc.]("https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27407418#overview")
 
 - [Overlay when clicking on Menu Icon]("https://www.youtube.com/watch?v=EyjuRCxpf6Y")
 - [NPM react-modal]("https://www.npmjs.com/package/react-modal")
