@@ -1,5 +1,6 @@
 # Backlog
 
+- [Folder & File Project Structure]("https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure")
 - [React-Query Client, QueryProvider]("")
 - [Import Export Module Path Alias for Shortcuts?](""https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27406740#overview)
 - Cypress
