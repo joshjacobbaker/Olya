@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@tanstack/react-query": "^4.2.1",
     "eslint": "^7.23.0",
     "eslint-config-next": "^12.0.8",
     "eslint-config-prettier": "^8.3.0",
@@ -13,6 +14,7 @@
     "react-modal": "^3.15.1"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^4.2.1",
     "@types/react-modal": "^3.13.1",
     "typescript": "^4.7.4"
   },
