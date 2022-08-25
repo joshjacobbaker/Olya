@@ -2,6 +2,7 @@ import "../styles/globals.css"
 import type { AppProps } from "next/app"
 import { ThemeProvider } from "next-themes"
 import MainLayout from "../components/layout/MainLayout"
+import ReactQueryProvider from "../context/reactQueryProvider"
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
@@ -11,17 +12,19 @@ type ComponentWithPageLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system">
-      <MainLayout>
-        {Component.PageLayout ? (
-          <Component.PageLayout>
+    <ReactQueryProvider>
+      <ThemeProvider attribute="class" defaultTheme="system">
+        <MainLayout>
+          {Component.PageLayout ? (
+            <Component.PageLayout>
+              <Component {...pageProps} />
+            </Component.PageLayout>
+          ) : (
             <Component {...pageProps} />
-          </Component.PageLayout>
-        ) : (
-          <Component {...pageProps} />
-        )}
-      </MainLayout>
-    </ThemeProvider>
+          )}
+        </MainLayout>
+      </ThemeProvider>
+    </ReactQueryProvider>
   )
 }
 

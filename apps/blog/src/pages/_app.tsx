@@ -4,6 +4,7 @@ import Head from "next/head"
 // import { ThemeProvider } from "next-themes"
 import MainLayout from "../components/layouts/MainLayout"
 import { MyThemeContextProvider } from "../context/myThemeContext"
+import ReactQueryProvider from "../context/reactQueryProvider"
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
@@ -13,21 +14,23 @@ type ComponentWithPageLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-    <MyThemeContextProvider>
-      <Head>
-        <meta />
-      </Head>
+    <ReactQueryProvider>
+      <MyThemeContextProvider>
+        <Head>
+          <meta />
+        </Head>
 
-      <MainLayout>
-        {Component.PageLayout ? (
-          <Component.PageLayout>
+        <MainLayout>
+          {Component.PageLayout ? (
+            <Component.PageLayout>
+              <Component {...pageProps} />
+            </Component.PageLayout>
+          ) : (
             <Component {...pageProps} />
-          </Component.PageLayout>
-        ) : (
-          <Component {...pageProps} />
-        )}
-      </MainLayout>
-    </MyThemeContextProvider>
+          )}
+        </MainLayout>
+      </MyThemeContextProvider>
+    </ReactQueryProvider>
   )
 }
 

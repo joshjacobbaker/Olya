@@ -170,3 +170,13 @@ Icons
 [React-Icons/FA Library]("https://react-icons.github.io/react-icons/search?q=sun")
 
 ---
+
+---
+
+##########################################################
+NextJS File-&-Folder Structure
+##########################################################
+
+[NextJS File&Folder Structure]("https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure")
+
+---

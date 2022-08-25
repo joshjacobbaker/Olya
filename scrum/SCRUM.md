@@ -1,7 +1,5 @@
 # Backlog
 
-- [Folder & File Project Structure]("https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure")
-- [React-Query Client, QueryProvider]("")
 - [Import Export Module Path Alias for Shortcuts?](""https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27406740#overview)
 - Cypress
 - [GitLab CICD]("")
@@ -60,7 +58,11 @@
 
 # WIP
 
-    **UI/UX**
+**React-Query Setup**
+
+- [React-Query Client, QueryProvider]("")
+
+**UI/UX**
 
 - [UI Provider for Overlay, Sidedrawer, etc.]("https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27407418#overview")
 
@@ -93,6 +95,9 @@
 [Modal from Scratch]("https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular")
 
 # Finished
+
+**NextJS File&Folder Structure**
+[NextJS File&Folder Structure]("https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure")
 
 **Dark Mode from Scratch _React Context & UseContext to pass down next-themes properties down to shared UI components_**
 

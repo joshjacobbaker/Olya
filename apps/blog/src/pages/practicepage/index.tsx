@@ -3,24 +3,12 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Head from "next/head"
 import Link from "next/link"
 import { PracticeLayout } from "ui"
-// import PageLayout from "../../components/layouts/PageLayout"
-// import { useTheme } from "next-themes"
+import { useQuery } from "@tanstack/react-query"
 
 function Page() {
-  // const [mounted, setMounted] = useState(false)
-  // const { systemTheme, theme, setTheme } = useTheme()
+  const query = useQuery(["count"], () => [1, 2, 3])
 
-  // const currentTheme = theme === "system" ? systemTheme : theme
-
-  // useEffect(() => {
-  //   setMounted(true)
-  // }, [])
-
-  // if (!mounted) {
-  //   return null
-  // }
-
-  // console.log(theme)
+  console.log(query)
 
   return (
     <div>
@@ -29,6 +17,7 @@ function Page() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p>practicepage</p>
+      {query.data && query.data.map((d) => <p>{d}</p>)}
       <div className="grid grid-flow-col gap-4">
         <Link href="/" className="bg-red-200 py-4 px-8">
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Home Page?</a>
