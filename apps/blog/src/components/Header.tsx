@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react"
 // import ModalComponent from "./Modal"
 import ModalFromScratch from "./ModalFromScratch"
 import { Search, Menu, Logo } from "ui"
-import MyThemeContext from "../store/myThemeContext"
+import MyThemeContext from "../context/myThemeContext"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 type Props = {}

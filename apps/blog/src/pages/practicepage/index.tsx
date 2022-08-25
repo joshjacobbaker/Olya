@@ -37,16 +37,6 @@ function Page() {
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
         </Link>
       </div>
-      <br />
-      {/* {currentTheme === "dark" ? (
-        <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("light")}>
-          Light Theme? {theme}
-        </button>
-      ) : (
-        <button className="py-4 px-8 bg-green-200 rounded-lg" onClick={() => setTheme("dark")}>
-          Dark Theme? Currently Doesnt work, cuz its setup for next-themes try header toggle {theme}
-        </button>
-      )} */}
     </div>
   )
 }

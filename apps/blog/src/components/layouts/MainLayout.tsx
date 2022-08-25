@@ -1,7 +1,6 @@
 import * as React from "react"
 import Header from "../Header"
 import { Footer } from "ui"
-import { useState } from "react"
 type Props = {
   children?: JSX.Element
 }

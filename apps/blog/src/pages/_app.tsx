@@ -3,7 +3,7 @@ import type { AppProps, NextWebVitalsMetric } from "next/app"
 import Head from "next/head"
 // import { ThemeProvider } from "next-themes"
 import MainLayout from "../components/layouts/MainLayout"
-import { MyThemeContextProvider } from "../store/myThemeContext"
+import { MyThemeContextProvider } from "../context/myThemeContext"
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
