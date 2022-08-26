@@ -7,4 +7,9 @@ module.exports = {
       rootDir: ["apps/*/"],
     },
   },
-};
+}
+
+// {
+//   "env": {"browser": true, "es6": true},
+//   "extends": ["eslint:recommended", "next/core-web-vitals"]
+// }

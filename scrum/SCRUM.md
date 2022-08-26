@@ -58,6 +58,10 @@
 
 # WIP
 
+**Context - State**
+UI context
+Shopping Cart Context
+
 **React-Query Setup**
 
 - [React-Query Client, QueryProvider]("")
@@ -65,6 +69,9 @@
 **UI/UX**
 
 - [UI Provider for Overlay, Sidedrawer, etc.]("https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27407418#overview")
+
+**NextJS Modal**
+[Modal from Scratch]("https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular")
 
 - [Overlay when clicking on Menu Icon]("https://www.youtube.com/watch?v=EyjuRCxpf6Y")
 - [NPM react-modal]("https://www.npmjs.com/package/react-modal")
@@ -90,9 +97,6 @@
 - [TailwindCSS @layer component @apply text-size for typographies... header1, buttons, etc. on different screen sizes]("")
 - [Create Shared tailwind.config.js configuration for apps/\*]("")
 - [npx tailwindcss init --full ......want entire configuration with all classes]("")
-
-**NextJS Modal**
-[Modal from Scratch]("https://www.creative-tim.com/learning-lab/tailwind-starter-kit/documentation/react/modals/regular")
 
 # Finished
 
