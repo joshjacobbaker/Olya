@@ -1,5 +1,7 @@
 # Backlog
 
+- [react-toastify]("")
+- [NextAuth.js]("")
 - [Import Export Module Path Alias for Shortcuts?](""https://www.udemy.com/course/next-js-typescript-with-shopify-integration-full-guide/learn/lecture/27406740#overview)
 - Cypress
 - [GitLab CICD]("")
