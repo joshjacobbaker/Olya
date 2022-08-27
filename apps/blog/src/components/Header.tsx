@@ -6,22 +6,23 @@ import { Search, Menu, Logo } from "ui"
 import MyThemeContext from "../context/myThemeContext"
 import { FaSun, FaMoon } from "react-icons/fa"
 
+import { UiContext } from "../context/uiContextProvider"
+
 type Props = {}
 
 function Header({}: Props) {
   const themeCtx: { isDarkTheme?: boolean; toggleThemeHandler: () => void } = useContext(MyThemeContext)
   const [modalIsOpen, setIsOpen] = useState(false)
+  const { state, dispatch } = useContext(UiContext)
 
   function toggleThemeHandler(): void {
     themeCtx.toggleThemeHandler()
   }
 
-  function openModal() {
-    setIsOpen(true)
-  }
-
-  function closeModal() {
-    setIsOpen(false)
+  function toggleModal() {
+    // setIsOpen(true)
+    dispatch({ type: "MODAL_OPEN" })
+    console.log(state.modalOpen)
   }
 
   return (
@@ -41,12 +42,12 @@ function Header({}: Props) {
             onClick={toggleThemeHandler}>
             {themeCtx.isDarkTheme ? <FaSun /> : <FaMoon />}
           </button>
-          <button onClick={openModal}>
+          <button onClick={toggleModal}>
             <Menu />
           </button>
         </div>
       </nav>
-      <ModalFromScratch modalIsOpen={modalIsOpen} closeModal={closeModal} contentLabel={"Example Modal"}></ModalFromScratch>
+      <ModalFromScratch modalIsOpen={state.modalOpen} closeModal={toggleModal} contentLabel={"Example Modal"}></ModalFromScratch>
       {/* <ModalComponent modalIsOpen={modalIsOpen} closeModal={closeModal} contentLabel={"Example Modal"} /> */}
     </header>
   )

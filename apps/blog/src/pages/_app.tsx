@@ -5,6 +5,7 @@ import Head from "next/head"
 import MainLayout from "../components/layouts/MainLayout"
 import { MyThemeContextProvider } from "../context/myThemeContext"
 import ReactQueryProvider from "../context/reactQueryProvider"
+import UiContextProvider from "../context/uiContextProvider"
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
@@ -14,23 +15,25 @@ type ComponentWithPageLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-    <ReactQueryProvider>
-      <MyThemeContextProvider>
-        <Head>
-          <meta />
-        </Head>
+    <UiContextProvider>
+      <ReactQueryProvider>
+        <MyThemeContextProvider>
+          <Head>
+            <meta />
+          </Head>
 
-        <MainLayout>
-          {Component.PageLayout ? (
-            <Component.PageLayout>
+          <MainLayout>
+            {Component.PageLayout ? (
+              <Component.PageLayout>
+                <Component {...pageProps} />
+              </Component.PageLayout>
+            ) : (
               <Component {...pageProps} />
-            </Component.PageLayout>
-          ) : (
-            <Component {...pageProps} />
-          )}
-        </MainLayout>
-      </MyThemeContextProvider>
-    </ReactQueryProvider>
+            )}
+          </MainLayout>
+        </MyThemeContextProvider>
+      </ReactQueryProvider>
+    </UiContextProvider>
   )
 }
 
