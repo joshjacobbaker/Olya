@@ -19,7 +19,10 @@ const Home: NextPage = () => {
             <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">Practice Page?</a>
           </Link>
           <Link href="/masongrid">
-            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">checkout the Mason Grid?</a>
+          </Link>
+          <Link href="/writingBlog">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Writing Blog</a>
           </Link>
         </div>
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />{" "}
