@@ -23,7 +23,14 @@ function Page({ data }) {
 
       <p>React Query:</p>
 
-      <ul>{query.data && query.data.map((d, i) => <li className={`ml-2 ${i % 2 === 0 ? "ml-8" : ""}`}>{d}</li>)}</ul>
+      <ul>
+        {query.data &&
+          query.data.map((d, i) => (
+            <li key={i} className={`ml-2 ${i % 2 === 0 ? "ml-8" : ""}`}>
+              {d}
+            </li>
+          ))}
+      </ul>
       <div className="grid grid-flow-col gap-4">
         <Link href="/" className="bg-red-200 py-4 px-8">
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Home Page?</a>

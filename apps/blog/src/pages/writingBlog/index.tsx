@@ -27,10 +27,33 @@ function Page() {
         </Link>
       </div>
       <div className="grid h-96 bg-yellow-200 justify-center content-center mt-4">
-        <label htmlFor="blog" className="bg-red-400">
-          Write blog here:
-        </label>
-        <textarea id="blog" name="blog" cols="20" rows="5" className="w-full bg-green-200"></textarea>
+        <form action="" className="space-y-4">
+          <div>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div>
+            <label htmlFor="date">Date</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div>
+            <select name="topic" id="topic">
+              <option value="shoes">shoes</option>
+              <option value="jackets">jackets</option>
+              <option value="shorts">shorts</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="private">Private?</label>
+            <input type="checkbox" name="private" id="private" />
+          </div>
+          <div>
+            <label htmlFor="blog" className="bg-red-400">
+              Write blog here:
+            </label>
+            <textarea id="blog" name="blog" cols="20" rows="5" className="w-full bg-green-200"></textarea>
+          </div>
+        </form>
       </div>
     </div>
   )
