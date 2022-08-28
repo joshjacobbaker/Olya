@@ -19,12 +19,18 @@ function Page() {
       <p>Write your blog here</p>
       {query.data && query.data.map((d) => <p>{d}</p>)}
       <div className="grid grid-flow-col gap-4">
-        <Link href="/" className="bg-red-200 py-4 px-8">
+        <Link href="/" className="">
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Home Page?</a>
         </Link>
-        <Link href="/masongrid" className="bg-red-200 py-4 px-8">
+        <Link href="/masongrid" className="">
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
         </Link>
+      </div>
+      <div className="grid h-96 bg-yellow-200 justify-center content-center mt-4">
+        <label htmlFor="blog" className="bg-red-400">
+          Write blog here:
+        </label>
+        <textarea id="blog" name="blog" cols="20" rows="5" className="w-full bg-green-200"></textarea>
       </div>
     </div>
   )

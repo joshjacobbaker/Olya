@@ -102,6 +102,7 @@ Shopping Cart Context
 
 # Finished
 
+[Added event. stopPropagation to the modal to prevent a double click on the child-parent divs ]("")
 **NextJS File&Folder Structure**
 [NextJS File&Folder Structure]("https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure")
 
