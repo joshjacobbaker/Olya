@@ -10,7 +10,7 @@ export default function Modal(props: Props) {
   // const [showModal, setShowModal] = React.useState(false)
   const { modalIsOpen, closeModal, contentLabel } = props
 
-  const onClickHandlerStopPropogation = (e) => {
+  const onClickHandlerStopPropogation = (e: any) => {
     e.stopPropagation()
     closeModal()
   }

@@ -14,11 +14,16 @@ const initialState: UiReducerStateProps = {
   shoppingCartOpen: false,
 }
 
-export const UiContext = createContext({})
-
 interface UiReducerAction {
   type: "MENU_DROPDOWN_OPEN" | "SIDE_DRAWER_OPEN" | "MODAL_OPEN" | "SHOPPING_CART_OPEN"
 }
+
+interface IUiContext {
+  state: any
+  dispatch: any
+}
+
+export const UiContext = createContext<IUiContext>({ state: null, dispatch: null })
 
 function reducer(state: UiReducerStateProps, action: UiReducerAction) {
   switch (action.type) {

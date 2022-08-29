@@ -4,8 +4,11 @@ import Head from "next/head"
 import Link from "next/link"
 import { PracticeLayout } from "ui"
 import { useQuery } from "@tanstack/react-query"
+// import type { Data } from "../api/hello"
 
-function Page({ data }) {
+type PageProps = { data: { name: string } }
+
+function Page({ data }: PageProps) {
   const query = useQuery(["count"], () => [1, 2, 3])
 
   console.log(`props: ${JSON.stringify(data.name)}`)
@@ -44,7 +47,7 @@ function Page({ data }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps() {
+export async function getServerSideProps<GetServerSideProps>() {
   // Fetch data from external API
   const res = await fetch(`http://localhost:3000/api/hello`)
   const data = await res.json()

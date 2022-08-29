@@ -10,6 +10,26 @@ function Page() {
 
   console.log(query)
 
+  const formHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log("POST API")
+    let data
+    try {
+      const response = await fetch("http://localhost:3000/api/practicePost", {
+        method: "POST",
+        body: JSON.stringify({ test: 1, yo: "yoYo" }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      data = (await response.json()) || "nothing received"
+    } catch (e) {
+      console.log(e)
+    }
+
+    console.log(data)
+  }
+
   return (
     <div>
       <Head>
@@ -26,17 +46,24 @@ function Page() {
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">checkout the Mason Grid?</a>
         </Link>
       </div>
-      <div className="grid h-96 bg-yellow-200 justify-center content-center mt-4">
-        <form action="" className="space-y-4">
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" />
+      <div className="grid h-96 bg-blue-200 rounded-lg justify-center content-center mt-4">
+        <form action="POST" onSubmit={formHandler} className="space-y-4">
+          <div className="">
+            <label htmlFor="email" className="mr-2">
+              Email
+            </label>
+            <input type="email" name="email" id="email" className="mr-2" />
           </div>
           <div>
-            <label htmlFor="date">Date</label>
+            <label htmlFor="date" className="mr-2">
+              Date
+            </label>
             <input type="date" name="date" id="date" />
           </div>
           <div>
+            <label htmlFor="topic" className="mr-2">
+              Topic:
+            </label>
             <select name="topic" id="topic">
               <option value="shoes">shoes</option>
               <option value="jackets">jackets</option>
@@ -48,10 +75,15 @@ function Page() {
             <input type="checkbox" name="private" id="private" />
           </div>
           <div>
-            <label htmlFor="blog" className="bg-red-400">
+            <label htmlFor="blog" className="bg-gray-600 rounded mb-2">
               Write blog here:
             </label>
-            <textarea id="blog" name="blog" cols="20" rows="5" className="w-full bg-green-200"></textarea>
+            <textarea id="blog" name="blog" cols={20} rows={5} className="mt-2 w-full rounded-sm"></textarea>
+          </div>
+          <div>
+            <button type="submit" className="px-4 py-2 bg-slate-700 rounded">
+              Submit Form
+            </button>
           </div>
         </form>
       </div>
