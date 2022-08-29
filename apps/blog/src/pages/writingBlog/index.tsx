@@ -47,7 +47,7 @@ function Page() {
         </Link>
       </div>
       <div className="grid h-96 bg-blue-200 rounded-lg justify-center content-center mt-4">
-        <form action="POST" onSubmit={formHandler} className="space-y-4">
+        <form onSubmit={formHandler} className="space-y-4">
           <div className="">
             <label htmlFor="email" className="mr-2">
               Email
