@@ -2,11 +2,13 @@ import { ReactElement, useState, useEffect } from "react"
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Head from "next/head"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { PracticeLayout } from "ui"
 import { useQuery } from "@tanstack/react-query"
 
 function Page() {
   const query = useQuery(["count-even"], () => [2, 4, 6])
+  const router = useRouter()
 
   console.log(query)
 
@@ -28,6 +30,7 @@ function Page() {
     }
 
     console.log(data)
+    router.push("/")
   }
 
   return (
