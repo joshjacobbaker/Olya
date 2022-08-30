@@ -8,18 +8,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log(req.body)
     const blog = req.body
 
-    const newBlog = {
-      id: Date.now(),
-      blog,
-    }
     const dataReadResponse = await fs.readFile(path.join(process.cwd(), "./src/data/example.json"), { encoding: "utf8" })
     console.log(dataReadResponse)
     let dataReadResponseParsed = JSON.parse(dataReadResponse)
+
     if (!Array.isArray(dataReadResponseParsed)) {
       dataReadResponseParsed = [...dataReadResponseParsed]
     }
 
-    dataReadResponseParsed.push(newBlog)
+    dataReadResponseParsed.push(blog)
     const dataWriteResponse = await fs.writeFile(path.join(process.cwd(), "./src/data/example.json"), JSON.stringify(dataReadResponseParsed))
     return res.status(200).json("received")
   } else {

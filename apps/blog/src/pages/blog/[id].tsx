@@ -1,13 +1,21 @@
 import { ReactElement } from "react"
+import Link from "next/link"
 import { NextPage, GetStaticPaths, GetStaticProps } from "next"
 import { ParsedUrlQuery } from "querystring"
-
+import data from "../../data/example.json"
 interface IPageProps {
   id: string | number
 }
 
 const Page: NextPage<IPageProps> = ({ id }) => {
-  return <div>Blog Id: {id}</div>
+  return (
+    <div>
+      <p className="leading-3 text-zinc-500 font-extralight p-4 mb-4 border-2 border-blue-400 hover:font-bold hover:no-underline underline border-b-spacing-0 mt-4">Blog Id: {id}</p>
+      <Link href="/blogs">
+        <a className="py-2 px-4 bg-blue-200 rounded text-white">Go Back to list of blogs</a>
+      </Link>
+    </div>
+  )
 }
 
 export default Page
@@ -17,8 +25,16 @@ interface Params extends ParsedUrlQuery {
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
+  const paths = data.map((d) => {
+    return {
+      params: {
+        id: String(d.id),
+      },
+    }
+  })
+  // paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
   return {
-    paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
+    paths,
     fallback: false, // can also be true or 'blocking'
   }
 }

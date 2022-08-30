@@ -16,10 +16,11 @@ function Page() {
     e.preventDefault()
     console.log("POST API")
     let data
+    let timeId = Date.now()
     try {
       const response = await fetch("http://localhost:3000/api/practicePost", {
         method: "POST",
-        body: JSON.stringify({ test: 1, yo: "yoYo" }),
+        body: JSON.stringify({ id: timeId, test: 1, yo: "yoYo" }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -30,7 +31,7 @@ function Page() {
     }
 
     console.log(data)
-    router.push("/")
+    router.push(`/blog/${timeId}`)
   }
 
   return (
