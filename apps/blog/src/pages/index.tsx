@@ -22,7 +22,10 @@ const Home: NextPage = () => {
             <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">checkout the Mason Grid?</a>
           </Link>
           <Link href="/writingBlog">
-            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Writing Blog</a>
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">Writing Blog</a>
+          </Link>
+          <Link href="/reacthookform">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">React Hook Form</a>
           </Link>
         </div>
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />{" "}
