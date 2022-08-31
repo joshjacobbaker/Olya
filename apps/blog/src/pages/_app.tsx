@@ -6,7 +6,7 @@ import MainLayout from "../components/layouts/MainLayout"
 import { MyThemeContextProvider } from "../context/myThemeContext"
 import ReactQueryProvider from "../context/reactQueryProvider"
 import UiContextProvider from "../context/uiContextProvider"
-
+import ReactHookFormProvider from "../context/reactHookFormProvider"
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
     PageLayout?: React.ComponentType
@@ -15,25 +15,27 @@ type ComponentWithPageLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-    <UiContextProvider>
-      <ReactQueryProvider>
-        <MyThemeContextProvider>
-          <Head>
-            <meta />
-          </Head>
+    <ReactHookFormProvider>
+      <UiContextProvider>
+        <ReactQueryProvider>
+          <MyThemeContextProvider>
+            <Head>
+              <meta />
+            </Head>
 
-          <MainLayout>
-            {Component.PageLayout ? (
-              <Component.PageLayout>
+            <MainLayout>
+              {Component.PageLayout ? (
+                <Component.PageLayout>
+                  <Component {...pageProps} />
+                </Component.PageLayout>
+              ) : (
                 <Component {...pageProps} />
-              </Component.PageLayout>
-            ) : (
-              <Component {...pageProps} />
-            )}
-          </MainLayout>
-        </MyThemeContextProvider>
-      </ReactQueryProvider>
-    </UiContextProvider>
+              )}
+            </MainLayout>
+          </MyThemeContextProvider>
+        </ReactQueryProvider>
+      </UiContextProvider>
+    </ReactHookFormProvider>
   )
 }
 
