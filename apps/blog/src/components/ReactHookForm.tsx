@@ -14,11 +14,11 @@ export default function ReactHookForm() {
   } = useForm<Inputs>()
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
-  console.log(watch("example")) // watch input value by passing the name of it
-  console.log(watch("exampleRequired"))
+  // console.log(watch("example")) // watch input value by passing the name of it
+  // console.log(watch("exampleRequired"))
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)} className="bg-zinc-700 h-screen w-screen flex flex-col items-center align-center">
+    <form onSubmit={handleSubmit(onSubmit)} className="bg-zinc-700 p-4 rounded-lg flex flex-col items-center align-center">
       {/* register your input into the hook by invoking the "register" function */}
       <label htmlFor="">example</label>
       <input defaultValue="test" {...register("example")} />

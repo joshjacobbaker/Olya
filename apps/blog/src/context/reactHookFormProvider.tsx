@@ -1,15 +1,18 @@
 import { createContext, useReducer, useContext, ReactNode } from "react"
 
-const ReactHookFormContext = createContext("")
+const ReactHookFormContext = createContext([])
 
 export const useReactHookFormData = () => {
   return useContext(ReactHookFormContext)
 }
 
-function reducer(state, action) {
+function reducer(state: { count: number }, action: { type: string; payload: object }) {
   switch (action.type) {
-    case "ADD_NAME_INPUT": {
-      return { ...state }
+    case "INCREMENT": {
+      return { count: state.count + 1 }
+    }
+    case "DECREMENT": {
+      return { count: state.count - 1 }
     }
     default:
       return state
@@ -17,9 +20,9 @@ function reducer(state, action) {
 }
 
 const ReactHookFormProvider = ({ children }: { children: ReactNode }) => {
-  const { state, dispatch } = useReducer(reducer, { initialState: "" })
+  const reducerContext = useReducer(reducer, { count: 0 })
 
-  return <ReactHookFormContext.Provider value={{ state, dispatch }}>{children}</ReactHookFormContext.Provider>
+  return <ReactHookFormContext.Provider value={reducerContext}>{children}</ReactHookFormContext.Provider>
 
   // return <div>{children}</div>
 }
