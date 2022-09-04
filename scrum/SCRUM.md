@@ -61,6 +61,13 @@
 
 # WIP
 
+**_Search Field_**
+Api endpoint
+api client
+algorithm
+ui/ux
+Flow: type in search field, hit submit, redirected to page with search results,
+
 **React Hook Form**
 [React-Hook-Form]("https://www.youtube.com/watch?v=3qLd69WMqKk")
 ...

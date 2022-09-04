@@ -27,6 +27,9 @@ const Home: NextPage = () => {
           <Link href="/reacthookform">
             <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">React Hook Form</a>
           </Link>
+          <Link href="/search">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">Search</a>
+          </Link>
         </div>
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />{" "}
       </div>
