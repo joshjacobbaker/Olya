@@ -4,14 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@hookform/resolvers": "^2.9.7",
     "@tanstack/react-query": "^4.2.1",
     "eslint": "^7.23.0",
     "eslint-config-next": "^12.0.8",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "7.28.0",
     "next-themes": "^0.2.0",
+    "react-hook-form": "^7.34.2",
     "react-icons": "^4.4.0",
-    "react-modal": "^3.15.1"
+    "react-modal": "^3.15.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@tanstack/react-query-devtools": "^4.2.1",
