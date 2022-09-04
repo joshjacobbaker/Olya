@@ -1,17 +1,12 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
-type Inputs = {
-  example: string
-  exampleRequired: string
-}
-const onSubmit: SubmitHandler<schema> = async (data) => console.log(data)
 
 const schema = yup.object().shape({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   email: yup.string().email().required(),
-  age: yup.number().positive().integer().required(),
+  age: yup.number().positive("must be positive").required("age is required"),
   password: yup.string().min(4).max(15).required(),
   confirmPassword: yup
     .string()
@@ -19,13 +14,24 @@ const schema = yup.object().shape({
     .required(),
 })
 
+interface IFormSchema {
+  firstName: string
+  lastName: string
+  email: string
+  age: number
+  password: string
+  confirmPassword: string
+}
+
+const onSubmit: SubmitHandler<IFormSchema> = async (data) => console.log(data?.age)
+
 export default function ReactHookFormComponent() {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<typeof schema>({
+  } = useForm<IFormSchema>({
     resolver: yupResolver(schema),
   })
 
@@ -59,7 +65,7 @@ export default function ReactHookFormComponent() {
 
       <div>
         <div>
-          Errors:<span className="font-bold text-slate-800 text-lg">{errors && "Errors"}</span>
+          Errors:<span className="font-bold text-slate-800 text-lg">{errors && errors.age?.message}</span>
         </div>
         <div>
           First Name: <span className="font-bold text-slate-800 text-lg">{watch("firstName")}</span>

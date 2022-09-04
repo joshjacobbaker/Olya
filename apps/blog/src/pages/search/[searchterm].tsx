@@ -1,12 +1,17 @@
 import React from "react"
-import { useRouter, Context } from "next/router"
+import { useRouter } from "next/router"
+import { InferGetServerSidePropsType, GetServerSidePropsContext, GetServerSidePropsResult } from "next"
 import blogData from "../../data/example.json"
 
 type Props = {
   matchedSearchResults: string[]
 }
 
-export default function SearchPage({ matchedSearchResults }: Props) {
+type PageParams = {
+  searchterm: string
+}
+
+export default function SearchPage({ matchedSearchResults }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter()
   const { searchterm } = router.query
   return (
@@ -15,10 +20,10 @@ export default function SearchPage({ matchedSearchResults }: Props) {
         Your Search Term was: <span>{searchterm}</span>
       </div>
       <ul>
-        <li>We found these results:</li>
+        <li>We found these results in descending order:</li>
         {matchedSearchResults[0] ? (
           matchedSearchResults.map((data) => {
-            return <li id={data.id}>{data.id}</li>
+            return <li id={data.id.toString()}>{data.id}</li>
           })
         ) : (
           <li>No Results -- try searching for a number like 1, 2, 3, etc.</li>
@@ -28,11 +33,17 @@ export default function SearchPage({ matchedSearchResults }: Props) {
   )
 }
 
-export const getServerSideProps = async ({ params }: Context) => {
-  const { searchterm } = params
-  const matchedSearchResults = blogData.filter((data) => {
-    return new RegExp(searchterm, "ig").test(data.id.toString())
-  })
+interface IServerProps {
+  searchterm: string | number
+}
+
+export const getServerSideProps = async ({ params }: GetServerSidePropsContext<PageParams>) => {
+  const { searchterm } = params as PageParams
+  const matchedSearchResults = blogData
+    .filter((data) => {
+      return new RegExp(searchterm, "ig").test(data.id.toString())
+    })
+    .sort((a, b) => b.id - a.id)
   return {
     props: {
       matchedSearchResults,
