@@ -23,7 +23,47 @@ interface IFormSchema {
   confirmPassword: string
 }
 
-const onSubmit: SubmitHandler<IFormSchema> = async (data) => console.log(data?.age)
+const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema) => {
+  // console.log(`1. ${data}`)
+  let formData = data
+  try {
+    const response = await fetch("http://localhost:3000/api/reacthookform", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+
+    const responseData = (await response.json()) || "nothing received"
+    console.log(responseData)
+  } catch (e) {
+    console.log(e)
+  }
+  console.log(formData)
+}
+
+// const formHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+//   e.preventDefault()
+//   console.log("POST API")
+//   let data
+//   let timeId = Date.now()
+//   try {
+//     const response = await fetch("http://localhost:3000/api/practicePost", {
+//       method: "POST",
+//       body: JSON.stringify({ id: timeId, test: 1, yo: "yoYo" }),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     })
+//     data = (await response.json()) || "nothing received"
+//   } catch (e) {
+//     console.log(e)
+//   }
+
+//   // console.log(data)
+//   router.push(`/blog/${timeId}`)
+// }
 
 export default function ReactHookFormComponent() {
   const {
@@ -33,6 +73,14 @@ export default function ReactHookFormComponent() {
     formState: { errors },
   } = useForm<IFormSchema>({
     resolver: yupResolver(schema),
+    defaultValues: {
+      firstName: "firstname",
+      lastName: "lastname",
+      email: "jd@gmail.test.com",
+      age: 2,
+      password: "asdfasdf",
+      confirmPassword: "asdfasdf",
+    },
   })
 
   // console.log(watch("example")) // watch input value by passing the name of it
