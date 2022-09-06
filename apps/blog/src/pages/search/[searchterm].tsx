@@ -26,7 +26,7 @@ export default function SearchPage({ matchedSearchResults }: InferGetServerSideP
             return <li id={data.id.toString()}>{data.id}</li>
           })
         ) : (
-          <li>No Results -- try searching for a number like 1, 2, 3, etc.</li>
+          <li id="noResult">No Results -- try searching for a number like 1, 2, 3, etc.</li>
         )}
       </ul>
     </div>

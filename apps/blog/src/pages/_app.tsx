@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
 }
 
 export function reportWebVitals(metric: NextWebVitalsMetric) {
-  console.log(metric)
+  // console.log(metric)
 }
 
 export default MyApp

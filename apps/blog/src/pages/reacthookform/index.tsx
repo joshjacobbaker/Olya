@@ -5,7 +5,7 @@ import { useReactHookFormData } from "../../context/reactHookFormProvider"
 const Page = () => {
   const [state, dispatch] = useReactHookFormData()
 
-  // console.log(state, dispatch)
+  console.log(state, dispatch)
   return (
     <div className="h-screen w-full bg-zinc-600 flex flex-col items-center">
       <Link href="/">

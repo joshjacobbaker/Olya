@@ -6,7 +6,7 @@ const schema = yup.object().shape({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   email: yup.string().email().required(),
-  age: yup.number().positive("must be positive").required("age is required"),
+  age: yup.number().positive("must be positive").required("age is required").typeError("Age field must be a number"),
   password: yup.string().min(4).max(15).required(),
   confirmPassword: yup
     .string()

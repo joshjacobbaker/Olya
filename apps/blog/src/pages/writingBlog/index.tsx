@@ -10,7 +10,7 @@ function Page() {
   const query = useQuery(["count-even"], () => [2, 4, 6])
   const router = useRouter()
 
-  console.log(query)
+  // console.log(query)
 
   const formHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -30,7 +30,7 @@ function Page() {
       console.log(e)
     }
 
-    console.log(data)
+    // console.log(data)
     router.push(`/blog/${timeId}`)
   }
 
@@ -41,7 +41,7 @@ function Page() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <p>Write your blog here</p>
-      {query.data && query.data.map((d) => <p>{d}</p>)}
+      {query.data && query.data.map((d) => <p id={d.toString()}>{d}</p>)}
       <div className="grid grid-flow-col gap-4">
         <Link href="/" className="">
           <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg">Home Page?</a>
