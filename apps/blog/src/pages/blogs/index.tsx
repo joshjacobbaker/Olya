@@ -1,6 +1,6 @@
 import Link from "next/link"
 import exampleData from "../../data/example.json"
-import { NextPage, GetStaticProps, InferGetStaticPropsType } from "next"
+import { NextPage, GetStaticProps } from "next"
 
 interface IProps {
   data: { id: number; blog: { test: number; yo: string } }[]
