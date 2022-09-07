@@ -1,12 +1,22 @@
-import { createContext, useReducer, useContext, ReactNode } from "react"
+import React, { createContext, useReducer, useContext, ReactNode } from "react"
 
-const ReactHookFormContext = createContext([])
+const ReactHookFormContext = createContext<
+  | [
+      {
+        count: number
+      },
+      React.Dispatch<{
+        type: string
+        payload?: object
+      }>
+    ]
+>([{ count: 0 }, () => {}])
 
 export const useReactHookFormData = () => {
   return useContext(ReactHookFormContext)
 }
 
-function reducer(state: { count: number }, action: { type: string; payload: object }) {
+function reducer(state: { count: number }, action: { type: string; payload?: object }) {
   switch (action.type) {
     case "INCREMENT": {
       return { count: state.count + 1 }
