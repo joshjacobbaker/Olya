@@ -118,6 +118,8 @@ Shopping Cart Context
 
 # Finished
 
+[Type React.createContext when passing [state, dispatch]=useReducer()]("https://stackoverflow.com/questions/59432133/how-to-type-state-and-dispatch-for-usereducer-typescript-and-react")
+
 [Added event. stopPropagation to the modal to prevent a double click on the child-parent divs ]("")
 **NextJS File&Folder Structure**
 [NextJS File&Folder Structure]("https://blog.dennisokeeffe.com/blog/2021-12-06-nextjs-enterprise-project-structure")
