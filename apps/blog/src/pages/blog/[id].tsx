@@ -1,4 +1,3 @@
-import { ReactElement } from "react"
 import Link from "next/link"
 import { NextPage, GetStaticPaths, GetStaticProps } from "next"
 import { ParsedUrlQuery } from "querystring"

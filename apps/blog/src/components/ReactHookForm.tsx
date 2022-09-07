@@ -23,9 +23,21 @@ interface IFormSchema {
   confirmPassword: string
 }
 
-const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema) => {
+interface IFormWithIdSchema {
+  id: string
+  firstName: string
+  lastName: string
+  email: string
+  age: number
+  password: string
+  confirmPassword: string
+}
+
+const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema): Promise<IFormWithIdSchema | void> => {
   // console.log(`1. ${data}`)
-  let formData = data
+  const dateId = new Date().getTime()
+  console.log(dateId)
+  let formData: IFormWithIdSchema = { ...data, id: dateId.toString() }
   try {
     const response = await fetch("http://localhost:3000/api/reacthookform", {
       method: "POST",
@@ -35,7 +47,7 @@ const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema) => {
       },
     })
 
-    const responseData = (await response.json()) || "nothing received"
+    const responseData: string = (await response.json()) || "nothing received"
     console.log(responseData)
   } catch (e) {
     console.log(e)
@@ -83,8 +95,6 @@ export default function ReactHookFormComponent() {
     },
   })
 
-  // console.log(watch("example")) // watch input value by passing the name of it
-  // console.log(watch("exampleRequired"))
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="bg-zinc-700 p-4 rounded-lg flex flex-col items-center align-center">

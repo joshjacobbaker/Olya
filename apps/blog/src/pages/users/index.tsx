@@ -3,7 +3,7 @@ import { NextPage, GetStaticProps } from "next"
 import reactFormData from "../../data/reactFormData.json"
 
 interface IProps {
-  data: { firstName: string; lastName: string; email: string; age: string; password: string; confirmPassword: string }[]
+  data: { id: string | number; firstName: string; lastName: string; email: string; age: string; password: string; confirmPassword: string }[]
 }
 
 const UsersPage = ({ data }: IProps) => {
@@ -14,7 +14,13 @@ const UsersPage = ({ data }: IProps) => {
       </Link>
       <ul className={`mt-4`}>
         {data.map((d) => {
-          return <li id={d.firstName}>{d.firstName}</li>
+          return (
+            <li id={d.id}>
+              <Link href={`/users/${d.id}`}>
+                <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">{d.firstName}</a>
+              </Link>
+            </li>
+          )
         })}
       </ul>
     </div>
