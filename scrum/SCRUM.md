@@ -116,6 +116,11 @@ Shopping Cart Context
 - [Create Shared tailwind.config.js configuration for apps/\*]("")
 - [npx tailwindcss init --full ......want entire configuration with all classes]("")
 
+**_Stripe API_**
+[Stripe API in NextJS]("https://www.youtube.com/watch?v=w6xpHQBWZr8")
+[Stripe API in NextJS w/Leigh Halliday]("https://www.youtube.com/watch?v=WTUYem2IxLA")
+**_GetServerSideProps instead of GetStaticSideProps for Dynamic Results_**
+
 # Finished
 
 [Type React.createContext when passing [state, dispatch]=useReducer()]("https://stackoverflow.com/questions/59432133/how-to-type-state-and-dispatch-for-usereducer-typescript-and-react")
