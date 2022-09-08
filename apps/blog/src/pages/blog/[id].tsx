@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { NextPage, GetStaticPaths, GetStaticProps } from "next"
+import { NextPage, GetStaticPaths, GetStaticProps, GetServerSideProps } from "next"
 import { ParsedUrlQuery } from "querystring"
 import data from "../../data/example.json"
 interface IPageProps {

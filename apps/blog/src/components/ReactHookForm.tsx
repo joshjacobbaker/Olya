@@ -1,6 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
+import { useRouter } from "next/router"
 
 const schema = yup.object().shape({
   firstName: yup.string().required(),
@@ -33,28 +34,6 @@ interface IFormWithIdSchema {
   confirmPassword: string
 }
 
-const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema): Promise<IFormWithIdSchema | void> => {
-  // console.log(`1. ${data}`)
-  const dateId = new Date().getTime()
-  console.log(dateId)
-  let formData: IFormWithIdSchema = { ...data, id: dateId.toString() }
-  try {
-    const response = await fetch("http://localhost:3000/api/reacthookform", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-
-    const responseData: string = (await response.json()) || "nothing received"
-    console.log(responseData)
-  } catch (e) {
-    console.log(e)
-  }
-  console.log(formData)
-}
-
 // const formHandler = async (e: React.FormEvent<HTMLFormElement>) => {
 //   e.preventDefault()
 //   console.log("POST API")
@@ -78,6 +57,7 @@ const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema): Promise<
 // }
 
 export default function ReactHookFormComponent() {
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -94,6 +74,29 @@ export default function ReactHookFormComponent() {
       confirmPassword: "asdfasdf",
     },
   })
+
+  const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema): Promise<IFormWithIdSchema | void> => {
+    // console.log(`1. ${data}`)
+    const dateId = new Date().getTime()
+    console.log(dateId)
+    let formData: IFormWithIdSchema = { ...data, id: dateId.toString() }
+    try {
+      const response = await fetch("http://localhost:3000/api/reacthookform", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+
+      const responseData: string = (await response.json()) || "nothing received"
+      console.log(responseData)
+      router.push(`/users/${dateId}`)
+    } catch (e) {
+      console.log(e)
+    }
+    console.log(formData)
+  }
 
   return (
     <>

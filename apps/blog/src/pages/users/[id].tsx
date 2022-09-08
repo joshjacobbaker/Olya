@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 import { GetStaticProps, GetStaticPaths, NextPage } from "next"
 import { ParsedUrlQuery } from "querystring"
 import data from "../../data/reactFormData.json"
+import Link from "next/link"
 
 interface IProps {
   id: string
@@ -11,6 +12,9 @@ const UsersIdPage: NextPage<IProps> = ({ id }) => {
   const router = useRouter()
   return (
     <div>
+      <Link href={`/users`}>
+        <a>Got Back to List of Users</a>
+      </Link>
       <div>router: {router.query.id}</div>
       <div>prop: {id}</div>
     </div>
@@ -33,26 +37,36 @@ interface IFormWithIdSchema {
   confirmPassword: string
 }
 
-export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const paths = data.map((d) => {
-    return {
-      params: {
-        id: String(d.id),
-      },
-    }
-  })
-
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { id } = context.params as Params
+  // const result = data.filter((d) => d.id === id)
   return {
-    paths,
-    fallback: false,
+    props: {
+      id,
+    }, // will be passed to the page component as props
   }
 }
 
-// interface IStaticProps {
-//   id: string | number
+// export const getStaticPaths: GetStaticPaths<Params> = async () => {
+//   const paths = data.map((d) => {
+//     return {
+//       params: {
+//         id: String(d.id),
+//       },
+//     }
+//   })
+
+//   return {
+//     paths,
+//     fallback: false,
+//   }
 // }
 
-export const getStaticProps: GetStaticProps<Params> = async ({ params }) => {
-  const { id } = params as Params
-  return { props: { id } }
-}
+// // interface IStaticProps {
+// //   id: string | number
+// // }
+
+// export const getStaticProps: GetStaticProps<Params> = async ({ params }) => {
+//   const { id } = params as Params
+//   return { props: { id } }
+// }
