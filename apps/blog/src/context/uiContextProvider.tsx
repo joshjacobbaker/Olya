@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useReducer } from "react"
+import { createContext, useContext, ReactNode, useReducer, useEffect, useMemo } from "react"
 
 interface UiReducerStateProps {
   menuDropdownOpen: boolean
@@ -15,7 +15,8 @@ const initialState: UiReducerStateProps = {
 }
 
 interface UiReducerAction {
-  type: "MENU_DROPDOWN_OPEN" | "SIDE_DRAWER_OPEN" | "MODAL_OPEN" | "SHOPPING_CART_OPEN"
+  type: "LOCAL_STATE" | "MENU_DROPDOWN_OPEN" | "SIDE_DRAWER_OPEN" | "MODAL_OPEN" | "SHOPPING_CART_OPEN"
+  payload: object | string | number | boolean
 }
 
 interface IUiContext {
@@ -27,6 +28,8 @@ export const UiContext = createContext<IUiContext>({ state: null, dispatch: null
 
 function reducer(state: UiReducerStateProps, action: UiReducerAction) {
   switch (action.type) {
+    case "LOCAL_STATE":
+      return { ...state, ...action.payload }
     case "MENU_DROPDOWN_OPEN":
       return { ...state, menuDropdownOpen: !state.menuDropdownOpen }
     case "SIDE_DRAWER_OPEN":
@@ -46,9 +49,28 @@ interface UiContextProviderProps {
 
 const UiContextProvider = ({ children }: UiContextProviderProps) => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const value = { state, dispatch }
+  const sharedState = useMemo(() => {
+    return { state, dispatch }
+  }, [state, dispatch])
 
-  return <UiContext.Provider value={value}>{children}</UiContext.Provider>
+  useEffect(() => {
+    const uiLocalContextState = JSON.stringify(localStorage.getItem("uiLocalContextState"))
+    if (uiLocalContextState) {
+      dispatch({ type: "LOCAL_STATE", payload: uiLocalContextState })
+    }
+  }, [])
+
+  useEffect(() => {
+    if (state !== initialState) {
+      localStorage.setItem("LOCAL_STATE", JSON.stringify(state))
+    }
+  }, [state])
+
+  return <UiContext.Provider value={sharedState}>{children}</UiContext.Provider>
 }
 
 export default UiContextProvider
+
+export function useUIContext() {
+  return useContext(UiContext)
+}
