@@ -15,8 +15,8 @@ const UsersPage = ({ data }: IProps) => {
       <ul className={`mt-4`}>
         {data.map((d) => {
           return (
-            <li id={d.id}>
-              <Link href={`/users/${d.id}`}>
+            <li id={d.id.toString()}>
+              <Link href={`/users/${d.id.toString()}`}>
                 <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">{d.firstName}</a>
               </Link>
             </li>

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { GetStaticProps, GetStaticPaths, NextPage } from "next"
+import { GetStaticProps, GetStaticPaths, NextPage, GetServerSideProps } from "next"
 import { ParsedUrlQuery } from "querystring"
 import data from "../../data/reactFormData.json"
 import Link from "next/link"
@@ -11,9 +11,9 @@ interface IProps {
 const UsersIdPage: NextPage<IProps> = ({ id }) => {
   const router = useRouter()
   return (
-    <div>
+    <div className={`bg-zinc-200`}>
       <Link href={`/users`}>
-        <a>Got Back to List of Users</a>
+        <a className={`block py-2 px-4 bg-blue-400 mt-4 mb-4`}>Got Back to List of Users</a>
       </Link>
       <div>router: {router.query.id}</div>
       <div>prop: {id}</div>

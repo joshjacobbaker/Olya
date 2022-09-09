@@ -23,26 +23,36 @@ interface Params extends ParsedUrlQuery {
   id: string
 }
 
-export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const paths = data.map((d) => {
-    return {
-      params: {
-        id: String(d.id),
-      },
-    }
-  })
-  // paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { id } = context.params as Params
+  // const result = data.filter((d) => d.id === id)
   return {
-    paths,
-    fallback: false, // can also be true or 'blocking'
+    props: {
+      id,
+    }, // will be passed to the page component as props
   }
 }
 
-interface IStaticProps {
-  id: string | number
-}
+// export const getStaticPaths: GetStaticPaths<Params> = async () => {
+//   const paths = data.map((d) => {
+//     return {
+//       params: {
+//         id: String(d.id),
+//       },
+//     }
+//   })
+//   // paths: [{ params: { id: "1" } }, { params: { id: "2" } }],
+//   return {
+//     paths,
+//     fallback: false, // can also be true or 'blocking'
+//   }
+// }
 
-export const getStaticProps: GetStaticProps<IStaticProps, Params> = async ({ params }) => {
-  const { id } = params as IStaticProps
-  return { props: { id } }
-}
+// interface IStaticProps {
+//   id: string | number
+// }
+
+// export const getStaticProps: GetStaticProps<IStaticProps, Params> = async ({ params }) => {
+//   const { id } = params as IStaticProps
+//   return { props: { id } }
+// }
