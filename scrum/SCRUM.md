@@ -71,7 +71,8 @@ Flow: type in search field, hit submit, redirected to page with search results,
 **React Hook Form**
 [React-Hook-Form]("https://www.youtube.com/watch?v=3qLd69WMqKk")
 [Form Provider and Context Wrapper w/subcomponents]("https://www.youtube.com/watch?v=aCRaGQmUiQE")
-...
+
+[ReactHookForm **_MULTI-STEP Wizard_**]("https://www.youtube.com/watch?v=evDxlqnsxXc")
 
 **API POST**
 [NextJS API POST save comments]("https://www.youtube.com/watch?v=wqHGLjuXuHo")
@@ -79,6 +80,7 @@ Flow: type in search field, hit submit, redirected to page with search results,
 **Context - State**
 UI context
 Shopping Cart Context
+[React Shopping Cart w/Faker Data]("https://www.youtube.com/watch?v=HptuMAUaNGk")
 
 **React-Query Setup**
 
@@ -123,6 +125,7 @@ Shopping Cart Context
 
 # Finished
 
+[Context with useMemo, useEffect LocalStorage]("https://www.youtube.com/watch?v=74a98FoLS70")
 [Type React.createContext when passing [state, dispatch]=useReducer()]("https://stackoverflow.com/questions/59432133/how-to-type-state-and-dispatch-for-usereducer-typescript-and-react")
 
 [Added event. stopPropagation to the modal to prevent a double click on the child-parent divs ]("")
