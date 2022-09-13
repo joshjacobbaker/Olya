@@ -8,9 +8,7 @@ const SingleProductCard = ({ id, productName, price, image, inStock, fastDeliver
         <li>id: {id}</li>
         <li>productName: {productName}</li>
         <li>price: {price}</li>
-        <li>
-          <Image src={image} width={300} height={300} />
-        </li>
+        <li>{/* <Image src={image} width={300} height={300} /> */}</li>
         <li>inStock: {inStock}</li>
         <li>fastDelivery: {fastDelivery}</li>
         <li>ratings: {ratings}</li>

@@ -82,6 +82,9 @@ UI context
 Shopping Cart Context
 [React Shopping Cart w/Faker Data]("https://www.youtube.com/watch?v=HptuMAUaNGk")
 
+**useReducer**
+[useReducerf]("https://www.youtube.com/watch?v=lSh9RyYcnPA&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=12")
+
 **React-Query Setup**
 
 - [React-Query Client, QueryProvider]("")

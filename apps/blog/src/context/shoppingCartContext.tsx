@@ -4,23 +4,36 @@ const ShoppingCartContext = createContext({})
 
 const shoppingCartReducer = (state, action) => {
   switch (action.type) {
-    case "INCREMENT": {
-      return { count: state.count + 1 }
+    case "FILTER": {
+      // const {productName, inventoryCount} = action.payload
+      // const filterForProduct = state.filter(()=>{})
+      // const updateFilteredProduct = {...filterForProduct, filterForProduct.inventoryCount + inventoryCount }
+      // return { ...state, updateFilteredProduct }
+      console.log(action.payload)
+      return { products: [{ id: "a9326647-9f6e-4dab-bdb5-aec2b0f0768e", productName: "Unbranded Granite Shirt", price: 300, inStock: 6, fastDelivery: true, ratings: 8 }] }
+    }
+    case "UNFILTER": {
+      // const {productName, inventoryCount} = action.payload
+      // const filterForProduct = state.filter(()=>{})
+      // const updateFilteredProduct = {...filterForProduct, filterForProduct.inventoryCount + inventoryCount }
+      // return { ...state, updateFilteredProduct }
+      console.log(action.payload)
+      return { products: createProducts(20) }
     }
     case "DECREMENT": {
-      return { count: state.count - 1 }
+      return { ...state }
     }
     default:
       return state
   }
 }
 
-const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
+const ShoppingCartContextProvider = ({ children }: { children: ReactNode }): void => {
   const memoizedProducts = useCallback(() => {
     return createProducts(20)
-  }, [createProducts])
+  }, [])
   let products = memoizedProducts()
-  const [state, dispatch] = useReducer(shoppingCartReducer, { count: 0, products })
+  const [state, dispatch] = useReducer(shoppingCartReducer, { products })
   const sharedState = useMemo(() => {
     return { state, dispatch }
   }, [state, dispatch])
