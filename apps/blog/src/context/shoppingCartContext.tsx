@@ -1,16 +1,27 @@
 import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode } from "react"
 import { createProducts } from "../data/fakerGeneratedShoppingCartData"
 const ShoppingCartContext = createContext({})
+// id: faker.datatype.uuid(),
+// productName: faker.commerce.productName(),
+// price: faker.commerce.price(),
+// image: faker.image.fashion(),
+// inStock: faker.random.numeric(),
+// fastDelivery: faker.datatype.boolean(),
+// ratings: faker.random.numeric(),
 
 const shoppingCartReducer = (state, action) => {
   switch (action.type) {
     case "FILTER": {
+      let { products } = state
+      let filteredProducts = products.filter((obj) => {
+        return obj.inStock > action.payload.inStock
+      })
       // const {productName, inventoryCount} = action.payload
       // const filterForProduct = state.filter(()=>{})
       // const updateFilteredProduct = {...filterForProduct, filterForProduct.inventoryCount + inventoryCount }
       // return { ...state, updateFilteredProduct }
       console.log(action.payload)
-      return { products: [{ id: "a9326647-9f6e-4dab-bdb5-aec2b0f0768e", productName: "Unbranded Granite Shirt", price: 300, inStock: 6, fastDelivery: true, ratings: 8 }] }
+      return { products: filteredProducts }
     }
     case "UNFILTER": {
       // const {productName, inventoryCount} = action.payload

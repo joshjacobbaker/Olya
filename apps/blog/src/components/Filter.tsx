@@ -46,7 +46,7 @@ const Filter = () => {
 
   const onSubmit: SubmitHandler<IFormSchema> = async (data: IFormSchema): Promise<IFormSchema | void> => {
     dispatch({ type: "FILTER", payload: data })
-    // console.log(data)
+    console.log(data)
   }
 
   return (
