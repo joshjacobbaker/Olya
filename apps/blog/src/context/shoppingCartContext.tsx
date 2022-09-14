@@ -13,9 +13,26 @@ const shoppingCartReducer = (state, action) => {
   switch (action.type) {
     case "FILTER": {
       let { products } = state
-      let filteredProducts = products.filter((obj) => {
-        return obj.inStock > action.payload.inStock
-      })
+      let filteredProducts = products
+        .filter((obj) => {
+          return obj.inStock > action.payload.inStock
+        })
+        .filter((obj) => {
+          return obj.ratings > action.payload.ratings
+        })
+        .filter((obj) => {
+          if (action.payload.fastDelivery) {
+            return obj.fastDelivery === "true"
+          } else {
+            return obj
+          }
+        })
+        .filter((obj) => {
+          return obj.price > action.payload.price
+        })
+      console.log(typeof action.payload.fastDelivery)
+      // console.log(`${action.payload.fastDelivery} payload`)
+      console.log(filteredProducts)
       // const {productName, inventoryCount} = action.payload
       // const filterForProduct = state.filter(()=>{})
       // const updateFilteredProduct = {...filterForProduct, filterForProduct.inventoryCount + inventoryCount }

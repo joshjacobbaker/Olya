@@ -68,6 +68,10 @@ const Filter = () => {
           <label htmlFor="ratings">Ratings</label>
           <input className={`ml-3`} type="number" {...register("ratings")} />
         </span>
+        <span>
+          <label htmlFor="ratings">Fast Delivery</label>
+          <input className={`ml-3`} type="checkbox" {...register("fastDelivery")} />
+        </span>
         <button type="submit" className="px-4 py-2 bg-blue-400">
           Filter
         </button>
