@@ -1,7 +1,17 @@
 import React from "react"
 import Image from "next/image"
 
-const SingleProductCard = ({ id, productName, price, image, inStock, fastDelivery, ratings }) => {
+interface UiReducerStateProps {
+  id: number
+  productName: string
+  price: number
+  image: string
+  inStock: number
+  fastDelivery: boolean
+  ratings: number
+}
+
+const SingleProductCard = ({ id, productName, price, image, inStock, fastDelivery, ratings }: UiReducerStateProps) => {
   return (
     <li>
       <ul>

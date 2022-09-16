@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode } from "react"
 import { createProducts } from "../data/fakerGeneratedShoppingCartData"
-const ShoppingCartContext = createContext({})
+
 // id: faker.datatype.uuid(),
 // productName: faker.commerce.productName(),
 // price: faker.commerce.price(),
@@ -9,7 +9,27 @@ const ShoppingCartContext = createContext({})
 // fastDelivery: faker.datatype.boolean(),
 // ratings: faker.random.numeric(),
 
-const shoppingCartReducer = (state, action) => {
+interface IShoppingCartContext {
+  state: any
+  dispatch: any
+}
+
+type product = { id: number; productName: string; price: number; image: string; inStock: number | string; fastDelivery: boolean; ratings: number }
+interface UiReducerStateProps {
+  products: product[]
+}
+
+// const initialState: UiReducerStateProps = {
+// }
+
+interface IShoppingCartReducerAction {
+  type: "FILTER" | "UNFILTER" | "DECREMENT"
+  payload: product
+}
+
+const ShoppingCartContext = createContext<IShoppingCartContext>({ state: null, dispatch: null })
+
+const shoppingCartReducer = (state: UiReducerStateProps, action: IShoppingCartReducerAction) => {
   switch (action.type) {
     case "FILTER": {
       let { products } = state
@@ -22,7 +42,7 @@ const shoppingCartReducer = (state, action) => {
         })
         .filter((obj) => {
           if (action.payload.fastDelivery) {
-            return obj.fastDelivery === "true"
+            return obj.fastDelivery === true
           } else {
             return obj
           }
