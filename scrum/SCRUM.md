@@ -81,6 +81,13 @@ Flow: type in search field, hit submit, redirected to page with search results,
 UI context
 Shopping Cart Context
 [React Shopping Cart w/Faker Data]("https://www.youtube.com/watch?v=HptuMAUaNGk")
+todo:
+
+- Sum function in redux reducer
+- Count function in redux reducer
+- Filter function in redux reducer
+- 2 useEffect localstorage initial and on change
+- Type useReducer, Context, Dispatch..?
 
 **useReducer**
 [useReducerf]("https://www.youtube.com/watch?v=lSh9RyYcnPA&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=12")

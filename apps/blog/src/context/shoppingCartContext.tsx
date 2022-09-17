@@ -9,29 +9,31 @@ import { createProducts } from "../data/fakerGeneratedShoppingCartData"
 // fastDelivery: faker.datatype.boolean(),
 // ratings: faker.random.numeric(),
 
-interface IShoppingCartContext {
-  state: any
-  dispatch: any
-}
+// interface IShoppingCartContext {
+//   state: any
+//   dispatch: any
+// }
 
 type product = { id: number; productName: string; price: number; image: string; inStock: number | string; fastDelivery: boolean; ratings: number }
+
 interface UiReducerStateProps {
   products: product[]
+  quantity: number // products.reduce()
+  TotalSalesAmount: number // products.reduce()
 }
 
-// const initialState: UiReducerStateProps = {
-// }
+let shoppingCartInitialState = { products: [], quantity: 0, totalSalesAmount: 0 }
 
 interface IShoppingCartReducerAction {
   type: "FILTER" | "UNFILTER" | "DECREMENT"
-  payload: product
+  payload: product | product[]
 }
 
-const ShoppingCartContext = createContext<IShoppingCartContext>({ state: null, dispatch: null })
+const ShoppingCartContext = createContext({ state: null, dispatch: null })
 
-const shoppingCartReducer = (state: UiReducerStateProps, action: IShoppingCartReducerAction) => {
+const shoppingCartReducer = (state: UiReducerStateProps, action: IShoppingCartReducerAction): UiReducerStateProps => {
   switch (action.type) {
-    case "FILTER": {
+    case "FILTER":
       let { products } = state
       let filteredProducts = products
         .filter((obj) => {
@@ -50,43 +52,39 @@ const shoppingCartReducer = (state: UiReducerStateProps, action: IShoppingCartRe
         .filter((obj) => {
           return obj.price > action.payload.price
         })
-      console.log(typeof action.payload.fastDelivery)
-      // console.log(`${action.payload.fastDelivery} payload`)
-      console.log(filteredProducts)
-      // const {productName, inventoryCount} = action.payload
-      // const filterForProduct = state.filter(()=>{})
-      // const updateFilteredProduct = {...filterForProduct, filterForProduct.inventoryCount + inventoryCount }
-      // return { ...state, updateFilteredProduct }
-      console.log(action.payload)
-      return { products: filteredProducts }
-    }
-    case "UNFILTER": {
-      // const {productName, inventoryCount} = action.payload
-      // const filterForProduct = state.filter(()=>{})
-      // const updateFilteredProduct = {...filterForProduct, filterForProduct.inventoryCount + inventoryCount }
-      // return { ...state, updateFilteredProduct }
-      console.log(action.payload)
-      return { products: createProducts(20) }
-    }
-    case "DECREMENT": {
-      return { ...state }
-    }
+    // case: "TOTAL_SALES_AMOUNT":
+    //     return [].reduce()
+    // case: "COUNT_QUANTITY":
+    //     return [].reduce()
     default:
       return state
   }
 }
 
-const ShoppingCartContextProvider = ({ children }: { children: ReactNode }): void => {
+const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
   const memoizedProducts = useCallback(() => {
     return createProducts(20)
   }, [])
+
   let products = memoizedProducts()
   const [state, dispatch] = useReducer(shoppingCartReducer, { products })
   const sharedState = useMemo(() => {
     return { state, dispatch }
   }, [state, dispatch])
 
-  console.log(memoizedProducts)
+  // useEffect(() => {
+  //   const shoppingCartContextState = JSON.stringify(localStorage.getItem("shoppingCartContext"))
+  //   if (shoppingCartContextState) {
+  //     dispatch({ type: "LOCAL_STATE", payload: shoppingCartContextState })
+  //   }
+  // }, [])
+
+  // useEffect(() => {
+  //   if (state !== initialState) {
+  //     localStorage.setItem("shoppingCartContext", JSON.stringify(state))
+  //   }
+  // }, [state])
+
   return <ShoppingCartContext.Provider value={sharedState}>{children}</ShoppingCartContext.Provider>
 }
 

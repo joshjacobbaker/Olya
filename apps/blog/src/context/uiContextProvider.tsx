@@ -62,7 +62,7 @@ const UiContextProvider = ({ children }: UiContextProviderProps) => {
 
   useEffect(() => {
     if (state !== initialState) {
-      localStorage.setItem("LOCAL_STATE", JSON.stringify(state))
+      localStorage.setItem("uiLocalContextState", JSON.stringify(state))
     }
   }, [state])
 
