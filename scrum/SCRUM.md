@@ -89,6 +89,12 @@ todo:
 - 2 useEffect localstorage initial and on change
 - Type useReducer, Context, Dispatch..?
 
+**_React-Query Shopping Cart State Management_**
+[Example]("https://www.youtube.com/watch?v=y-xhPqBN3LY")
+
+**_MongoDB & Mongoose_**
+[]()
+
 **useReducer**
 [useReducerf]("https://www.youtube.com/watch?v=lSh9RyYcnPA&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=12")
 
