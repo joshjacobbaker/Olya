@@ -1,5 +1,6 @@
 # Backlog
 
+- [RTK Query & Redux]("")
 - [React-Hook-Form]("https://react-hook-form.com/")
 - [react-toastify]("")
 - [NextAuth.js]("")
