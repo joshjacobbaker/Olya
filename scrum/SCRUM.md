@@ -136,6 +136,7 @@ todo:
 - [npx tailwindcss init --full ......want entire configuration with all classes]("")
 
 **_Stripe API_**
+[Stripe API Implementing...]("https://www.youtube.com/watch?v=XKWJFpZYVAQ")
 [Stripe API in NextJS]("https://www.youtube.com/watch?v=w6xpHQBWZr8")
 [Stripe API in NextJS w/Leigh Halliday]("https://www.youtube.com/watch?v=WTUYem2IxLA")
 **_GetServerSideProps instead of GetStaticSideProps for Dynamic Results_**

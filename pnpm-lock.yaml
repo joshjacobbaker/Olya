@@ -30,6 +30,7 @@ importers:
     specifiers:
       '@faker-js/faker': ^7.5.0
       '@hookform/resolvers': ^2.9.7
+      '@stripe/react-stripe-js': ^1.10.0
       '@stripe/stripe-js': ^1.36.0
       '@tanstack/react-query': ^4.2.1
       '@tanstack/react-query-devtools': ^4.2.1
@@ -38,6 +39,9 @@ importers:
       '@types/react-dom': <18.0.0
       '@types/react-modal': ^3.13.1
       autoprefixer: ^10.4.7
+      axios: ^0.27.2
+      micro: ^9.4.1
+      micro-cors: ^0.1.1
       mongoose: ^6.6.1
       next: latest
       next-themes: ^0.2.0
@@ -48,14 +52,20 @@ importers:
       react-hook-form: ^7.34.2
       react-icons: ^4.4.0
       react-modal: ^3.15.1
+      stripe: ^10.10.0
       tailwindcss: ^3.1.2
       typescript: 4.7.2
       ui: workspace:*
+      use-shopping-cart: ^3.1.2
       yup: ^0.32.11
     dependencies:
       '@hookform/resolvers': 2.9.7_react-hook-form@7.34.2
+      '@stripe/react-stripe-js': 1.10.0_lujjq3iiqjpi5zybwguk3ttsje
       '@stripe/stripe-js': 1.36.0
       '@tanstack/react-query': 4.2.1_ef5jwxihqo6n7gxfmzogljlgcm
+      axios: 0.27.2
+      micro: 9.4.1
+      micro-cors: 0.1.1
       mongoose: 6.6.1
       next: 12.3.1_ef5jwxihqo6n7gxfmzogljlgcm
       next-themes: 0.2.0_y3vnqhrq6kacn7e7j5j4tjxiry
@@ -64,7 +74,9 @@ importers:
       react-hook-form: 7.34.2_react@18.1.0
       react-icons: 4.4.0_react@18.1.0
       react-modal: 3.15.1_ef5jwxihqo6n7gxfmzogljlgcm
+      stripe: 10.10.0
       ui: link:../../packages/ui
+      use-shopping-cart: 3.1.2_ef5jwxihqo6n7gxfmzogljlgcm
       yup: 0.32.11
     devDependencies:
       '@faker-js/faker': 7.5.0
@@ -1820,7 +1832,7 @@ packages:
     peerDependencies:
       react-hook-form: ^7.0.0
     dependencies:
-      react-hook-form: 7.34.2_react@17.0.2
+      react-hook-form: 7.34.2_react@18.1.0
     dev: false
 
   /@humanwhocodes/config-array/0.5.0:
@@ -2310,6 +2322,25 @@ packages:
       immer: 9.0.15
       react: 17.0.2
       react-redux: 7.2.8_sfoxds7t5ydpegc3knd667wn6m
+      redux: 4.2.0
+      redux-thunk: 2.4.1_redux@4.2.0
+      reselect: 4.1.6
+    dev: false
+
+  /@reduxjs/toolkit/1.8.5_zzxyysq6wldktrdb626h7upe3y:
+    resolution: {integrity: sha512-f4D5EXO7A7Xq35T0zRbWq5kJQyXzzscnHKmjnu2+37B3rwHU6mX9PYlbfXdnxcY6P/7zfmjhgan0Z+yuOfeBmA==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+    dependencies:
+      immer: 9.0.15
+      react: 18.1.0
+      react-redux: 7.2.8_ef5jwxihqo6n7gxfmzogljlgcm
       redux: 4.2.0
       redux-thunk: 2.4.1_redux@4.2.0
       reselect: 4.1.6
@@ -3573,6 +3604,19 @@ packages:
       resolve-from: 5.0.0
     dev: true
 
+  /@stripe/react-stripe-js/1.10.0_lujjq3iiqjpi5zybwguk3ttsje:
+    resolution: {integrity: sha512-vuIjJUZJ3nyiaGa5z5iyMCzZfGGsgzOOjWjqknbbhkNsewyyginfeky9EZLSz9+iSAsgC9K6MeNOTLKVGcMycQ==}
+    peerDependencies:
+      '@stripe/stripe-js': ^1.34.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@stripe/stripe-js': 1.36.0
+      prop-types: 15.8.1
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
   /@stripe/react-stripe-js/1.7.0_226fsijyab33iz4n2n6k2yzrje:
     resolution: {integrity: sha512-L20v8Jq0TDZFL2+y+uXD751t6q9SalSFkSYZpmZ2VWrGZGK7HAGfRQ804dzYSSr5fGenW6iz6y7U0YKfC/TK3g==}
     peerDependencies:
@@ -4685,7 +4729,6 @@ packages:
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
-    dev: true
 
   /at-least-node/1.0.0:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
@@ -4730,6 +4773,15 @@ packages:
   /axe-core/4.4.3:
     resolution: {integrity: sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==}
     engines: {node: '>=4'}
+    dev: false
+
+  /axios/0.27.2:
+    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+    dependencies:
+      follow-redirects: 1.15.2
+      form-data: 4.0.0
+    transitivePeerDependencies:
+      - debug
     dev: false
 
   /axobject-query/2.2.0:
@@ -5080,7 +5132,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001374
+      caniuse-lite: 1.0.30001406
       electron-to-chromium: 1.4.211
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5_browserslist@4.21.3
@@ -5473,7 +5525,6 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
-    dev: true
 
   /comma-separated-tokens/1.0.8:
     resolution: {integrity: sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==}
@@ -5894,7 +5945,6 @@ packages:
   /delayed-stream/1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
-    dev: true
 
   /delegates/1.0.0:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
@@ -6933,6 +6983,16 @@ packages:
       readable-stream: 2.3.7
     dev: true
 
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
   /for-in/1.0.2:
     resolution: {integrity: sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==}
     engines: {node: '>=0.10.0'}
@@ -7012,6 +7072,15 @@ packages:
       combined-stream: 1.0.8
       mime-types: 2.1.35
     dev: true
+
+  /form-data/4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+    dev: false
 
   /forwarded/0.2.0:
     resolution: {integrity: sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==}
@@ -8662,14 +8731,12 @@ packages:
   /mime-db/1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
-    dev: true
 
   /mime-types/2.1.35:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
-    dev: true
 
   /mime/1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
@@ -10402,6 +10469,28 @@ packages:
       warning: 4.0.3
     dev: false
 
+  /react-redux/7.2.8_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-6+uDjhs3PSIclqoCk0kd6iX74gzrGc3W5zcAjbrFgEdIjRSQObdIwfx80unTkVUYvbQ95Y8Av3OvFHq1w5EOUw==}
+    peerDependencies:
+      react: ^16.8.3 || ^17 || ^18
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.18.9
+      '@types/react-redux': 7.1.24
+      hoist-non-react-statics: 3.3.2
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      react-is: 17.0.2
+    dev: false
+
   /react-redux/7.2.8_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-6+uDjhs3PSIclqoCk0kd6iX74gzrGc3W5zcAjbrFgEdIjRSQObdIwfx80unTkVUYvbQ95Y8Av3OvFHq1w5EOUw==}
     peerDependencies:
@@ -10544,6 +10633,18 @@ packages:
         optional: true
     dependencies:
       react: 17.0.2
+    dev: false
+
+  /redux-persist/6.0.0_react@18.1.0:
+    resolution: {integrity: sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==}
+    peerDependencies:
+      react: '>=16'
+      redux: '>4.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /redux-thunk/2.4.1_redux@4.2.0:
@@ -11437,6 +11538,14 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+  /stripe/10.10.0:
+    resolution: {integrity: sha512-CINNkuDEmF1rsHoTKS39iZ641NFONKZKllUioeQkRpz7qYPJayp7Xl/V30vbM2n5CTJo3X0FmZ2CychThfPTDA==}
+    engines: {node: ^8.1 || >=10.*}
+    dependencies:
+      '@types/node': 18.6.5
+      qs: 6.11.0
+    dev: false
+
   /stripe/8.200.0:
     resolution: {integrity: sha512-oM6jBvsIwY3x9cuNUSytwQ3daGuo2xxcMM6diUrNZhvOm5hbY2AvP2JPWW8RPMK0OHFskmYbWTKMJ1wg7AvLSQ==}
     engines: {node: ^8.1 || >=10.*}
@@ -12314,6 +12423,25 @@ packages:
       - react-native
       - redux
       - rollup
+    dev: false
+
+  /use-shopping-cart/3.1.2_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-TxagEZ8jlExzIETsDcqyQZ+WpPSwWCIOqSFaE66vdV7SvxBUNNVXmpjo2jSaOdDdjXvPHQcK/9hNo2kbP1ro9Q==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      '@reduxjs/toolkit': 1.8.5_zzxyysq6wldktrdb626h7upe3y
+      '@stripe/stripe-js': 1.36.0
+      react: 18.1.0
+      react-redux: 7.2.8_ef5jwxihqo6n7gxfmzogljlgcm
+      redux-persist: 6.0.0_react@18.1.0
+      typescript: 4.7.4
+      uuid: 8.3.2
+    transitivePeerDependencies:
+      - react-dom
+      - react-native
+      - redux
     dev: false
 
   /use-sync-external-store/1.2.0:

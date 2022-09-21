@@ -12,7 +12,7 @@ type Props = {}
 
 function Header({}: Props) {
   const themeCtx: { isDarkTheme?: boolean; toggleThemeHandler: () => void } = useContext(MyThemeContext)
-  const [modalIsOpen, setIsOpen] = useState(false)
+  // const [modalIsOpen, setIsOpen] = useState(false)
   const { state, dispatch } = useContext(UiContext)
 
   function toggleThemeHandler(): void {
@@ -22,7 +22,7 @@ function Header({}: Props) {
   function toggleModal() {
     // setIsOpen(true)
     dispatch({ type: "MODAL_OPEN" })
-    console.log(state.modalOpen)
+    // console.log(state.modalOpen)
   }
 
   return (

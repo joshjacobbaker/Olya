@@ -9,6 +9,7 @@ import { MyThemeContextProvider } from "../context/myThemeContext"
 import ReactQueryProvider from "../context/reactQueryProvider"
 import UiContextProvider from "../context/uiContextProvider"
 import ReactHookFormProvider from "../context/reactHookFormProvider"
+import StripeContext from "../context/stripeContext"
 
 //
 type ComponentWithPageLayout = AppProps & {
@@ -19,29 +20,31 @@ type ComponentWithPageLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-    <ReactHookFormProvider>
+    <StripeContext>
       <UiContextProvider>
-        <ReactQueryProvider>
-          <MyThemeContextProvider>
-            <ShoppingCartContextProvider>
-              <Head>
-                <meta />
-              </Head>
+        <ReactHookFormProvider>
+          <ReactQueryProvider>
+            <MyThemeContextProvider>
+              <ShoppingCartContextProvider>
+                <Head>
+                  <meta />
+                </Head>
 
-              <MainLayout>
-                {Component.PageLayout ? (
-                  <Component.PageLayout>
+                <MainLayout>
+                  {Component.PageLayout ? (
+                    <Component.PageLayout>
+                      <Component {...pageProps} />
+                    </Component.PageLayout>
+                  ) : (
                     <Component {...pageProps} />
-                  </Component.PageLayout>
-                ) : (
-                  <Component {...pageProps} />
-                )}
-              </MainLayout>
-            </ShoppingCartContextProvider>
-          </MyThemeContextProvider>
-        </ReactQueryProvider>
+                  )}
+                </MainLayout>
+              </ShoppingCartContextProvider>
+            </MyThemeContextProvider>
+          </ReactQueryProvider>
+        </ReactHookFormProvider>
       </UiContextProvider>
-    </ReactHookFormProvider>
+    </StripeContext>
   )
 }
 

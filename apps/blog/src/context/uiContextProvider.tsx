@@ -60,11 +60,11 @@ const UiContextProvider = ({ children }: UiContextProviderProps) => {
     }
   }, [])
 
-  useEffect(() => {
-    if (state !== initialState) {
-      localStorage.setItem("uiLocalContextState", JSON.stringify(state))
-    }
-  }, [state])
+  // useEffect(() => {
+  //   if (state !== initialState) {
+  //     localStorage.setItem("uiLocalContextState", JSON.stringify(state))
+  //   }
+  // }, [state])
 
   return <UiContext.Provider value={sharedState}>{children}</UiContext.Provider>
 }

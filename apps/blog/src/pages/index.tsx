@@ -39,6 +39,9 @@ const Home: NextPage = () => {
           <Link href="/mongodb">
             <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">MongoDB</a>
           </Link>
+          <Link href="/stripe">
+            <a className="bg-blue-900 py-4 px-8 flex justify-center items-center rounded-lg mb-4">Stripe</a>
+          </Link>
         </div>
         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />{" "}
       </div>
