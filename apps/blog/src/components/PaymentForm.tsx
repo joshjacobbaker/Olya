@@ -28,11 +28,12 @@ export default function PaymentForm({}: Props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log("Payment Process Started")
     const { error, paymentMethod } = await stripe?.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement),
     })
-
+    console.log("Payment Method Created")
     if (!error) {
       try {
         const { id } = paymentMethod
@@ -51,14 +52,14 @@ export default function PaymentForm({}: Props) {
     }
   }
   return (
-    <>
+    <div className="h-screen w-screen flex flex-col">
       {!success ? (
-        <form className="h-2/3" onSubmit={handleSubmit}>
+        <form className="h-2/3 bg-zinc-300 p-4 m-10" onSubmit={handleSubmit}>
           <fieldset className="FormGroup">
             <div className="FormRow">
-              <CardElement options={CARD_OPTIONS} />
+              <CardElement />
             </div>
-            <button>Pay</button>
+            <button className="px-4 py-2 bg-blue-400 rounded-lg">Pay</button>
           </fieldset>
         </form>
       ) : (
@@ -67,6 +68,6 @@ export default function PaymentForm({}: Props) {
         </div>
       )}
       PaymentForm
-    </>
+    </div>
   )
 }
