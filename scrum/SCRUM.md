@@ -60,6 +60,9 @@
     **MonoRepo Management**
   - [remove unwanted root level packages from node_modules and package.json]("")
 
+**_ Email Service _**
+Send Grid
+
 # WIP
 
 **_Search Field_**
@@ -143,6 +146,7 @@ todo:
 
 **_Next-Auth_**
 [Next-Auth]("https://next-auth.js.org/getting-started/example")
+[Next-Auth Tutorial YouTube]("https://www.youtube.com/watch?v=tgrvKGPmI04")
 
 # Finished
 
