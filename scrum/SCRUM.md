@@ -141,6 +141,9 @@ todo:
 [Stripe API in NextJS w/Leigh Halliday]("https://www.youtube.com/watch?v=WTUYem2IxLA")
 **_GetServerSideProps instead of GetStaticSideProps for Dynamic Results_**
 
+**_Next-Auth_**
+[Next-Auth]("https://next-auth.js.org/getting-started/example")
+
 # Finished
 
 [Context with useMemo, useEffect LocalStorage]("https://www.youtube.com/watch?v=74a98FoLS70")

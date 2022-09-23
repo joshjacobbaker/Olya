@@ -9,6 +9,7 @@ import { MyThemeContextProvider } from "../context/myThemeContext"
 import ReactQueryProvider from "../context/reactQueryProvider"
 import UiContextProvider from "../context/uiContextProvider"
 import ReactHookFormProvider from "../context/reactHookFormProvider"
+import { SessionProvider } from "next-auth/react"
 
 //
 type ComponentWithPageLayout = AppProps & {
@@ -17,31 +18,33 @@ type ComponentWithPageLayout = AppProps & {
   }
 }
 
-function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: ComponentWithPageLayout) {
   return (
-    <UiContextProvider>
-      <ReactHookFormProvider>
-        <ReactQueryProvider>
-          <MyThemeContextProvider>
-            <ShoppingCartContextProvider>
-              <Head>
-                <meta />
-              </Head>
+    <SessionProvider session={session}>
+      <UiContextProvider>
+        <ReactHookFormProvider>
+          <ReactQueryProvider>
+            <MyThemeContextProvider>
+              <ShoppingCartContextProvider>
+                <Head>
+                  <meta />
+                </Head>
 
-              <MainLayout>
-                {Component.PageLayout ? (
-                  <Component.PageLayout>
+                <MainLayout>
+                  {Component.PageLayout ? (
+                    <Component.PageLayout>
+                      <Component {...pageProps} />
+                    </Component.PageLayout>
+                  ) : (
                     <Component {...pageProps} />
-                  </Component.PageLayout>
-                ) : (
-                  <Component {...pageProps} />
-                )}
-              </MainLayout>
-            </ShoppingCartContextProvider>
-          </MyThemeContextProvider>
-        </ReactQueryProvider>
-      </ReactHookFormProvider>
-    </UiContextProvider>
+                  )}
+                </MainLayout>
+              </ShoppingCartContextProvider>
+            </MyThemeContextProvider>
+          </ReactQueryProvider>
+        </ReactHookFormProvider>
+      </UiContextProvider>
+    </SessionProvider>
   )
 }
 

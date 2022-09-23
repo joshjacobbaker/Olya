@@ -4,8 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 // import Link from "next/link"
 import { Button } from "ui"
+import { useSession } from "next-auth/react"
 
 const Home: NextPage = () => {
+  const { data: session } = useSession()
   return (
     <>
       <Head>
