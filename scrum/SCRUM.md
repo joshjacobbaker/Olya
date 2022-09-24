@@ -61,7 +61,8 @@
   - [remove unwanted root level packages from node_modules and package.json]("")
 
 **_ Email Service _**
-Send Grid
+[Send Grid]("https://www.youtube.com/watch?v=tgrvKGPmI04")
+[My Send Grid Account has been setup here]("https://app.sendgrid.com/")
 
 # WIP
 
