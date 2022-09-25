@@ -28,7 +28,9 @@
 - [SSG]("")
 - [SSR]("")
 - [CMS]("")
-
+- [Terraform]("")
+- [Nginx]("")
+- [React Next Translation locale]("")
 - [Husky Linting]("https://github.com/typicode/husky")
 - [Add Jest Testing to MonoRepo...?]("")
 - [Tailwind & MaterialUI]("https://www.youtube.com/watch?v=QQIfuMlA6TI")
