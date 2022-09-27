@@ -150,6 +150,12 @@ todo:
 **_Next-Auth_**
 [Next-Auth]("https://next-auth.js.org/getting-started/example")
 [Next-Auth Tutorial YouTube]("https://www.youtube.com/watch?v=tgrvKGPmI04")
+[Next-Auth MongoDB Adapter]("https://www.youtube.com/watch?v=mW09FBg4PlQ")
+
+**_ Next - i18Next _**
+
+- [Internationalization]("https://www.youtube.com/watch?v=nW2QUJ7_13M&list=RDLVoxsLlvJZ0RM&index=3")
+- [NextJS i18Next Translation w/i18nexus]("https://www.youtube.com/watch?v=UwzN8R6h9-U&list=RDLVoxsLlvJZ0RM&index=18")
 
 # Finished
 
