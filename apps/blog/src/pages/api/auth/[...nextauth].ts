@@ -1,4 +1,6 @@
 import NextAuth from "next-auth"
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
+import clientPromise from "../../../database/mongodbClientAdapterNextAuth"
 // import AppleProvider from "next-auth/providers/apple"
 // import GoogleProvider from "next-auth/providers/google"
 // import EmailProvider from "next-auth/providers/email"
@@ -29,4 +31,7 @@ export default NextAuth({
   pages: {
     signIn: "/nextauth/signin",
   },
+  debug: process.env.NODE_ENV === "development",
+  secret: process.env.AUTH_SECRET,
+  adapter: MongoDBAdapter(clientPromise),
 })
