@@ -48,8 +48,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: ComponentWit
   )
 }
 
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  // console.log(metric)
-}
+// export function reportWebVitals(metric: NextWebVitalsMetric) {
+// console.log(metric)
+// }
 
 export default MyApp
