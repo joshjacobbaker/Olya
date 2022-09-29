@@ -39,6 +39,7 @@ importers:
       '@types/react': <18.0.0
       '@types/react-dom': <18.0.0
       '@types/react-modal': ^3.13.1
+      '@types/stripe': ^8.0.417
       autoprefixer: ^10.4.7
       axios: ^0.27.2
       micro: ^9.4.1
@@ -47,6 +48,7 @@ importers:
       mongoose: ^6.6.1
       next: latest
       next-auth: ^4.10.3
+      next-sitemap: ^3.1.23
       next-themes: ^0.2.0
       next-transpile-modules: ^9.0.0
       postcss: ^8.4.14
@@ -74,6 +76,7 @@ importers:
       mongoose: 6.6.1
       next: 12.3.1_ef5jwxihqo6n7gxfmzogljlgcm
       next-auth: 4.10.3_ef5jwxihqo6n7gxfmzogljlgcm
+      next-sitemap: 3.1.23_next@12.3.1
       next-themes: 0.2.0_y3vnqhrq6kacn7e7j5j4tjxiry
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
@@ -91,6 +94,7 @@ importers:
       '@types/react': 17.0.48
       '@types/react-dom': 17.0.17
       '@types/react-modal': 3.13.1
+      '@types/stripe': 8.0.417
       autoprefixer: 10.4.8_postcss@8.4.16
       next-transpile-modules: 9.0.0
       postcss: 8.4.16
@@ -1814,6 +1818,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@corex/deepmerge/4.0.29:
+    resolution: {integrity: sha512-q/yVUnqckA8Do+EvAfpy7RLdumnBy9ZsducMUtZTvpdbJC7azEf1hGtnYYxm0QfphYxjwggv6XtH64prvS1W+A==}
+    dev: false
 
   /@discoveryjs/json-ext/0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
@@ -4024,6 +4032,13 @@ packages:
 
   /@types/source-list-map/0.1.2:
     resolution: {integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==}
+    dev: true
+
+  /@types/stripe/8.0.417:
+    resolution: {integrity: sha512-PTuqskh9YKNENnOHGVJBm4sM0zE8B1jZw1JIskuGAPkMB+OH236QeN8scclhYGPA4nG6zTtPXgwpXdp+HPDTVw==}
+    deprecated: This is a stub types definition. stripe provides its own type definitions, so you do not need this installed.
+    dependencies:
+      stripe: 10.10.0
     dev: true
 
   /@types/tapable/1.0.8:
@@ -9124,6 +9139,19 @@ packages:
       uuid: 8.3.2
     dev: false
 
+  /next-sitemap/3.1.23_next@12.3.1:
+    resolution: {integrity: sha512-szQ5uvxn4/7P01U/rvzEccOcYk0Nm+kI3BGzHheREV+HDcj+IilrhXCuNqv4dBWy49eqsgCmjHuEDINx3/teMQ==}
+    engines: {node: '>=14.18'}
+    hasBin: true
+    peerDependencies:
+      '@next/env': '*'
+      next: '*'
+    dependencies:
+      '@corex/deepmerge': 4.0.29
+      minimist: 1.2.6
+      next: 12.3.1_ef5jwxihqo6n7gxfmzogljlgcm
+    dev: false
+
   /next-themes/0.2.0:
     resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
     peerDependencies:
@@ -11732,7 +11760,6 @@ packages:
     dependencies:
       '@types/node': 18.6.5
       qs: 6.11.0
-    dev: false
 
   /stripe/8.200.0:
     resolution: {integrity: sha512-oM6jBvsIwY3x9cuNUSytwQ3daGuo2xxcMM6diUrNZhvOm5hbY2AvP2JPWW8RPMK0OHFskmYbWTKMJ1wg7AvLSQ==}
