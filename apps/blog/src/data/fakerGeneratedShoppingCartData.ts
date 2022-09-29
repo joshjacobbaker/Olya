@@ -7,9 +7,9 @@ const createProducts = (numberOfProducts: number) => {
       productName: faker.commerce.productName(),
       price: faker.commerce.price(),
       image: faker.image.fashion(),
-      inStock: faker.random.numeric(),
+      quantity: faker.random.numeric(),
       fastDelivery: faker.datatype.boolean() ? "true" : "false",
-      ratings: faker.random.numeric(),
+      rating: faker.random.numeric(),
     }
   })
 }

@@ -16,7 +16,7 @@ const initialState: UiReducerStateProps = {
 
 interface UiReducerAction {
   type: "LOCAL_STATE" | "MENU_DROPDOWN_OPEN" | "SIDE_DRAWER_OPEN" | "MODAL_OPEN" | "SHOPPING_CART_OPEN"
-  payload: object | string | number | boolean
+  payload: boolean | string
 }
 
 interface IUiContext {
@@ -28,8 +28,8 @@ export const UiContext = createContext<IUiContext>({ state: null, dispatch: null
 
 function reducer(state: UiReducerStateProps, action: UiReducerAction) {
   switch (action.type) {
-    case "LOCAL_STATE":
-      return { ...state, ...action.payload }
+    // case "LOCAL_STATE":
+    //   return { ...state, ...action.payload }
     case "MENU_DROPDOWN_OPEN":
       return { ...state, menuDropdownOpen: !state.menuDropdownOpen }
     case "SIDE_DRAWER_OPEN":

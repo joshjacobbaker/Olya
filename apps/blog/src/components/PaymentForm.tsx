@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js"
 import axios from "axios"
+import { FaLessThan } from "react-icons/fa"
 
 const CARD_OPTIONS = {
   iconStyle: "solid",
@@ -26,28 +27,34 @@ export default function PaymentForm({}: Props) {
   const stripe = useStripe()
   const elements = useElements()
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log("Payment Process Started")
-    const { error, paymentMethod } = await stripe?.createPaymentMethod({
-      type: "card",
-      card: elements.getElement(CardElement),
-    })
-    console.log("Payment Method Created")
-    if (!error) {
-      try {
-        const { id } = paymentMethod
-        const response = await axios.post("/api/payment", {
-          amount: 1000,
-          id,
-        })
+    const cardElement = elements?.getElement(CardElement)
 
-        if (response.data.success) {
-          console.log("Successful Payment")
-          setSuccess(true)
+    if (cardElement) {
+      let payment = await stripe?.createPaymentMethod({
+        type: "card",
+        card: cardElement,
+      })
+
+      console.log("Payment Method Created")
+      if (!payment?.error) {
+        try {
+          const id = payment?.paymentMethod?.id
+
+          const response = await axios.post("/api/payment", {
+            amount: 1000,
+            id,
+          })
+
+          if (response?.data?.success) {
+            console.log("Successful Payment")
+            setSuccess(true)
+          }
+        } catch (e) {
+          console.error("Error", e)
         }
-      } catch (e) {
-        console.error("Error", e)
       }
     }
   }

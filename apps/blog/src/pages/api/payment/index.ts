@@ -1,7 +1,7 @@
 import Stripe from "stripe"
 import { NextRequest, NextResponse } from "next/server"
 
-const stripe = Stripe(process.env.PRIVATE_STRIPE_KEY)
+const stripe = new Stripe(process.env.PRIVATE_STRIPE_KEY)
 
 export default async function handler(req: NextRequest, res: NextResponse) {
   if (req.method === "POST") {

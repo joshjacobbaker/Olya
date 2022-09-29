@@ -15,12 +15,14 @@ import { SessionProvider } from "next-auth/react"
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps["Component"] & {
     PageLayout?: React.ComponentType
+  } & {
+    session: typeof SessionProvider
   }
 }
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: ComponentWithPageLayout) {
+function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
-    <SessionProvider session={session}>
+    <SessionProvider session={(pageProps as any).session}>
       <UiContextProvider>
         <ReactHookFormProvider>
           <ReactQueryProvider>
