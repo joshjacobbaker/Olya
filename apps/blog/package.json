@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "post:build": "next-sitemap"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.7",
@@ -20,6 +21,7 @@
     "mongoose": "^6.6.1",
     "next": "latest",
     "next-auth": "^4.10.3",
+    "next-sitemap": "^3.1.23",
     "next-themes": "^0.2.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
@@ -38,6 +40,7 @@
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.5",
     "@types/react-modal": "^3.13.1",
+    "@types/stripe": "^8.0.417",
     "autoprefixer": "^10.4.7",
     "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.14",

@@ -6,7 +6,7 @@ import { MongoClient } from "mongodb"
 //   useNewUrlParser: true,
 // }
 
-const uri: string = process.env.MONGO_URI
+const MONGO_URI = process.env.MONGO_URI ?? ""
 let client: MongoClient
 let clientPromise: Promise<MongoClient>
 
@@ -23,13 +23,13 @@ if (process.env.NODE_ENV === "development") {
   }
 
   if (!globalWithMongoClientPromise._mongoClientPromise) {
-    client = new MongoClient(uri)
+    client = new MongoClient(MONGO_URI)
     globalWithMongoClientPromise._mongoClientPromise = client.connect()
   }
   clientPromise = globalWithMongoClientPromise._mongoClientPromise
 } else {
   // In production mode, it's best to not use a global variable.
-  client = new MongoClient(uri)
+  client = new MongoClient(MONGO_URI)
   clientPromise = client.connect()
 }
 

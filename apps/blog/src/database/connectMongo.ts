@@ -3,8 +3,9 @@ import mongoose from "mongoose"
 
 const connectMongo = async () => {
   // console.log(`${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}`)
+  const MONGO_URI = process.env.MONGO_URI ?? ""
 
-  return mongoose.connect(process.env.MONGO_URI)
+  return mongoose.connect(MONGO_URI)
 }
 
 export default connectMongo

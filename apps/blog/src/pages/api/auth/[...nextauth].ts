@@ -7,7 +7,6 @@ import clientPromise from "../../../database/mongodbClientAdapterNextAuth"
 import GithubProvider from "next-auth/providers/github"
 
 export default NextAuth({
-  secret: process.env.SECRET,
   providers: [
     // OAuth authentication providers
     // AppleProvider({
@@ -24,14 +23,14 @@ export default NextAuth({
     //   from: "<no-reply@example.com>",
     // }),
     GithubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      clientId: process.env.GITHUB_CLIENT_ID ?? "",
+      clientSecret: process.env.GITHUB_CLIENT_SECRET ?? "",
     }),
   ],
   pages: {
     signIn: "/nextauth/signin",
   },
   debug: process.env.NODE_ENV === "development",
-  secret: process.env.AUTH_SECRET,
+  secret: process.env.AUTH_SECRET ?? "",
   adapter: MongoDBAdapter(clientPromise),
 })
