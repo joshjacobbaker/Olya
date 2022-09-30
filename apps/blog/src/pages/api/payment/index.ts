@@ -1,9 +1,11 @@
 import Stripe from "stripe"
-import { NextRequest, NextResponse } from "next/server"
+import { NextApiRequest, NextApiResponse } from "next"
 
-const stripe = new Stripe(process.env.PRIVATE_STRIPE_KEY)
+const stripe = new Stripe(process.env.PRIVATE_STRIPE_KEY as string, {
+  apiVersion: "2022-08-01",
+})
 
-export default async function handler(req: NextRequest, res: NextResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     let { id, amount } = req.body
     console.log("id", id, "amount", amount)
@@ -18,13 +20,13 @@ export default async function handler(req: NextRequest, res: NextResponse) {
 
       console.log("Payment", payment)
 
-      res.status(200).json({
+      res?.status(200).json({
         message: "Payment successful",
         success: true,
       })
     } catch (e) {
       console.error("Error", e)
-      res.status().json({ message: "Payment Failed", success: false })
+      res?.status(403).json({ message: "Payment Failed", success: false })
     }
   }
 }
