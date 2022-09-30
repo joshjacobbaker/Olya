@@ -33,4 +33,9 @@ export default NextAuth({
   debug: process.env.NODE_ENV === "development",
   secret: process.env.AUTH_SECRET ?? "",
   adapter: MongoDBAdapter(clientPromise),
+  callbacks: {
+    session({ session, token, user }) {
+      return session // The return type will match the one returned in `useSession()`
+    },
+  },
 })

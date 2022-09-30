@@ -7,9 +7,9 @@ const ShoppingCartPage = () => {
   return (
     <div className={`grid grid-cols-2`}>
       <ul className={`bg-zinc-200`}>
-        {state.products.map((item) => {
+        {/* {state.products.map((item) => {
           return <SingleProductCard {...item} />
-        })}
+        })} */}
       </ul>
       <Filter />
     </div>

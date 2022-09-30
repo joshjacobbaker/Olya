@@ -2,7 +2,6 @@ import React from "react"
 import Image from "next/image"
 import PaymentForm from "../../components/PaymentForm"
 import StripeContextELement from "../../context/stripeContext"
-import stickFigure from ""
 type Props = {}
 
 function Stripe({}: Props) {

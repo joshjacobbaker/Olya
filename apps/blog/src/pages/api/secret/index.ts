@@ -1,7 +1,7 @@
 import { getSession } from "next-auth/react"
-import { NextRequest, NextResponse } from "next/server"
+import type { NextApiRequest, NextApiResponse } from "next"
 
-export default async function handler(req: NextRequest, res: NextResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await getSession({ req })
 
   if (session) {
