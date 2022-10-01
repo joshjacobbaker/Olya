@@ -1,5 +1,4 @@
 import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode } from "react"
-import { createProducts } from "../data/fakerGeneratedShoppingCartData"
 
 // id: faker.datatype.uuid(),
 // productName: faker.commerce.productName(),
@@ -14,37 +13,39 @@ import { createProducts } from "../data/fakerGeneratedShoppingCartData"
 //   dispatch: any
 // }
 
-type Iproduct = { id: number; productName: string; price: number; image: string; quantity: number; fastDelivery: boolean; rating: number }
+type Iproduct = { id: string; productName: string; price: string; image: string; quantity: string; fastDelivery: string; rating: string }
 
 interface IShoppingCartReducerStateProps {
-  products: Iproduct[] | null
+  products: Iproduct[]
   quantity: number // products.reduce()
   totalSalesAmount: number // products.reduce()
 }
 
-let shoppingCartInitialState = { products: null, quantity: 0, totalSalesAmount: 0 }
+let shoppingCartInitialState = { products: [], quantity: 0, totalSalesAmount: 0 }
 
 interface IShoppingCartReducerAction {
-  type: "TOTAL_SALES_AMOUNT" | "COUNT_QUANTITY"
-  payload: Iproduct[]
+  type: "TOTAL_SALES_AMOUNT" | "COUNT_QUANTITY" | "FILTER_PRODUCTS" | "SORT_PRODUCTS" | "ADD_PRODUCTS"
+  payload: { products?: Iproduct[] }
 }
 
 interface IUiContext {
-  state: any
-  dispatch: any
+  state: IShoppingCartReducerStateProps | object
+  dispatch: () => void
 }
 
-const ShoppingCartContext = createContext<IUiContext>({ state: null, dispatch: () => null })
+const ShoppingCartContext = createContext<IUiContext>({ state: null, dispatch: null })
 
 const shoppingCartReducer = (state: IShoppingCartReducerStateProps, action: IShoppingCartReducerAction): IShoppingCartReducerStateProps => {
   switch (action.type) {
     case "TOTAL_SALES_AMOUNT":
       return {
         ...state,
-        totalSalesAmount: action.payload.reduce((acc, item) => {
-          return acc + item.price * item.quantity
+        totalSalesAmount: action.payload.products.reduce((acc, item) => {
+          return acc + parseFloat(item.price) * parseFloat(item.quantity)
         }, 0),
       }
+    case "ADD_PRODUCTS":
+      return { ...state, products: [...state?.products, ...action?.payload?.products] }
     // case: "TOTAL_SALES_AMOUNT":
     //     return [].reduce()
     // case: "COUNT_QUANTITY":
@@ -55,12 +56,8 @@ const shoppingCartReducer = (state: IShoppingCartReducerStateProps, action: ISho
 }
 
 const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
-  const memoizedProducts = useCallback(() => {
-    return createProducts(20)
-  }, [])
-
-  let products = memoizedProducts()
   const [state, dispatch] = useReducer(shoppingCartReducer, shoppingCartInitialState)
+
   const sharedState = useMemo(() => {
     return { state, dispatch }
   }, [state, dispatch])
