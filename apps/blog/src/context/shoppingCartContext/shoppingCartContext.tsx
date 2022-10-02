@@ -1,5 +1,5 @@
-import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode }, React from "react"
-
+import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode } from "react"
+import { productReducer, shoppingCartReducer, ProductActions, ShoppingCartActions } from "./shoppingCartReducer"
 // id: faker.datatype.uuid(),
 // productName: faker.commerce.productName(),
 // price: faker.commerce.price(),
@@ -15,13 +15,12 @@ import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode 
 
 // type ProductType = { id: string; productName: string; price: string; image: string; quantity: string; fastDelivery: string; rating: string }
 
-type ProductType = { id: number; name: string; price: number}
+type ProductType = { id: number; name: string; price: number }
 
 type InitialStateType = {
-  products: ProductType[];
+  products: ProductType[]
   shoppingCart: number
 }
-
 
 // interface ShoppingCartType {
 //   products: ProductType[]
@@ -45,37 +44,15 @@ const initialState = {
 //   dispatch: React.Dispatch<IShoppingCartReducerAction> | null
 // }
 
-const ShoppingCartContext = createContext<InitialStateType>(initialState)
+const ShoppingCartContext = createContext<{ state: InitialStateType; dispatch: React.Dispatch<ProductActions | ShoppingCartActions> }>({ state: initialState, dispatch: () => null })
 
-export const productReducer = (state, action) => {
-  switch (action.type) {
-    case "CREATE_PRODUCT": 
-      return [
-        ...state,
-        {
-          id: action.payload.id,
-          name: action.payload.name,
-          price: action.payload.price
-        }
-      ]
-    case "DELETE_PRODUCT":
-      return [
-        ...state.filter(product => product.id !== action.payload.id)
-      ]
-    default: 
-      return state
-  }
-}
-
-export const shoppingCartReducer = (state, action) =>{
-  switch(action.type){
-    case "ADD_PRODUCT":
-      return state + 1
-  }
-}
+const mainReducer = ({ products, shoppingCart }: InitialStateType, action: ProductActions | ShoppingCartActions) => ({
+  products: productReducer(products, action),
+  shoppingCart: shoppingCartReducer(shoppingCart, action),
+})
 
 const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
-  const [state, dispatch] = useReducer(shoppingCartReducer, shoppingCartInitialState)
+  const [state, dispatch] = useReducer(mainReducer, initialState)
 
   const sharedState = useMemo(() => {
     return { state, dispatch }

@@ -4,7 +4,7 @@ import Head from "next/head"
 // import { ThemeProvider } from "next-themes"
 import MainLayout from "../components/layouts/MainLayout"
 // Context
-import ShoppingCartContextProvider from "../context/shoppingCartContext"
+import ShoppingCartContextProvider from "../context/shoppingCartContext/shoppingCartContext"
 import { MyThemeContextProvider } from "../context/myThemeContext"
 import ReactQueryProvider from "../context/reactQueryProvider"
 import UiContextProvider from "../context/uiContextProvider"
