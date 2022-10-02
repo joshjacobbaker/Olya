@@ -206,3 +206,12 @@ Send Grid Email
 ##########################################################
 
 ---
+
+---
+
+##########################################################
+Redux - CreateContext - useReducer
+##########################################################
+[Redux - CreateContext - useReducer - example]("https://dev.to/elisealcala/react-context-with-usereducer-and-typescript-4obm")
+
+---
