@@ -1,6 +1,6 @@
 # Backlog
 
-- [Vercel NextJS Turbo Repo Remote - Local Cache]("https://vercel.com/docs/concepts/monorepos/remote-caching")
+- [Vercel NextJS Turbo Repo Remote - Local Cache]("https://egghead.io/lessons/egghead-enable-github-actions-with-turbporepo-remote-caching")("https://vercel.com/docs/concepts/monorepos/remote-caching")
 - [RTK Query & Redux]("")
 - [React-Hook-Form]("https://react-hook-form.com/")
 - [react-toastify]("")
@@ -157,6 +157,9 @@ todo:
 
 - [Internationalization]("https://www.youtube.com/watch?v=nW2QUJ7_13M&list=RDLVoxsLlvJZ0RM&index=3")
 - [NextJS i18Next Translation w/i18nexus]("https://www.youtube.com/watch?v=UwzN8R6h9-U&list=RDLVoxsLlvJZ0RM&index=18")
+
+**_ UseReducer CreateContext Redux _**
+[Redux- CreateContext- useReducer]("https://dev.to/elisealcala/react-context-with-usereducer-and-typescript-4obm")
 
 # Finished
 

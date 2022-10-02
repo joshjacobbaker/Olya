@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode } from "react"
+import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode }, React from "react"
 
 // id: faker.datatype.uuid(),
 // productName: faker.commerce.productName(),
@@ -13,45 +13,64 @@ import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode 
 //   dispatch: any
 // }
 
-type Iproduct = { id: string; productName: string; price: string; image: string; quantity: string; fastDelivery: string; rating: string }
+// type ProductType = { id: string; productName: string; price: string; image: string; quantity: string; fastDelivery: string; rating: string }
 
-interface IShoppingCartReducerStateProps {
-  products: Iproduct[]
-  quantity: number // products.reduce()
-  totalSalesAmount: number // products.reduce()
+type ProductType = { id: number; name: string; price: number}
+
+type InitialStateType = {
+  products: ProductType[];
+  shoppingCart: number
 }
 
-let shoppingCartInitialState = { products: [], quantity: 0, totalSalesAmount: 0 }
 
-interface IShoppingCartReducerAction {
-  type: "TOTAL_SALES_AMOUNT" | "COUNT_QUANTITY" | "FILTER_PRODUCTS" | "SORT_PRODUCTS" | "ADD_PRODUCTS"
-  payload: { products?: Iproduct[] }
+// interface ShoppingCartType {
+//   products: ProductType[]
+//   quantity: number // products.reduce()
+//   totalSalesAmount: number // products.reduce()
+// }
+
+// let shoppingCartInitialState: ShoppingCartType = { products: [], quantity: 0, totalSalesAmount: 0 }
+const initialState = {
+  products: [],
+  shoppingCart: 0,
 }
 
-interface IUiContext {
-  state: IShoppingCartReducerStateProps | object
-  dispatch: () => void
-}
+// interface IShoppingCartReducerAction {
+//   type: "TOTAL_SALES_AMOUNT" | "COUNT_QUANTITY" | "FILTER_PRODUCTS" | "SORT_PRODUCTS" | "ADD_PRODUCTS"
+//   payload: { products?: ProductType[] }
+// }
 
-const ShoppingCartContext = createContext<IUiContext>({ state: null, dispatch: null })
+// interface IUiContext {
+//   state: IShoppingCartReducerStateProps | object
+//   dispatch: React.Dispatch<IShoppingCartReducerAction> | null
+// }
 
-const shoppingCartReducer = (state: IShoppingCartReducerStateProps, action: IShoppingCartReducerAction): IShoppingCartReducerStateProps => {
+const ShoppingCartContext = createContext<InitialStateType>(initialState)
+
+export const productReducer = (state, action) => {
   switch (action.type) {
-    case "TOTAL_SALES_AMOUNT":
-      return {
+    case "CREATE_PRODUCT": 
+      return [
         ...state,
-        totalSalesAmount: action.payload.products.reduce((acc, item) => {
-          return acc + parseFloat(item.price) * parseFloat(item.quantity)
-        }, 0),
-      }
-    case "ADD_PRODUCTS":
-      return { ...state, products: [...state?.products, ...action?.payload?.products] }
-    // case: "TOTAL_SALES_AMOUNT":
-    //     return [].reduce()
-    // case: "COUNT_QUANTITY":
-    //     return [].reduce()
-    default:
+        {
+          id: action.payload.id,
+          name: action.payload.name,
+          price: action.payload.price
+        }
+      ]
+    case "DELETE_PRODUCT":
+      return [
+        ...state.filter(product => product.id !== action.payload.id)
+      ]
+    default: 
       return state
+  }
+}
+
+export const shoppingCartReducer = (state, action) =>{
+  switch(action.type){
+    case "ADD_PRODUCT":
+      return state + 1
   }
 }
 
