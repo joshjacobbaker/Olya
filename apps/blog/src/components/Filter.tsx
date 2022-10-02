@@ -2,7 +2,7 @@ import { useCallback } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
-import { useShoppingCartContext } from "../context/shoppingCartContext"
+import { useShoppingCartContext } from "../context/shoppingCartContext/shoppingCartContext"
 
 const schema = yup.object().shape({
   id: yup.string(),
