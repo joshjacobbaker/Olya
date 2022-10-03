@@ -13,11 +13,11 @@ const ShoppingCartPage = () => {
 
   return (
     <div className={`grid grid-cols-2`}>
-      <button onClick={() => console.log("clicked...")}></button>
+      <button onClick={() => console.log("clicked...")}>This is a button</button>
       <ul className={`bg-zinc-200`}>
-        {/* {state?.products?.map((item) => {
-          return <SingleProductCard />
-        })} */}
+        {state?.products?.map((item) => {
+          return <SingleProductCard {...item} />
+        })}
       </ul>
 
       <Filter />
