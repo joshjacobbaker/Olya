@@ -160,6 +160,7 @@ todo:
 
 **_ UseReducer CreateContext Redux _**
 [Redux- CreateContext- useReducer]("https://dev.to/elisealcala/react-context-with-usereducer-and-typescript-4obm")
+[Add reducer types for products and cart]
 
 # Finished
 
