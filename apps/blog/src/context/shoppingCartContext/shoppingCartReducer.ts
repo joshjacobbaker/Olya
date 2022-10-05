@@ -10,9 +10,10 @@ type ActionMap<M extends { [index: string]: any }> = {
 }
 
 export enum Types {
-  Create = "CREATE_PRODUCT",
-  Delete = "DELETE_PRODUCT",
-  Add = "ADD_PRODUCT",
+  CREATE_PRODUCT = "CREATE_PRODUCT",
+  DELETE_PRODUCT = "DELETE_PRODUCT",
+  INCREMENT_TOTAL_CART_COUNT = "ADD_TOTAL_CART_COUNT",
+  DECREMENT_TOTAL_CART_COUNT = "DEDUCT_TOTAL_CART_COUNT",
 }
 
 type ProductType = {
@@ -22,12 +23,12 @@ type ProductType = {
 }
 
 type ProductPayload = {
-  [Types.Create]: {
+  [Types.CREATE_PRODUCT]: {
     id: number
     name: string
     price: number
   }
-  [Types.Delete]: {
+  [Types.DELETE_PRODUCT]: {
     id: number
   }
 }
@@ -36,7 +37,7 @@ export type ProductActions = ActionMap<ProductPayload>[keyof ActionMap<ProductPa
 
 export const productReducer = (state: ProductType[], action: ProductActions | ShoppingCartActions) => {
   switch (action.type) {
-    case Types.Create:
+    case Types.CREATE_PRODUCT:
       return [
         ...state,
         {
@@ -45,7 +46,7 @@ export const productReducer = (state: ProductType[], action: ProductActions | Sh
           price: action.payload.price,
         },
       ]
-    case Types.Delete:
+    case Types.DELETE_PRODUCT:
       return [...state.filter((product) => product.id !== action.payload.id)]
     default:
       return state
@@ -55,15 +56,18 @@ export const productReducer = (state: ProductType[], action: ProductActions | Sh
 // Shopping Cart
 
 type ShoppingCartPayload = {
-  [Types.Add]: undefined
+  [Types.INCREMENT_TOTAL_CART_COUNT]: undefined
+  [Types.DECREMENT_TOTAL_CART_COUNT]: undefined
 }
 
 export type ShoppingCartActions = ActionMap<ShoppingCartPayload>[keyof ActionMap<ShoppingCartPayload>]
 
 export const shoppingCartReducer = (state: number, action: ProductActions | ShoppingCartActions) => {
   switch (action.type) {
-    case Types.Add:
+    case Types.INCREMENT_TOTAL_CART_COUNT:
       return state + 1
+    case Types.DECREMENT_TOTAL_CART_COUNT:
+      return state > 0 ? state - 1 : 0
     default:
       return state
   }
