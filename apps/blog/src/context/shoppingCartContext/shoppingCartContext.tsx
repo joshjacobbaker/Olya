@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useCallback, useMemo, ReactNode } from "react"
+import { createContext, useContext, useReducer, useEffect, useCallback, useMemo, ReactNode } from "react"
 import { productReducer, shoppingCartReducer, ProductActions, ShoppingCartActions } from "./shoppingCartReducer"
 // id: faker.datatype.uuid(),
 // productName: faker.commerce.productName(),
@@ -54,22 +54,19 @@ const mainReducer = ({ products, shoppingCart }: InitialStateType, action: Produ
 const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(mainReducer, initialState)
 
-  const sharedState = useMemo(() => {
+  let sharedState = useMemo(() => {
     return { state, dispatch }
   }, [state, dispatch])
 
   // useEffect(() => {
-  //   const shoppingCartContextState = JSON.stringify(localStorage.getItem("shoppingCartContext"))
-  //   if (shoppingCartContextState) {
-  //     dispatch({ type: "LOCAL_STATE", payload: shoppingCartContextState })
-  //   }
+  //   let state = JSON.parse(localStorage.getItem("shoppingCartContext"))
   // }, [])
 
   // useEffect(() => {
-  //   if (state !== initialState) {
-  //     localStorage.setItem("shoppingCartContext", JSON.stringify(state))
+  //   if (sharedState.state !== initialState) {
+  //     localStorage.setItem("shoppingCartContext", JSON.stringify(sharedState))
   //   }
-  // }, [state])
+  // }, [sharedState])
 
   return <ShoppingCartContext.Provider value={sharedState}>{children}</ShoppingCartContext.Provider>
 }
