@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, useEffect, useCallback, useMemo, ReactNode } from "react"
-import { productReducer, shoppingCartReducer, ProductActions, ShoppingCartActions } from "./shoppingCartReducer"
+import { mainReducer, MainReducerActions, ProductActions, ShoppingCartActions, Types, InitialStateType } from "./shoppingCartReducer"
 // id: faker.datatype.uuid(),
 // productName: faker.commerce.productName(),
 // price: faker.commerce.price(),
@@ -15,13 +15,6 @@ import { productReducer, shoppingCartReducer, ProductActions, ShoppingCartAction
 
 // type ProductType = { id: string; productName: string; price: string; image: string; quantity: string; fastDelivery: string; rating: string }
 
-type ProductType = { id: number; name: string; price: number }
-
-type InitialStateType = {
-  products: ProductType[]
-  shoppingCart: number
-}
-
 // interface ShoppingCartType {
 //   products: ProductType[]
 //   quantity: number // products.reduce()
@@ -29,10 +22,6 @@ type InitialStateType = {
 // }
 
 // let shoppingCartInitialState: ShoppingCartType = { products: [], quantity: 0, totalSalesAmount: 0 }
-const initialState = {
-  products: [],
-  shoppingCart: 0,
-}
 
 // interface IShoppingCartReducerAction {
 //   type: "TOTAL_SALES_AMOUNT" | "COUNT_QUANTITY" | "FILTER_PRODUCTS" | "SORT_PRODUCTS" | "ADD_PRODUCTS"
@@ -44,12 +33,12 @@ const initialState = {
 //   dispatch: React.Dispatch<IShoppingCartReducerAction> | null
 // }
 
-const ShoppingCartContext = createContext<{ state: InitialStateType; dispatch: React.Dispatch<ProductActions | ShoppingCartActions> }>({ state: initialState, dispatch: () => null })
+const initialState = {
+  products: [],
+  shoppingCart: 0,
+}
 
-const mainReducer = ({ products, shoppingCart }: InitialStateType, action: ProductActions | ShoppingCartActions) => ({
-  products: productReducer(products, action),
-  shoppingCart: shoppingCartReducer(shoppingCart, action),
-})
+const ShoppingCartContext = createContext<{ state: InitialStateType; dispatch: React.Dispatch<ProductActions | ShoppingCartActions | MainReducerActions> }>({ state: initialState, dispatch: () => null })
 
 const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(mainReducer, initialState)
@@ -59,14 +48,18 @@ const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
   }, [state, dispatch])
 
   // useEffect(() => {
-  //   let state = JSON.parse(localStorage.getItem("shoppingCartContext"))
+  //   let localStorageState = JSON.parse(localStorage.getItem("shoppingCartContext") ?? initialState) as InitialStateType
+  //   dispatch({ type: Types.PRODUCT_LOCAL_STORAGE_STATE, payload: localStorageState.products })
+  //   dispatch({ type: Types.SHOPPINGCART_LOCAL_STORAGE_STATE, payload: localStorageState.shoppingCart })
   // }, [])
 
   // useEffect(() => {
-  //   if (sharedState.state !== initialState) {
-  //     localStorage.setItem("shoppingCartContext", JSON.stringify(sharedState))
+  //   if (state !== initialState) {
+  //     localStorage.setItem("shoppingCartContext", JSON.stringify(state))
   //   }
-  // }, [sharedState])
+  // }, [state])
+
+  // console.log(sharedState)
 
   return <ShoppingCartContext.Provider value={sharedState}>{children}</ShoppingCartContext.Provider>
 }
