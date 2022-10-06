@@ -77,7 +77,7 @@ export const shoppingCartReducer = (state: number, action: ProductActions | Shop
 // Main Reducer
 
 type MainReducerPayload = {
-  [Types.LOCAL_STORAGE_STATE]: undefined
+  [Types.LOCAL_STORAGE_STATE]: InitialStateType
 }
 
 export type MainReducerActions = ActionMap<MainReducerPayload>[keyof ActionMap<MainReducerPayload>]
@@ -89,8 +89,8 @@ export type InitialStateType = {
 
 export const mainReducer = ({ products, shoppingCart }: InitialStateType, action: ProductActions | ShoppingCartActions | MainReducerActions) => {
   switch (action.type) {
-    // case Types.LOCAL_STORAGE_STATE:
-    //   return null
+    case Types.LOCAL_STORAGE_STATE:
+      return action.payload
     default:
       return {
         products: productReducer(products, action),

@@ -47,17 +47,28 @@ const ShoppingCartContextProvider = ({ children }: { children: ReactNode }) => {
     return { state, dispatch }
   }, [state, dispatch])
 
-  // useEffect(() => {
-  //   let localStorageState = JSON.parse(localStorage.getItem("shoppingCartContext") ?? initialState) as InitialStateType
-  //   dispatch({ type: Types.PRODUCT_LOCAL_STORAGE_STATE, payload: localStorageState.products })
-  //   dispatch({ type: Types.SHOPPINGCART_LOCAL_STORAGE_STATE, payload: localStorageState.shoppingCart })
-  // }, [])
+  useEffect(() => {
+    let localStorageState: InitialStateType = JSON.parse(localStorage.getItem("shoppingCartContext") || "") || initialState
+    // alert(`localstorage ${JSON.stringify(localStorageState)}...{
+    //   products: [{ id: 0, name: "martha", price: 4 }],
+    //   shoppingCart: 10,
+    // },`)
+    dispatch({
+      type: Types.LOCAL_STORAGE_STATE,
+      payload: localStorageState,
 
-  // useEffect(() => {
-  //   if (state !== initialState) {
-  //     localStorage.setItem("shoppingCartContext", JSON.stringify(state))
-  //   }
-  // }, [state])
+      // payload: {
+      //   products: [{ id: 0, name: "martha", price: 4 }],
+      //   shoppingCart: 10,
+      // },
+    })
+  }, [])
+
+  useEffect(() => {
+    if (state !== initialState) {
+      localStorage.setItem("shoppingCartContext", JSON.stringify(state))
+    }
+  }, [state])
 
   // console.log(sharedState)
 
