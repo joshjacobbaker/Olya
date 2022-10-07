@@ -215,3 +215,13 @@ Redux - CreateContext - useReducer
 [Redux - CreateContext - useReducer - example]("https://dev.to/elisealcala/react-context-with-usereducer-and-typescript-4obm")
 
 ---
+
+---
+
+##########################################################
+Cypress Testing
+##########################################################
+[Cypress Testing w/Laith on YouTube]("https://www.youtube.com/watch?v=avb-VDa3ZG4")
+[NextJS Testing w/Cypress]("https://nextjs.org/docs/testing")
+
+---
