@@ -1,5 +1,8 @@
 # Backlog
 
+- [RabbitMQ youtube playlist by Web Dev Journey]("https://www.youtube.com/watch?v=AMC2p0h0LJE&list=PLrwNNiB6YOA3Z3JfOUMKE6PmnpmVAJgTK")
+- [NextJS Playlist by Codevolution]("https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH")
+- [next-auth ServerSide Authentication w/pageProps.session and provider useSession, getSession]("https://www.youtube.com/watch?v=ae8lxOOhOtY")
 - [Image, Video processing, music]("")
 - [S3 Bucket for files, images, videos]("")
 - [Shared Components]("")
