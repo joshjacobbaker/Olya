@@ -1,5 +1,6 @@
 # Backlog
 
+- [Folder & File Structure]("https://youtu.be/UUga4-z7b6s")
 - [RabbitMQ youtube playlist by Web Dev Journey]("https://www.youtube.com/watch?v=AMC2p0h0LJE&list=PLrwNNiB6YOA3Z3JfOUMKE6PmnpmVAJgTK")
 - [NextJS Playlist by Codevolution]("https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH")
 - [next-auth ServerSide Authentication w/pageProps.session and provider useSession, getSession]("https://www.youtube.com/watch?v=ae8lxOOhOtY")
@@ -18,7 +19,7 @@
 - [CDN implementation... CloudFlare?]("")
 - [Forward Proxy, Reverse Proxy]("")
 - [PostGreSQL, MongoDB, MySQL?]("")
-- [Redis Cache]("")
+- [Redis Cache, Leigh Halliday YouTube Tutorial]("https://www.youtube.com/watch?v=sBiUqozxY4o")
 - [Express APIs]("")
 - [RabbitMQ]("")
 - [System Design]("")
