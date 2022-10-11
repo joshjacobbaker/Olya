@@ -1,5 +1,14 @@
 # Backlog
 
+- [k8s/Docker Examples w/TurboRepo]("https://github.com/vercel/turborepo/issues/215")
+- [Redis Cache... Reduce HTTP calls]("https://www.youtube.com/watch?v=jgpVdJB2sKQ&t=19s")
+- [Express Authentication... Redis]("https://github.com/alex996/node-auth")
+- [Backend User Authentication, Authorization Logic by Web Dev Simplified]("https://www.youtube.com/watch?v=jI4K7L-LI58")
+- [Clean Code Architecture]("https://github.com/panagiop/node.js-clean-architecture")
+- [React Project Architecture for Production]("https://www.youtube.com/watch?v=7MIm1HD8l-4")
+- [EsLint CLI to enforce standards]("https://www.youtube.com/watch?v=lQK71JnjSw4")
+- [Type Checking CLI TypeScript Checking tsc --noEmit ]("")
+- [Accessibility A11y Aria-live alt screen reader]("")
 - [Folder & File Structure]("https://youtu.be/UUga4-z7b6s")
 - [RabbitMQ youtube playlist by Web Dev Journey]("https://www.youtube.com/watch?v=AMC2p0h0LJE&list=PLrwNNiB6YOA3Z3JfOUMKE6PmnpmVAJgTK")
 - [NextJS Playlist by Codevolution]("https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH")
