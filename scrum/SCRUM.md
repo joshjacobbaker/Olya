@@ -1,5 +1,7 @@
 # Backlog
 
+- [Draw System Design]("")
+- [Create Jira Kanban Board to manage project]("")
 - [Functional Programming... Ramda]("https://randycoulman.com/blog/2016/07/19/thinking-in-ramda-wrap-up/")
 - [k8s/Docker Examples w/TurboRepo]("https://github.com/vercel/turborepo/issues/215")
 - [Redis Cache... Reduce HTTP calls]("https://www.youtube.com/watch?v=jgpVdJB2sKQ&t=19s")
