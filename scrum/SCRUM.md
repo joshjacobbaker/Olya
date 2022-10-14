@@ -1,5 +1,6 @@
 # Backlog
 
+- [GitLab Pipeline]("")
 - [Draw System Design]("")
 - [Create Jira Kanban Board to manage project]("")
 - [Functional Programming... Ramda]("https://randycoulman.com/blog/2016/07/19/thinking-in-ramda-wrap-up/")
