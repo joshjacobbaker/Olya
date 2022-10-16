@@ -1,5 +1,7 @@
 # Backlog
-- []("https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11437352#overview")
+
+- [Cron Script in Cloud for midnight job i.e. database backup, etc.]("")
+- [Stephen Grider K8s Micro-Service Course]("https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11437352#overview")
 - [GitLab Pipeline]("")
 - [Draw System Design]("")
 - [Create Jira Kanban Board to manage project]("")
