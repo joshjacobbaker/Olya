@@ -1,5 +1,7 @@
 # Backlog
 
+- [Docker Containerize Apps]("https://www.udemy.com/course/docker-kubernetes-the-practical-guide/")
+- [GitLab CICD]("https://www.youtube.com/watch?v=XHPAWykUpas")
 - [Cron Script in Cloud for midnight job i.e. database backup, etc.]("")
 - [Stephen Grider K8s Micro-Service Course]("https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/learn/lecture/11437352#overview")
 - [GitLab Pipeline]("")
