@@ -1,5 +1,7 @@
 # Backlog
 
+- [Axiom to monitor and record all logs from NextJS server]("https://vercel.com/integrations/axiom")
+- [Use pnpm command in Dockerfile to build workspace app]("")
 - [Create Context, SuperFast]("https://www.youtube.com/watch?v=ZKlXqrcBx88")
 - [Apollo GraphQL Federation MicroService Api]("https://github.com/apollographql/federation-demo")
 - [Queue? Callstack DataStructures? ]("")
