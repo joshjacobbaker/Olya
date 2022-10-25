@@ -1,5 +1,8 @@
 # Backlog
 
+- [Controlling the focus programmatically (keyboard) & with mouse]("")
+- [Testing TailwindCSS in Jest or Cypress?]("")
+- [Log Rocket for User Session Replay]("")
 - [Axiom to monitor and record all logs from NextJS server]("https://vercel.com/integrations/axiom")
 - [Use pnpm command in Dockerfile to build workspace app]("")
 - [Create Context, SuperFast]("https://www.youtube.com/watch?v=ZKlXqrcBx88")
