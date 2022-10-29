@@ -1,5 +1,6 @@
 # Backlog
 
+- [Cypress test in CICD pipeline]("")
 - [React Query ServerSide with Hydration on Client Side]("")
 - [Nested Layouts with Next via Sam's example in the Next Conference]("")
 - [A/B Testing]("")
