@@ -1,5 +1,6 @@
 # Backlog
 
+- [GraphQL Server]("https://www.udemy.com/course/graphql-for-beginners-with-javascript/learn/lecture/11835982#overview")
 - [Cypress test in CICD pipeline]("")
 - [React Query ServerSide with Hydration on Client Side]("")
 - [Nested Layouts with Next via Sam's example in the Next Conference]("")
