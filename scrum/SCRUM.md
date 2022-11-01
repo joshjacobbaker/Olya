@@ -1,6 +1,7 @@
 # Backlog
 
-- [GraphQL Server]("https://www.udemy.com/course/graphql-for-beginners-with-javascript/learn/lecture/11835982#overview")
+- [Every App should have it's own CICD Pipeline]("https://blog.logrocket.com/creating-separate-monorepo-ci-cd-pipelines-github-actions/")
+- [GraphQL Server]("https://www.youtube.com/watch?v=XzE-PzALyDc")
 - [Cypress test in CICD pipeline]("")
 - [React Query ServerSide with Hydration on Client Side]("")
 - [Nested Layouts with Next via Sam's example in the Next Conference]("")
