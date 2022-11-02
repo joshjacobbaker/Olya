@@ -1,5 +1,6 @@
 # Backlog
 
+- [Tailwind Pseudo Elements before after, dynamic styles, css w/ TW, animations]("https://www.youtube.com/watch?v=LHYqKEtD-Co")
 - [Every App should have it's own CICD Pipeline]("https://blog.logrocket.com/creating-separate-monorepo-ci-cd-pipelines-github-actions/")
 - [GraphQL Server]("https://www.youtube.com/watch?v=XzE-PzALyDc")
 - [Cypress test in CICD pipeline]("")
