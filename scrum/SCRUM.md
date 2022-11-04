@@ -1,5 +1,7 @@
 # Backlog
 
+- [Blurry, Animated Background with TailwindCSS](https://www.youtube.com/watch?v=Tmkr2kKUEgU")
+- [DEPLOY NGNIX NEXTJS PM2]("https://www.youtube.com/watch?v=DbREUJNgxqw")
 - [NextJs Server for E2E cypress testing?]("https://www.youtube.com/watch?v=p_cEMvh6uTg")
 - [ServerLess]("https://www.youtube.com/watch?v=FZHyHQ6ytZM")
 - [Promise.All in-series or parrallel]("https://www.youtube.com/watch?v=GvzkpboqV8c")
