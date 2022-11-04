@@ -1,5 +1,9 @@
 # Backlog
 
+- [NextJs Server for E2E cypress testing?]("https://www.youtube.com/watch?v=p_cEMvh6uTg")
+- [ServerLess]("https://www.youtube.com/watch?v=FZHyHQ6ytZM")
+- [Promise.All in-series or parrallel]("https://www.youtube.com/watch?v=GvzkpboqV8c")
+- [Draw.io Integration]("https://drawio-app.com/tutorials/step-by-step-guides/")
 - [Tailwind Pseudo Elements before after, dynamic styles, css w/ TW, animations]("https://www.youtube.com/watch?v=LHYqKEtD-Co")
 - [Every App should have it's own CICD Pipeline]("https://blog.logrocket.com/creating-separate-monorepo-ci-cd-pipelines-github-actions/")
 - [GraphQL Server]("https://www.youtube.com/watch?v=XzE-PzALyDc")
