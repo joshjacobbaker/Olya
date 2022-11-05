@@ -1,6 +1,7 @@
 # Backlog
 
 - [Blurry, Animated Background with TailwindCSS](https://www.youtube.com/watch?v=Tmkr2kKUEgU")
+- [Deploy Multiple NextJS Apps on same ubuntu instance]("https://www.youtube.com/watch?v=TQJ9dpLUnbU")
 - [DEPLOY NGNIX NEXTJS PM2]("https://www.youtube.com/watch?v=DbREUJNgxqw")
 - [NextJs Server for E2E cypress testing?]("https://www.youtube.com/watch?v=p_cEMvh6uTg")
 - [ServerLess]("https://www.youtube.com/watch?v=FZHyHQ6ytZM")
