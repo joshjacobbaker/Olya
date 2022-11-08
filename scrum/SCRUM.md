@@ -1,9 +1,12 @@
 # Backlog
 
+- [GraphQL Server Express-Graphql & React Client]("https://www.youtube.com/watch?v=7smx9VgiGIo&list=PL55RiY5tL51rG1x02Yyj93iypUuHYXcB_&index=18")
+- [Glowing Background Gradient Effects with TailwindCSS]("https://www.youtube.com/watch?v=5W6kEP65AH4")
 - [Blurry, Animated Background with TailwindCSS](https://www.youtube.com/watch?v=Tmkr2kKUEgU")
 - [Deploy Multiple NextJS Apps on same ubuntu instance]("https://www.youtube.com/watch?v=TQJ9dpLUnbU")
 - [DEPLOY NGNIX NEXTJS PM2]("https://www.youtube.com/watch?v=DbREUJNgxqw")
 - [NextJs Server for E2E cypress testing?]("https://www.youtube.com/watch?v=p_cEMvh6uTg")
+- [NextJS, TypeScript, Tailwind, Github Actions, Code Scanning, Cron Schedule]("https://www.youtube.com/watch?v=2Zb93oc0068")
 - [ServerLess]("https://www.youtube.com/watch?v=FZHyHQ6ytZM")
 - [Promise.All in-series or parrallel]("https://www.youtube.com/watch?v=GvzkpboqV8c")
 - [Draw.io Integration]("https://drawio-app.com/tutorials/step-by-step-guides/")
