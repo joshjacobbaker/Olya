@@ -1,5 +1,7 @@
 # Backlog
 
+- [translate npm package]("https://www.npmjs.com/package/translate")
+- [GraphQL CLI]("https://www.graphql-cli.com/codegen/")
 - [GraphQL Server Express-Graphql & React Client]("https://www.youtube.com/watch?v=7smx9VgiGIo&list=PL55RiY5tL51rG1x02Yyj93iypUuHYXcB_&index=18")
 - [Glowing Background Gradient Effects with TailwindCSS]("https://www.youtube.com/watch?v=5W6kEP65AH4")
 - [Blurry, Animated Background with TailwindCSS](https://www.youtube.com/watch?v=Tmkr2kKUEgU")
