@@ -1,5 +1,7 @@
 # Backlog
 
+- [Rebase vs Merge]("")
+- [Jira, Figma, CICD]("")
 - [translate npm package]("https://www.npmjs.com/package/translate")
 - [GraphQL CLI]("https://www.graphql-cli.com/codegen/")
 - [GraphQL Server Express-Graphql & React Client]("https://www.youtube.com/watch?v=7smx9VgiGIo&list=PL55RiY5tL51rG1x02Yyj93iypUuHYXcB_&index=18")
