@@ -1,5 +1,6 @@
 # Backlog
 
+- [JIRA & GitLab Pipeline Connected via API]("")
 - [Multiple NextJS Servers with different URLendpoints]("")
 - [Rebase vs Merge]("")
 - [Jira, Figma, CICD]("")
