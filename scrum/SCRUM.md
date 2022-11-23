@@ -1,5 +1,8 @@
 # Backlog
 
+- [Scan 3rd Party Apps for Vulnerabilities]("")
+- [DDOS attacks]("")
+- [SQL Injection Attacks?]("")
 - [React Native App in MonoRepo]("")
 - [Prevent SSFR, XSS, and other hacks]("https://www.youtube.com/watch?v=ih5R_c16bKc&list=PLuyTk2_mYISIlDtWBIqmgJgn6CYlzHVsQ")
 - [JIRA & GitLab Pipeline Connected via API]("")
