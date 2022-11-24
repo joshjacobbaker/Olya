@@ -1,5 +1,6 @@
 # Backlog
 
+- [gitlab cicd nodejs script to build pipeline for new apps in monorepo]("")
 - [Scan 3rd Party Apps for Vulnerabilities]("")
 - [DDOS attacks]("")
 - [SQL Injection Attacks?]("")
