@@ -1,5 +1,6 @@
 # Backlog
 
+- [Adobe Analytics?]("")
 - [gitlab cicd nodejs script to build pipeline for new apps in monorepo]("")
 - [Scan 3rd Party Apps for Vulnerabilities]("")
 - [DDOS attacks]("")
@@ -28,7 +29,7 @@
 - [Cypress test in CICD pipeline]("")
 - [React Query ServerSide with Hydration on Client Side]("")
 - [Nested Layouts with Next via Sam's example in the Next Conference]("")
-- [A/B Testing]("")
+- [Conductrics A/B Testing]("")
 - [TensorFlow.js within api route to return a value]("")
 - [Controlling the focus programmatically (keyboard) & with mouse]("")
 - [Testing TailwindCSS in Jest or Cypress?]("")
