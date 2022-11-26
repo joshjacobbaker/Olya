@@ -1,5 +1,6 @@
 # Backlog
 
+- [RabbitMQ]("")
 - [Adobe Analytics?]("")
 - [gitlab cicd nodejs script to build pipeline for new apps in monorepo]("")
 - [Scan 3rd Party Apps for Vulnerabilities]("")
