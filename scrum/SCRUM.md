@@ -1,5 +1,6 @@
 # Backlog
 
+- [Desktop App w/Electron]("")
 - [Throttle & Debounce search API requests form inputs]("")
 - [RabbitMQ]("")
 - [Adobe Analytics?]("")
