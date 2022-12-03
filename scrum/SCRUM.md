@@ -1,4 +1,6 @@
 # Backlog
+
+- [Tailwind Theme]("")
 - [CICD for each app]("")
 - [Desktop App w/Electron]("")
 - [Throttle & Debounce search API requests form inputs]("")
