@@ -1,5 +1,6 @@
 # Backlog
 
+- [Framer Motion]("")
 - [Tailwind Theme]("")
 - [CICD for each app]("")
 - [Desktop App w/Electron]("")
