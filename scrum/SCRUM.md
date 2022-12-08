@@ -1,5 +1,6 @@
 # Backlog
 
+- [Atomic Design in React Apps]("https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97")
 - [Different Environments local>Test>Stage>Prod]("")
 - [Figma to Tailwind]("")
 - [Remix App?]("")
