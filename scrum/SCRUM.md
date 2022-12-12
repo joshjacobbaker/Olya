@@ -1,5 +1,6 @@
 # Backlog
 
+- [RxJs]("")
 - [Data Forge DataFrame DataStructure]("")
 - [TailwindCss animations, transitions, etc.]("")
 - [Blockchain in backend from Udemy Course]("https://www.udemy.com/course/build-a-blockchain-in-javascript/learn/lecture/10400630#overview")
