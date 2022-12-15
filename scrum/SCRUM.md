@@ -1,5 +1,6 @@
 # Backlog
 
+- [URL Encoding, HTTP Params, XSS attack vectors and defenses, Reflected, Persisted, DOM attacks, etc.]("")
 - [Tailwind>theme>extends>keyframes & animation]("")
 - [Tailwind Layers: Base, Components, Utilities]("")
 - [Free UX/UI Figma Designs Professional]("https://uidesigndaily.com/")
