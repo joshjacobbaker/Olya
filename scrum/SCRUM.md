@@ -1,5 +1,6 @@
 # Backlog
 
+- [Hero Icons SVG]("")
 - [Tailwind Custom animation delay plugin within tailwind.config.js plugin property]("")
 - [URL Encoding, HTTP Params, XSS attack vectors and defenses, Reflected, Persisted, DOM attacks, etc.]("")
 - [Tailwind>theme>extends>keyframes & animation]("")
