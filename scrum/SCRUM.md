@@ -1,5 +1,7 @@
 # Backlog
 
+- [Tailwind absolute fixed animation]("https://www.youtube.com/watch?v=0TOqn6ARj9s")
+- [Next13 Tutorial]("https://www.youtube.com/watch?v=6aP9nyTcd44")
 - [Comment DIV CSS Sections for readability & documentation]("")
 - [Tailwind Flex Style]("")
 - [Hero Icons SVG]("")
@@ -39,6 +41,7 @@
 - [Glowing Background Gradient Effects with TailwindCSS]("https://www.youtube.com/watch?v=5W6kEP65AH4")
 - [Blurry, Animated Background with TailwindCSS](https://www.youtube.com/watch?v=Tmkr2kKUEgU")
 - [Deploy Multiple NextJS Apps on same ubuntu instance]("https://www.youtube.com/watch?v=TQJ9dpLUnbU")
+- [Deploy NextJS With Nginx and PM2]("https://www.youtube.com/watch?v=IwWQG6lEdQQ")
 - [DEPLOY NGNIX NEXTJS PM2]("https://www.youtube.com/watch?v=DbREUJNgxqw")
 - [NextJs Server for E2E cypress testing?]("https://www.youtube.com/watch?v=p_cEMvh6uTg")
 - [NextJS, TypeScript, Tailwind, Github Actions, Code Scanning, Cron Schedule]("https://www.youtube.com/watch?v=2Zb93oc0068")
