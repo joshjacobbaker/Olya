@@ -1,4 +1,6 @@
 # Backlog
+
+- [NEXT.JS (Framer Motion, Tailwind CSS, Sanity.io, React) ]("https://www.youtube.com/watch?v=urgi2iz9P6U")
 - [Tailwind Custom Plugin]("")
 - [Tailwind absolute fixed animation]("https://www.youtube.com/watch?v=0TOqn6ARj9s")
 - [Next13 Tutorial]("https://www.youtube.com/watch?v=6aP9nyTcd44")
