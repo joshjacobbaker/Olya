@@ -1,5 +1,6 @@
 # Backlog
 
+- [React optimizations, useMemo, useRef]("")
 - [Burp Suite DOM Test Cyber Security]("")
 - [TailwindCss snap-x snap-mandatory snap-center]("")
 - [NEXT.JS (Framer Motion, Tailwind CSS, Sanity.io, React) ]("https://www.youtube.com/watch?v=urgi2iz9P6U")
