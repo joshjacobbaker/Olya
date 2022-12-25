@@ -1,5 +1,7 @@
 # Backlog
 
+- [Build websites even faster with components on top of Tailwind CSS]("https://flowbite.com/")
+- [Upstash.. Serverless Kafka for messenger systems -- FB messenger]("https://www.youtube.com/watch?v=T2jKJF4BZOY")
 - [TailwindCSS Scrollbar Plugin Styles]("")
 - [Utilities folder for all API fetch AJAX calls]("")
 - [React optimizations, useMemo, useRef]("")
