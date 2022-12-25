@@ -1,5 +1,7 @@
 # Backlog
 
+- [TailwindCSS Scrollbar Plugin Styles]("")
+- [Utilities folder for all API fetch AJAX calls]("")
 - [React optimizations, useMemo, useRef]("")
 - [Burp Suite DOM Test Cyber Security]("")
 - [TailwindCss snap-x snap-mandatory snap-center]("")
