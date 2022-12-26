@@ -1,4 +1,4 @@
-# Backlog
+##############################################################3 Backlog
 
 - [Build websites even faster with components on top of Tailwind CSS]("https://flowbite.com/")
 - [Upstash.. Serverless Kafka for messenger systems -- FB messenger]("https://www.youtube.com/watch?v=T2jKJF4BZOY")
@@ -183,7 +183,7 @@
 [Send Grid]("https://www.youtube.com/watch?v=tgrvKGPmI04")
 [My Send Grid Account has been setup here]("https://app.sendgrid.com/")
 
-# WIP
+########################################################## WIP
 
 **_Search Field_**
 Api endpoint
@@ -278,7 +278,7 @@ todo:
 [Redux- CreateContext- useReducer]("https://dev.to/elisealcala/react-context-with-usereducer-and-typescript-4obm")
 [Add reducer types for products and cart]
 
-# Finished
+################################################################### Finished
 
 [Context with useMemo, useEffect LocalStorage]("https://www.youtube.com/watch?v=74a98FoLS70")
 [Type React.createContext when passing [state, dispatch]=useReducer()]("https://stackoverflow.com/questions/59432133/how-to-type-state-and-dispatch-for-usereducer-typescript-and-react")
